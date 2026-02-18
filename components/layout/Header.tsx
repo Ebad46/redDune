@@ -59,6 +59,7 @@ export function Header() {
     // Map specific cases if needed, otherwise rely on key matching
     if (key === "home") return t("nav.home");
     if (key === "services") return t("nav.services");
+    if (key === "brands") return t("nav.brands");
     if (key === "products") return t("nav.products");
     if (key === "contact") return t("nav.contact");
     return label;
@@ -121,7 +122,9 @@ export function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {SITE_CONFIG.navItems.map((item) => {
-              const hasDropdown = ["Services", "Products"].includes(item.label);
+              const hasDropdown = ["Services", "Brands", "Products"].includes(
+                item.label,
+              );
               const dropdownData = hasDropdown
                 ? getDropdownData(item.label)
                 : null;
@@ -169,6 +172,35 @@ export function Header() {
                       )}
                     >
                       <div className="bg-secondary text-white rounded-xl shadow-2xl overflow-hidden border border-white/10 p-6">
+                        {/* Brands Grid (4 Columns) */}
+                        {item.label === "Brands" && (
+                          <div
+                            className="grid grid-cols-4 gap-x-12 gap-y-4 w-[800px]"
+                            dir="ltr"
+                          >
+                            {(dropdownData as Column[]).map((col, colIndex) => (
+                              <div
+                                key={colIndex}
+                                className="flex flex-col gap-3"
+                              >
+                                {col.map((brand) => (
+                                  <Link
+                                    key={brand.label}
+                                    href={brand.href}
+                                    className="hover:text-primary transition-colors text-sm flex items-center gap-2 group/item"
+                                  >
+                                    <ChevronRight
+                                      size={12}
+                                      className="opacity-0 -ml-4 group-hover/item:opacity-100 group-hover/item:ml-0 transition-all text-primary"
+                                    />
+                                    {brand.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
                         {/* Services & Products (Horizontal) */}
                         {(item.label === "Services" ||
                           item.label === "Products") && (
@@ -237,7 +269,9 @@ export function Header() {
       >
         <nav className="flex flex-col p-8 gap-4 h-full overflow-y-auto">
           {SITE_CONFIG.navItems.map((item) => {
-            const hasDropdown = ["Services", "Products"].includes(item.label);
+            const hasDropdown = ["Services", "Brands", "Products"].includes(
+              item.label,
+            );
             const dropdownData = hasDropdown
               ? getDropdownData(item.label)
               : null;
@@ -282,7 +316,33 @@ export function Header() {
                         ? "max-h-[800px] opacity-100 mt-2 mb-4"
                         : "max-h-0 opacity-0",
                     )}
-                  ></div>
+                  >
+                    <div className="flex flex-col gap-3 pl-4 border-l-2 border-primary/20">
+                      {item.label === "Brands"
+                        ? // Flatten Brands for Mobile
+                          (dropdownData as Column[]).flat().map((brand) => (
+                            <Link
+                              key={brand.label}
+                              href={brand.href}
+                              className="text-muted-foreground hover:text-primary text-sm flex items-center gap-2"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {brand.label}
+                            </Link>
+                          ))
+                        : // Services & Products
+                          (dropdownData as NavItem[]).map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              href={subItem.href}
+                              className="text-muted-foreground hover:text-primary text-sm flex items-center gap-2"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {subItem.label}
+                            </Link>
+                          ))}
+                    </div>
+                  </div>
                 )}
               </div>
             );
