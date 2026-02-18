@@ -6,7 +6,6 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Menu, X, Phone, MessageCircle, ChevronDown, ChevronRight, Globe } from "lucide-react";
 import { SITE_CONFIG, NAV_DROPDOWNS } from "@/lib/data";
-import { ModeToggle } from "@/components/ui/ModeToggle";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Button } from "@/components/ui/Button";
 
@@ -59,7 +58,7 @@ export function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 flex flex-col" dir={direction} data-aos="fade-down" data-aos-duration="800">
+        <header className="fixed top-0 left-0 right-0 z-50 flex flex-col" dir={direction}>
             {/* Top Bar - Dark Premium Look */}
             <div className="bg-secondary text-secondary-foreground py-2 text-xs md:text-sm transition-all duration-300 overflow-hidden"
                 style={{ height: isScrolled ? 0 : 'auto', opacity: isScrolled ? 0 : 1 }}>
@@ -181,13 +180,12 @@ export function Header() {
                             variant="ghost"
                             size="icon"
                             onClick={toggleLanguage}
-                            className="rounded-full w-10 h-10 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            className="rounded-full w-10 h-10 hover:bg-gray-100 transition-colors text-red-600 hover:text-red-700"
                             aria-label="Toggle Language"
                         >
                             <span className="font-bold text-sm">{language === "en" ? "AR" : "EN"}</span>
                         </Button>
 
-                        <ModeToggle />
                         <Link
                             href="#contact"
                             className="hidden sm:inline-flex bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-primary/90 transition-all hover:shadow-lg hover:-translate-y-0.5"
@@ -209,9 +207,10 @@ export function Header() {
             {/* Mobile Menu */}
             <div
                 className={cn(
-                    "lg:hidden fixed inset-x-0 top-[100px] bottom-0 bg-white z-40 transition-all duration-300 ease-in-out transform",
+                    "lg:hidden fixed inset-0 bg-white z-40 transition-all duration-300 ease-in-out transform",
                     isMobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
                 )}
+                style={{ top: isScrolled ? "56px" : "100px" }}
             >
                 <nav className="flex flex-col p-8 gap-4 h-full overflow-y-auto">
                     {SITE_CONFIG.navItems.map((item) => {
@@ -225,7 +224,7 @@ export function Header() {
                                 <div className="flex justify-between items-center">
                                     <Link
                                         href={item.href}
-                                        className="text-xl font-bold text-secondary hover:text-primary py-2 block flex-1"
+                                        className="text-xl font-bold text-foreground hover:text-primary py-2 block flex-1"
                                         onClick={() => !hasDropdown && setIsMobileMenuOpen(false)}
                                     >
                                         {label}
@@ -290,6 +289,6 @@ export function Header() {
                     </Link>
                 </nav>
             </div>
-        </header>
+        </header >
     );
 }

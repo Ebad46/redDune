@@ -19,8 +19,8 @@ export const SITE_CONFIG = {
 
 export const NAV_DROPDOWNS = {
     services: [
-        { label: "Recovery Services", href: "/#contact" },
-        { label: "Engine & Gearbox", href: "/#contact" },
+        { label: "Recovery Services", href: "/services/recovery" },
+        { label: "Engine & Gearbox", href: "/services/enginegear" },
         { label: "Engineering & Programming", href: "/services/engineering" },
         { label: "Body Shop", href: "/services/bodyshop" },
         { label: "Workshop", href: "/services/workshop" },
@@ -162,14 +162,14 @@ export const SERVICE_DETAILS = [
         id: "service",
         title: "SERVICE",
         description: "Our comprehensive service packages ensure your vehicle performs at its best. From routine maintenance to complex repairs, our certified technicians use state-of-the-art diagnostic tools to identify and resolve issues with precision. We use only genuine parts to maintain the integrity and value of your luxury vehicle.",
-        image: "/public/images/logo.png",
-        link: "#contact",
+        image: "/images/engineering.jpg",
+        link: "/services/enginegear",
     },
     {
         id: "workshop",
         title: "WORKSHOP",
         description: "Our world-class workshop is equipped with the latest technology to handle any automotive challenge. We maintain a pristine, organized environment that reflects the quality of work we deliver. Whether it's a minor adjustment or a major overhaul, your car is in the safest hands.",
-        image: "/public/images/Services.jfif",
+        image: "/images/2.jpg",
         link: "/services/workshop",
     },
     {
@@ -191,14 +191,14 @@ export const SERVICE_DETAILS = [
         title: "ENGINE AND GEARBOX",
         description: "The heart of your vehicle deserves the utmost care. Our engine and gearbox specialists are experts in diagnosing and repairing complex mechanical issues. From engine rebuilds to transmission servicing, we ensure smooth power delivery and reliability for the long haul.",
         image: "/images/engine.jpg",
-        link: "#contact",
+        link: "/services/enginegear",
     },
     {
         id: "recovery",
         title: "RECOVERY SERVICE",
         description: "Stranded? Our premium recovery service is available 24/7 to assist you. We provide safe and professional towing for luxury vehicles, ensuring they are transported without a scratch to our workshop. Peace of mind is just a phone call away.",
         image: "/images/recovery.jpg",
-        link: "#contact",
+        link: "/services/recovery",
     },
 ];
 
