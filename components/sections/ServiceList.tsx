@@ -79,7 +79,7 @@ export function ServiceList() {
               data-aos={isEven ? "fade-left" : "fade-right"}
               data-aos-duration="1200"
             >
-              <div className="service-image w-full h-full relative overflow-hidden group">
+              <div className="service-image w-full h-full relativegroup">
                 <div className="absolute inset-0 bg-neutral-200" />
                 <Image
                   src={service.image}
