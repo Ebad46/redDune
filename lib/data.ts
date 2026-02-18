@@ -176,7 +176,7 @@ export const SERVICE_DETAILS = [
         id: "body-shop",
         title: "BODY SHOP",
         description: "Restore your vehicle's showroom shine with our expert body shop services. We specialize in dent removal, scratch repair, and full-body painting using premium accident-repair techniques. Our color-matching technology ensures a flawless finish that is indistinguishable from the factory original.",
-        image: "/images/body_shop.jpg",
+        image: "/images/download.jpg",
         link: "/services/bodyshop",
     },
     {
@@ -190,7 +190,7 @@ export const SERVICE_DETAILS = [
         id: "engine-gearbox",
         title: "ENGINE AND GEARBOX",
         description: "The heart of your vehicle deserves the utmost care. Our engine and gearbox specialists are experts in diagnosing and repairing complex mechanical issues. From engine rebuilds to transmission servicing, we ensure smooth power delivery and reliability for the long haul.",
-        image: "/images/engine.jpg",
+        image: "/images/2.jpg",
         link: "/services/enginegear",
     },
     {
