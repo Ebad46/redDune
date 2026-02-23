@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export function Hero() {
@@ -35,7 +34,7 @@ export function Hero() {
         >
           <div className="absolute inset-0 shadow-2xs shadow-red-500">
             <Image
-              src="/BG.jpg"
+              src="/BG2.png"
               alt="Engine Background"
               fill
               className="object-cover opacity-40"
@@ -94,11 +93,11 @@ export function Hero() {
                             2xl:text-[7rem]
                         "
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-red-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-white">
                 RED
               </span>{" "}
               DUNE German
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-red-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-black  via-black to-white">
                 {" "}
                 EXPERTS.
               </span>
@@ -131,23 +130,6 @@ export function Hero() {
               >
                 {t("hero.tagline")}
               </p>
-            </div>
-
-            {/* CTA Buttons - Responsive */}
-            <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
-              <Button
-                size="lg"
-                className="
-                                    bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-wider
-                                    rounded-full shadow-2xl shadow-red-600/50 transition-all hover:scale-105
-                                    text-xs px-4 py-4
-                                    xs:text-sm xs:px-6 xs:py-5
-                                    sm:text-base sm:px-8 sm:py-6
-                                    md:text-lg
-                                "
-              >
-                {t("hero.cta")}
-              </Button>
             </div>
           </div>
         </div>

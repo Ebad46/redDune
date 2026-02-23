@@ -18,6 +18,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/LanguageProvider";
@@ -68,9 +69,11 @@ export default function ServiceContractPage() {
       {/* 1️⃣ Hero Section */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <PlaceholderImage
-            label="Service Contract Banner"
-            className="opacity-30 mix-blend-overlay"
+          <Image
+            src="/images/contract/con2.jpeg"
+            alt="Detailed Inspection Process"
+            fill
+            className="opacity-30 mix-blend-overlay object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-background" />
         </div>
@@ -139,8 +142,10 @@ export default function ServiceContractPage() {
             </div>
             <div className="lg:w-1/2 h-[400px] w-full relative group">
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-              <PlaceholderImage
-                label="Contract Explanation"
+              <Image
+                src="/images/contract/con1.jpeg"
+                alt="Contract Explanation"
+                fill
                 className="relative z-10 border-primary/10 bg-neutral-900/50"
               />
             </div>
@@ -226,8 +231,10 @@ export default function ServiceContractPage() {
             </div>
             <div className="lg:w-1/2 h-[500px] w-full relative">
               <div className="absolute inset-0 transform -translate-x-4 translate-y-4 border border-primary/30" />
-              <PlaceholderImage
-                label="How It Helps"
+              <Image
+                src="/images/contract/con3.jpeg"
+                alt="How It Helps"
+                fill
                 className="relative z-10 border-primary/10 bg-neutral-900/50"
               />
             </div>

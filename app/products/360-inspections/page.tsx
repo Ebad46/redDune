@@ -2,9 +2,7 @@
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
 import {
   ScanEye,
   FileText,
@@ -13,9 +11,9 @@ import {
   ShieldCheck,
   BarChart3,
   Gauge,
-  UploadCloud,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Contact } from "@/components/sections/Contact";
@@ -44,9 +42,12 @@ export default function InspectionsPage() {
       {/* 1️⃣ Hero & Lead-In */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <PlaceholderImage
-            label="360 Inspections Hero"
-            className="opacity-30 mix-blend-overlay"
+          <Image
+            src="/images/360/ins1.jpeg"
+            alt="Hero Background"
+            fill
+            className="opacity-30 mix-blend-overlay object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-background" />
         </div>
@@ -96,17 +97,21 @@ export default function InspectionsPage() {
             </div>
             <div className="lg:w-1/2 h-[400px] w-full relative group">
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-              <PlaceholderImage
-                label="Detailed Inspection Process"
-                className="relative z-10 border-primary/10 bg-neutral-900/50"
-              />
+              <div className="relative z-10 w-full h-full">
+                <Image
+                  src="/images/360/ins2.jpeg"
+                  alt="Detailed Inspection Process"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 3️⃣ Why Pick Us? */}
-      <section className="py-24 bg-neutral-900/30 relative border-y border-white/5">
+      <section className="py-24 relative border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
@@ -123,10 +128,14 @@ export default function InspectionsPage() {
             </div>
             <div className="lg:w-1/2 h-[400px] w-full relative group">
               <div className="absolute inset-0 transform -translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:-translate-x-2 group-hover:translate-y-2" />
-              <PlaceholderImage
-                label="Expert Team & High-Tech Tools"
-                className="relative z-10 border-primary/10 bg-neutral-900/50"
-              />
+              <div className="relative z-10 w-full h-full">
+                <Image
+                  src="/images/360/ins3.jpeg"
+                  alt="Expert Team & High-Tech Tools"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -167,7 +176,7 @@ export default function InspectionsPage() {
       </section>
 
       {/* 5️⃣ How Do We Inspect? */}
-      <section className="py-24 bg-neutral-900/30 px-6 border-y border-white/5">
+      <section className="py-24  px-6 border-y border-white/5">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
@@ -184,10 +193,14 @@ export default function InspectionsPage() {
             </div>
             <div className="lg:w-1/2 h-[400px] w-full relative group">
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-              <PlaceholderImage
-                label="Inspection Workflow"
-                className="relative z-10 border-primary/10 bg-neutral-900/50"
-              />
+              <div className="relative z-10 w-full h-full">
+                <Image
+                  src="/images/360/ins4.png"
+                  alt="Inspection Workflow"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -211,10 +224,14 @@ export default function InspectionsPage() {
             </div>
             <div className="lg:w-1/2 h-[400px] w-full relative group">
               <div className="absolute inset-0 transform -translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:-translate-x-2 group-hover:translate-y-2" />
-              <PlaceholderImage
-                label="Best Car Assurance"
-                className="relative z-10 border-primary/10 bg-neutral-900/50"
-              />
+              <div className="relative z-10 w-full h-full">
+                <Image
+                  src="/images/360/vir360-img-3.png"
+                  alt="Best Car Assurance"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

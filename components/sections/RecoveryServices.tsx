@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -112,15 +111,15 @@ export function RecoveryServices() {
                 Call Sunday to Thursday: 08:00 AM – 11:00 PM, Saturday: 10:00 AM
                 – 07:30 PM
               </span>{" "}
-              Car Recovery Services in Dubai & Abu Dhabi
+              Car Recovery Services in Dubai 
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Whether your engine dies on the highway or you're stuck with a
-              flat in the middle of the night, car recovery service from German
-              Experts is fast, reliable, and always available. Our team is
-              available Sunday to Thursday, 08:00 AM – 11:00 PM, Saturday 10:00
-              AM – 07:30 PM, with the right recovery vehicle in Dubai and Abu
-              Dhabi, wherever you are in the UAE.
+              Whether your engine dies on the highway or you&apos;re stuck with
+              a flat in the middle of the night, car recovery service from Red
+              Dune German Experts is fast, reliable, and always available. Our
+              team is available Sunday to Thursday, 08:00 AM – 11:00 PM,
+              Saturday 10:00 AM – 07:30 PM, with the right recovery vehicle in
+              Dubai, wherever you are in the UAE.
             </p>
             <div className="pt-4">
               <Button className="bg-[#E10600] hover:bg-[#b30500] text-white px-10 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
@@ -156,7 +155,7 @@ export function RecoveryServices() {
           {/* Image Side - Left (Desktop) */}
           <div className="w-full lg:w-1/2 order-2 lg:order-1 relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/s2.jpg" // Placeholder using existing image
+              src="/images/recovery/ser (2).jpg" // Placeholder using existing image
               alt="Flatbed Recovery Service"
               fill
               className="object-cover"
@@ -171,10 +170,10 @@ export function RecoveryServices() {
               Service in Dubai
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Not every breakdown is sudden or severe. Sometimes it's a dead
-              battery in a mall parking lot. Other times, your car refuses to
-              start after fueling up. Whatever the case, we've got the right
-              recovery vehicle ready to come to you, fast.
+              Not every breakdown is sudden or severe. Sometimes it&apos;s a
+              dead battery in a mall parking lot. Other times, your car refuses
+              to start after fueling up. Whatever the case, we&apos;ve got the
+              right recovery vehicle ready to come to you, fast.
             </p>
 
             <ul className="space-y-4 mt-4">
@@ -192,8 +191,8 @@ export function RecoveryServices() {
               ))}
             </ul>
             <p className="text-gray-600 font-medium italic border-l-4 border-[#FFC400] pl-4 py-2 bg-yellow-50/50">
-              Our car recovery in Dubai covers it all — whether you're on Sheikh
-              Zayed Road, in Business Bay, or off-road in the desert.
+              Our car recovery in Dubai covers it all — whether you&apos;re on
+              Sheikh Zayed Road, in Business Bay, or off-road in the desert.
             </p>
           </div>
         </div>
@@ -216,7 +215,7 @@ export function RecoveryServices() {
           {/* Image Side - Left */}
           <div className="w-full lg:w-1/2 relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/download.jpg" // Placeholder
+              src="/images/recovery/ser (1).jpg" // Placeholder
               alt="Abu Dhabi Recovery"
               fill
               className="object-cover"
@@ -227,11 +226,12 @@ export function RecoveryServices() {
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-[#111111]">
               Need Car Recovery in{" "}
-              <span className="text-[#E10600]">Abu Dhabi?</span> German Experts
+              <span className="text-[#E10600]">Dubai?</span> German Experts
               Are Just a Call Away
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Getting stranded in Abu Dhabi can feel overwhelming, especially
+              Getting stranded in Dubai
+               can feel overwhelming, especially
               during extreme heat or late at night. That’s why we keep our lines
               open Sunday to Thursday, 08:00 AM – 11:00 PM, Saturday 10:00 AM –
               07:30 PM, so help is just a quick call away.
@@ -252,8 +252,7 @@ export function RecoveryServices() {
               ))}
             </ul>
             <p className="text-gray-600 font-medium italic border-l-4 border-[#FFC400] pl-4 py-2 bg-yellow-50/50">
-              Whether you're near Al Reem Island, Yas, or Mussafah, our Abu
-              Dhabi car recovery crew won’t keep you waiting.
+              Whether you&apos;re near Al Reem Island, Yas, or Mussafah, our dubai car recovery crew won’t keep you waiting.
             </p>
           </div>
         </div>
@@ -346,22 +345,22 @@ export function RecoveryServices() {
             {
               title: "Luxury Cars",
               models: "Ferrari, Bentley, Mercedes-AMG",
-              img: "/images/s2.jpg",
+              img: "/images/recovery/car.jpg",
             }, // Using placeholders
             {
               title: "SUVs & 4x4s",
               models: "Land Cruiser, Pajero, Patrol",
-              img: "/images/download.jpg",
+              img: "/images/recovery/car (2).jpg",
             },
             {
               title: "Electric Vehicles",
               models: "Tesla, Polestar, Hybrids",
-              img: "/images/download2.jpg",
+              img: "/images/recovery/car (3).jpg",
             },
             {
               title: "Commercial",
               models: "Vans, Fleets, Buses",
-              img: "/images/recovery.jpg",
+              img: "/images/recovery/car (1).jpg",
             },
           ].map((item, i) => (
             <div

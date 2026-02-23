@@ -12,7 +12,7 @@ import { ENGINEERING_SERVICES, SERVICE_DETAILS } from "@/lib/data";
 gsap.registerPlugin(ScrollTrigger);
 
 export function EngineeringServices() {
-  const { t, direction } = useLanguage();
+  const { direction } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const engineeringSectionRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);

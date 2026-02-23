@@ -11,7 +11,6 @@ import {
   MessageCircle,
   ChevronDown,
   ChevronRight,
-  Globe,
 } from "lucide-react";
 import { SITE_CONFIG, NAV_DROPDOWNS } from "@/lib/data";
 import { useLanguage } from "@/components/providers/LanguageProvider";

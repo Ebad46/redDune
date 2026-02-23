@@ -16,6 +16,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Contact } from "@/components/sections/Contact";
@@ -74,8 +75,10 @@ export default function SparePartsPage() {
       {/* 1️⃣ Hero Section */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <PlaceholderImage
-            label="Hero Banner (Luxury Workshop)"
+          <Image
+            src="/images/spare/part4.jpeg"
+            alt="Hero Banner (Luxury Workshop)"
+            fill
             className="opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-background" />
@@ -163,8 +166,10 @@ export default function SparePartsPage() {
               data-aos-duration="800"
             >
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30" />
-              <PlaceholderImage
-                label="Spare Parts Close-up"
+              <Image
+                src="/images/spare/part5.jpg"
+                alt="Spare Parts Close-up"
+                fill
                 className="relative z-10"
               />
             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { BODYSHOP_SERVICES, SERVICE_DETAILS } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,7 @@ export function BodyShopServices() {
   const containerRef = useRef<HTMLDivElement>(null);
   const bodyShopSectionRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const [flippedCardId, setFlippedCardId] = useState<string | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -97,7 +99,7 @@ export function BodyShopServices() {
   return (
     <div ref={containerRef} className="flex flex-col w-full" dir={direction}>
       {/* STEP 1: RED SEPARATOR LINE */}
-      <div className="w-full h-[1px] bg-gray-100 relative mt-20 mb-20 overflow-hidden">
+      <div className="w-full h-px bg-gray-100 relative mt-20 mb-20 overflow-hidden">
         <div className="red-separator-body absolute top-0 left-0 h-[3px] bg-primary w-full" />
       </div>
 
@@ -159,11 +161,22 @@ export function BodyShopServices() {
               return (
                 <div
                   key={service.id}
-                  className="flip-card-bs group h-[400px] w-full [perspective:1000px]"
+                  className="flip-card-bs group h-[400px] w-full perspective-[1000px]"
+                  onClick={() =>
+                    setFlippedCardId(
+                      flippedCardId === service.id ? null : service.id,
+                    )
+                  }
                 >
-                  <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  <div
+                    className={cn(
+                      "relative h-full w-full transition-all duration-700 transform-3d group-hover:transform-[rotateY(180deg)]",
+                      flippedCardId === service.id &&
+                        "transform-[rotateY(180deg)]",
+                    )}
+                  >
                     {/* FRONT SIDE */}
-                    <div className="absolute inset-0 h-full w-full bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col items-center justify-center text-center [backface-visibility:hidden]">
+                    <div className="absolute inset-0 h-full w-full bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col items-center justify-center text-center backface-hidden">
                       <span className="absolute top-6 left-6 text-4xl font-black text-gray-100 select-none">
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -182,7 +195,7 @@ export function BodyShopServices() {
                     </div>
 
                     {/* BACK SIDE */}
-                    <div className="absolute inset-0 h-full w-full bg-secondary rounded-xl shadow-xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <div className="absolute inset-0 h-full w-full bg-secondary rounded-xl shadow-xl overflow-hidden transform-[rotateY(180deg)] backface-hidden">
                       <div className="absolute inset-0">
                         <div className="absolute inset-0 bg-secondary/80 z-10" />
                         <Image
@@ -199,7 +212,7 @@ export function BodyShopServices() {
                         <h3 className="font-heading text-2xl font-bold uppercase">
                           {service.title}
                         </h3>
-                        <Link href="#contact">
+                        <Link href={service.href || "#contact"}>
                           <Button className="rounded-full bg-primary hover:bg-primary/90 text-white font-bold px-8 shadow-[0_0_20px_rgba(209,50,50,0.4)] hover:scale-110 transition-all duration-300">
                             {t("bodyShopSection.readMore")}
                           </Button>
