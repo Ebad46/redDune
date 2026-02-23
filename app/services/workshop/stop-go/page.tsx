@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Settings } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function StopGoPage() {
   const { t } = useLanguage();
@@ -149,7 +149,7 @@ export default function StopGoPage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.stopGo.whyUs.list") as string[]).map((item, i) => (
+                {(t("workshopPages.stopGo.whyUs.list") as unknown as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -208,7 +208,7 @@ export default function StopGoPage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {(t("workshopPages.stopGo.included.list") as string[]).map((item, i) => (
+            {(t("workshopPages.stopGo.included.list") as unknown as string[]).map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"
@@ -267,7 +267,7 @@ export default function StopGoPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t("workshopPages.stopGo.maintenance.items") as any[]).map((item, i) => (
+                {(t("workshopPages.stopGo.maintenance.items") as unknown as any[]).map((item, i) => (
                   <div
                     key={i}
                     className="border border-gray-200 p-5 hover:border-primary/40 transition-colors"

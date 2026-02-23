@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Droplets } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function OilChangePage() {
   const { t } = useLanguage();
@@ -93,7 +93,7 @@ export default function OilChangePage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.oilChange.service.list") as string[]).map((item, i) => (
+                {(t("workshopPages.oilChange.service.list") as unknown as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -155,7 +155,7 @@ export default function OilChangePage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {(t("workshopPages.oilChange.signs.list") as string[]).map((item, i) => (
+            {(t("workshopPages.oilChange.signs.list") as unknown as string[]).map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-white border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"
@@ -209,7 +209,7 @@ export default function OilChangePage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.oilChange.expect.list") as string[]).map((item, i) => (
+                {(t("workshopPages.oilChange.expect.list") as unknown as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -271,7 +271,7 @@ export default function OilChangePage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t("workshopPages.oilChange.oils.items") as any[]).map((item, i) => (
+                {(t("workshopPages.oilChange.oils.items") as unknown as any[]).map((item, i) => (
                   <div
                     key={i}
                     className="border border-gray-200 p-5 hover:border-primary/40 transition-colors"
@@ -334,17 +334,17 @@ export default function OilChangePage() {
                 <div className="w-12 h-[3px] bg-primary mb-6" />
               </div>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t("workshopPages.oilChange.whyUs.list") as string[]).map((item, i) => (
-                  <li
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {(t("workshopPages.oilChange.whyUs.list") as unknown as string[]).map((item, i) => (
+                  <div
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
                   >
                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                     <span className="font-semibold text-gray-800">{item}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">

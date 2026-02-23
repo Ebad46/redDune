@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Phone, Clock, Shield, CheckCircle2, MapPin, Truck, HelpCircle, ChevronRight, Star } from "lucide-react";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export const RecoveryServices = () => {
   const { t } = useLanguage();
@@ -24,7 +24,7 @@ export const RecoveryServices = () => {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-50 border border-red-100 mb-6 w-fit">
                 <Truck className="w-4 h-4 text-primary" />
-                <span className="text-primary text-xs font-bold uppercase tracking-widest">24/7 Premium Recovery</span>
+                <span className="text-primary text-xs font-bold uppercase tracking-widest">{t("recovery.hero.premium")}</span>
               </div>
 
               <h1 className="font-heading text-4xl md:text-6xl font-black uppercase tracking-tight leading-[1.05] text-black mb-8">
@@ -41,9 +41,9 @@ export const RecoveryServices = () => {
                     {t("recovery.hero.bookNow")}
                   </Button>
                 </Link>
-                <a href="tel:0501111111" className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-neutral-800 transition-colors">
+                <a href="tel:0501116000" className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-neutral-800 transition-colors">
                   <Phone className="w-5 h-5 text-primary" />
-                  Call Now
+                  {t("recovery.hero.callNow")}
                 </a>
               </div>
             </div>
@@ -67,9 +67,9 @@ export const RecoveryServices = () => {
               <div className="absolute bottom-10 left-10 right-10 lg:right-auto bg-black p-6 text-white max-w-sm">
                 <div className="flex items-center gap-4 mb-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">Status: Active</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-400">{t("recovery.status.label")}</span>
                 </div>
-                <p className="font-bold text-lg uppercase tracking-tight">Units deployed across Dubai Business Bay, SZR, & Marina</p>
+                <p className="font-bold text-lg uppercase tracking-tight">{t("recovery.status.description")}</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export const RecoveryServices = () => {
       {/* ─── TRUST BAR ─── */}
       <div className="bg-neutral-50 border-y border-gray-100 py-10">
         <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {[
               { label: "Response", value: "30-45m", icon: Clock },
               { label: "Availability", value: "24/7", icon: Shield },
@@ -126,16 +126,16 @@ export const RecoveryServices = () => {
                 {t("recovery.flatbed.description")}
               </p>
 
-              <div className="space-y-4 mb-10">
-                {(t("recovery.flatbed.items") as string[]).map((item, i) => (
-                  <div key={i} className="flex items-start gap-4" data-aos="fade-up" data-aos-delay={i * 100}>
+              <ul className="space-y-4 mb-8">
+                {(t("recovery.flatbed.items") as unknown as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3" data-aos="fade-up" data-aos-delay={i * 100}>
                     <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
                     <p className="text-black font-bold uppercase text-sm tracking-wide">{item}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
 
               <div className="p-6 bg-neutral-950 text-white italic text-sm border-l-4 border-primary">
                 "{t("recovery.flatbed.disclaimer")}"
@@ -176,7 +176,7 @@ export const RecoveryServices = () => {
               </p>
 
               <div className="bg-white p-8 border border-gray-200 gap-y-6 flex flex-col mb-10 shadow-sm">
-                {(t("recovery.dubai.items") as string[]).map((item, i) => (
+                {(t("recovery.dubai.items") as unknown as string[]).map((item, i) => (
                   <div key={i} className="flex items-center gap-5" data-aos="fade-up" data-aos-delay={i * 100}>
                     <span className="text-primary font-black text-2xl select-none">0{i + 1}</span>
                     <p className="text-black font-bold uppercase text-sm tracking-wider">{item}</p>
@@ -278,7 +278,7 @@ export const RecoveryServices = () => {
                 {t("recovery.response.title")}
               </h2>
               <div className="space-y-6">
-                {(t("recovery.response.items") as string[]).map((item, i) => (
+                {(t("recovery.response.items") as unknown as string[]).map((item, i) => (
                   <div key={i} className="flex items-center gap-5 group" data-aos="fade-right" data-aos-delay={i * 100}>
                     <div className="w-2 h-2 bg-white rounded-full group-hover:scale-150 transition-transform" />
                     <p className="font-bold text-lg uppercase tracking-tight">{item}</p>
@@ -298,11 +298,11 @@ export const RecoveryServices = () => {
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Strategic locations across Al Quoz, Business Bay, Sheikh Zayed Road, and Dubai Marina ensure we can reach you faster than anyone else.
+                {t("recovery.response.hubDescription")}
               </p>
               <Button onClick={() => window.location.href = "tel:0501111111"} className="w-full bg-black hover:bg-neutral-800 text-white rounded-none font-bold py-8 text-lg uppercase tracking-widest flex items-center justify-center gap-4">
                 <Truck className="w-6 h-6" />
-                Deploy Truck Now
+                {t("recovery.response.deployButton")}
               </Button>
             </div>
           </div>
@@ -319,7 +319,7 @@ export const RecoveryServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {(t("recovery.support.steps") as any[]).map((step, i) => (
+            {(t("recovery.support.steps") as unknown as any[]).map((step, i) => (
               <div key={i} className="relative group" data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="text-8xl font-black text-gray-50 absolute -top-10 -left-6 group-hover:text-red-50 transition-colors z-0">
                   {step.step}
@@ -383,15 +383,15 @@ export const RecoveryServices = () => {
         <div className="absolute inset-0 bg-primary opacity-5 animate-pulse" />
         <div className="container mx-auto max-w-[1200px] px-6 relative z-10" data-aos="zoom-in">
           <h2 className="font-heading text-4xl md:text-6xl font-black uppercase tracking-tighter mb-10 leading-none">
-            Don't stay <span className="text-primary italic">stranded</span> in Dubai
+            {t("recovery.finalCta.title1")} <span className="text-primary italic">{t("recovery.finalCta.titleHighlight")}</span> {t("recovery.finalCta.title2")}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button onClick={() => window.location.href = "tel:0501111111"} className="bg-primary hover:bg-primary/90 text-white rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest shadow-2xl shadow-primary/20 w-full sm:w-auto">
-              Call Now: 0501111111
+            <Button onClick={() => window.location.href = "tel:0501116000"} className="bg-primary hover:bg-primary/90 text-white rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest shadow-2xl shadow-primary/20 w-full sm:w-auto">
+              {t("recovery.finalCta.callButton")}
             </Button>
             <Link href="/#contact" className="w-full sm:w-auto">
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest w-full sm:w-auto">
-                Request Quote
+                {t("recovery.finalCta.quoteButton")}
               </Button>
             </Link>
           </div>

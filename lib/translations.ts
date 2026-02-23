@@ -766,9 +766,11 @@ export const translations = {
         },
         recovery: {
             hero: {
+                premium: "24/7 Premium Recovery",
                 title: "Stuck on the Road? Call Sunday to Thursday: 08:00 AM – 11:00 PM, Saturday: 10:00 AM – 07:30 PM Car Recovery Services in Dubai",
                 description: "Whether your engine dies on the highway or you're stuck with a flat in the middle of the night, car recovery service from Red Dune German Experts is fast, reliable, and always available. Our team is available Sunday to Thursday, 08:00 AM – 11:00 PM, Saturday 10:00 AM – 07:30 PM, with the right recovery vehicle in Dubai, wherever you are in the UAE.",
-                bookNow: "Book Now"
+                bookNow: "Book Now",
+                callNow: "Call Now"
             },
             flatbed: {
                 title: "Get Safe & Quick Emergency Flatbed Recovery Service in Dubai",
@@ -818,7 +820,13 @@ export const translations = {
                     "Friendly drivers who know the roads inside out",
                     "Live location tracking so you’re never left guessing",
                     "No roadside membership needed — just call and we’ll come"
-                ]
+                ],
+                hubDescription: "Strategic locations across Al Quoz, Business Bay, Sheikh Zayed Road, and Dubai Marina ensure we can reach you faster than anyone else.",
+                deployButton: "Deploy Truck Now"
+            },
+            status: {
+                label: "Status: Active",
+                description: "Units deployed across Dubai Business Bay, SZR, & Marina"
             },
             support: {
                 title: "Stay Road-Ready with Round-the-Clock Support",
@@ -841,6 +849,13 @@ export const translations = {
                     { q: "What vehicles can you recover?", i: "Sedans, SUVs, sports cars, EVs, commercial vehicles." },
                     { q: "How do I track arrival time?", a: "We send a live tracking link via SMS." }
                 ]
+            },
+            finalCta: {
+                title1: "Don't stay",
+                titleHighlight: "stranded",
+                title2: "in Dubai",
+                callButton: "Call Now: 050 111 6000",
+                quoteButton: "Request Quote"
             }
         },
         workshopPages: {
@@ -2085,9 +2100,11 @@ export const translations = {
         },
         recovery: {
             hero: {
+                premium: "خدمة سحب متميزة ٢٤/٧",
                 title: "هل أنت عالق على الطريق؟ اتصل من الأحد إلى الخميس: 08:00 صباحاً – 11:00 مساءً، السبت: 10:00 صباحاً – 07:30 مساءً خدمات سحب السيارات في دبي",
                 description: "سواء توقف محرك سيارتك على الطريق السريع أو علقت بإطار مثقوب في منتصف الليل، فإن خدمة سحب السيارات من خبراء ريد ديون الألمان سريعة وموثوقة ومتوفرة دائماً. فريقنا متاح من الأحد إلى الخميس، 08:00 صباحاً – 11:00 مساءً، والسبت 10:00 صباحاً – 07:30 مساءً، مع مركبة السحب المناسبة في دبي، أينما كنت في الإمارات.",
-                bookNow: "احجز الآن"
+                bookNow: "احجز الآن",
+                callNow: "اتصل الآن"
             },
             flatbed: {
                 title: "احصل على خدمة سحب طارئة آمنة وسريعة في دبي",
@@ -2137,7 +2154,13 @@ export const translations = {
                     "سائقون ودودون يعرفون الطرق جيداً",
                     "تتبع الموقع المباشر حتى لا تضطر للتخمين أبداً",
                     "لا حاجة لعضوية المساعدة على الطريق — فقط اتصل وسنأتي"
-                ]
+                ],
+                hubDescription: "تضمن المواقع الاستراتيجية عبر القوز، والخليج التجاري، وشارع الشيخ زايد، ومرسى دبي إمكانية الوصول إليك بشكل أسرع من أي شخص آخر.",
+                deployButton: "أرسل شاحنة الآن"
+            },
+            status: {
+                label: "الحالة: نشط",
+                description: "الوحدات منتشرة في الخليج التجاري، وشارع الشيخ زايد، والمرسى"
             },
             support: {
                 title: "ابقَ مستعداً للطريق مع دعم على مدار الساعة",
@@ -2160,6 +2183,13 @@ export const translations = {
                     { q: "ما هي السيارات التي يمكنكم سحبها؟", a: "سيدان، دفع رباعي، سيارات رياضية، كهربائية، تجارية." },
                     { q: "كيف أتتبع وقت الوصول؟", a: "نرسل رابط تتبع مباشر عبر الرسائل النصية القصيرة." }
                 ]
+            },
+            finalCta: {
+                title1: "لا تبقى",
+                titleHighlight: "عالقا",
+                title2: "في دبي",
+                callButton: "اتصل الآن: ٠٥٠١١١٦٠٠٠",
+                quoteButton: "طلب عرض سعر"
             }
         },
         workshopPages: {

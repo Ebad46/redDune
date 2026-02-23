@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, ShieldAlert } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function BrakeSystemPage() {
   const { t } = useLanguage();
@@ -93,12 +93,9 @@ export default function BrakeSystemPage() {
                 </p>
               </div>
 
-              <ul className="space-y-4">
-                {(t("workshopPages.brakeSystem.service.list") as string[]).map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-4 text-gray-700 font-medium"
-                  >
+              <ul className="space-y-4 mb-8">
+                {(t("workshopPages.brakeSystem.service.list") as unknown as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                     {item}
                   </li>
@@ -155,12 +152,9 @@ export default function BrakeSystemPage() {
                 </p>
               </div>
 
-              <ul className="space-y-4">
-                {(t("workshopPages.brakeSystem.abs.list") as string[]).map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-4 text-gray-700 font-medium"
-                  >
+              <ul className="space-y-4 mb-8">
+                {(t("workshopPages.brakeSystem.abs.list") as unknown as string[]).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                     {item}
                   </li>
@@ -218,17 +212,17 @@ export default function BrakeSystemPage() {
                 <div className="w-12 h-[3px] bg-primary mb-6" />
               </div>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t("workshopPages.brakeSystem.whyUs.list") as string[]).map((item, i) => (
-                  <li
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {(t("workshopPages.brakeSystem.whyUs.list") as unknown as string[]).map((item, i) => (
+                  <div
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
                   >
                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                     <span className="font-semibold text-gray-800">{item}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
               <p className="text-lg text-gray-600 leading-[1.7]">
                 {t("workshopPages.brakeSystem.whyUs.description")}

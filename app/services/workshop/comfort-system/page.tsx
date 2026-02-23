@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Wrench } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
-import { useLanguage } from "@/lib/LanguageContext";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function ComfortSystemPage() {
   const { t } = useLanguage();
@@ -99,9 +99,9 @@ export default function ComfortSystemPage() {
                 <h3 className="font-heading text-2xl font-bold uppercase text-black mb-5">
                   {t("workshopPages.comfortSystem.ac.partsTitle")}
                 </h3>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {(t("workshopPages.comfortSystem.ac.parts") as string[]).map((item, i) => (
-                    <li
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  {(t("workshopPages.comfortSystem.ac.parts") as unknown as string[]).map((item, i) => (
+                    <div
                       key={i}
                       className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
                     >
@@ -109,9 +109,9 @@ export default function ComfortSystemPage() {
                       <span className="font-semibold text-gray-800">
                         {item}
                       </span>
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
 
               <p className="text-gray-600 leading-[1.7]">
