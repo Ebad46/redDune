@@ -6,9 +6,56 @@ import { Textarea } from "@/components/ui/Textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Link from 'next/link';
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { useState } from "react";
 
 export function Contact() {
     const { t } = useLanguage();
+
+    const [formData, setFormData] = useState({
+        firstName: "",
+        phone: "",
+        email: "",
+        make: "",
+        model: "",
+        message: "",
+    });
+
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [statusMessage, setStatusMessage] = useState("");
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus("loading");
+        setStatusMessage("");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                setStatus("success");
+                setStatusMessage("Your message has been sent! We'll get back to you soon.");
+                setFormData({ firstName: "", phone: "", email: "", make: "", model: "", message: "" });
+            } else {
+                setStatus("error");
+                setStatusMessage(data.message || "Something went wrong. Please try again.");
+            }
+        } catch {
+            setStatus("error");
+            setStatusMessage("Network error. Please check your connection and try again.");
+        }
+    };
 
     return (
         <section id="contact" className="py-24 bg-white overflow-hidden">
@@ -66,22 +113,83 @@ export function Contact() {
                             </div>
                         </div>
 
-                        <form className="space-y-4 pt-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                        <form
+                            onSubmit={handleSubmit}
+                            className="space-y-4 pt-4"
+                            data-aos="fade-up"
+                            data-aos-delay="400"
+                            data-aos-duration="800"
+                        >
                             <div className="grid grid-cols-2 gap-4">
-                                <Input placeholder={t("contact.form.firstName")} />
-                                <Input placeholder={t("contact.form.phone")} />
+                                <Input
+                                    name="firstName"
+                                    placeholder={t("contact.form.firstName")}
+                                    value={formData.firstName}
+                                    onChange={handleChange}
+                                    required
+                                />
+                                <Input
+                                    name="phone"
+                                    placeholder={t("contact.form.phone")}
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                />
                             </div>
-                            <Input placeholder={t("contact.form.email")} type="email" />
+                            <Input
+                                name="email"
+                                placeholder={t("contact.form.email")}
+                                type="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
                             <div className="grid grid-cols-2 gap-4">
-                                <Input placeholder={t("contact.form.make")} />
-                                <Input placeholder={t("contact.form.model")} />
+                                <Input
+                                    name="make"
+                                    placeholder={t("contact.form.make")}
+                                    value={formData.make}
+                                    onChange={handleChange}
+                                />
+                                <Input
+                                    name="model"
+                                    placeholder={t("contact.form.model")}
+                                    value={formData.model}
+                                    onChange={handleChange}
+                                />
                             </div>
-                            <Textarea placeholder={t("contact.form.message")} className="min-h-[120px]" />
-                            <Button type="submit" size="lg" className="w-full">{t("contact.form.submit")}</Button>
+                            <Textarea
+                                name="message"
+                                placeholder={t("contact.form.message")}
+                                className="min-h-[120px]"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            />
+
+                            {/* Status Message */}
+                            {status === "success" && (
+                                <div className="p-3 rounded-lg bg-green-50 text-green-700 text-sm font-medium">
+                                    ✅ {statusMessage}
+                                </div>
+                            )}
+                            {status === "error" && (
+                                <div className="p-3 rounded-lg bg-red-50 text-red-700 text-sm font-medium">
+                                    ❌ {statusMessage}
+                                </div>
+                            )}
+
+                            <Button
+                                type="submit"
+                                size="lg"
+                                className="w-full"
+                                disabled={status === "loading"}
+                            >
+                                {status === "loading" ? "Sending..." : t("contact.form.submit")}
+                            </Button>
                         </form>
                     </div>
 
-                    {/* Map Placeholder */}
+                    {/* Map */}
                     <div className="h-full min-h-[400px] w-full bg-gray-100 rounded-2xl overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500" data-aos="fade-left" data-aos-duration="1000">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.02874133959!2d55.15555627622875!3d25.02980590326476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f727c9135a575%3A0x633d749be9d4a8e3!2sGerman%20Experts%20Car%20Maintenance%20-%20Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
