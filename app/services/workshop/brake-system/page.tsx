@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, ShieldAlert } from "lucide-react";
+import { CheckCircle2, ShieldAlert, ShieldCheck, Wrench } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
@@ -81,8 +81,8 @@ export default function BrakeSystemPage() {
             >
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
-                  <ShieldAlert size={14} />
-                  Section 01
+                  <ShieldCheck size={14} />
+                  {t("workshopPages.common.section01")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.brakeSystem.service.title")}
@@ -141,7 +141,7 @@ export default function BrakeSystemPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <ShieldAlert size={14} />
-                  Section 02
+                  {t("workshopPages.common.section02")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.brakeSystem.abs.title")}
@@ -203,8 +203,8 @@ export default function BrakeSystemPage() {
             >
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
-                  <ShieldAlert size={14} />
-                  Section 03
+                  <ShieldCheck size={14} />
+                  {t("workshopPages.common.section03")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.brakeSystem.whyUs.title")}
@@ -262,7 +262,7 @@ export default function BrakeSystemPage() {
             data-aos-duration="800"
           >
             <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-primary mb-3">
-              Warning Signs
+              {t("workshopPages.common.symptoms")}
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
               {t("workshopPages.brakeSystem.signs.title")}
@@ -275,7 +275,7 @@ export default function BrakeSystemPage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {(t("workshopPages.brakeSystem.signs.list") as string[]).map((item, i) => (
+            {(t("workshopPages.brakeSystem.signs.list") as unknown as string[]).map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-white border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"

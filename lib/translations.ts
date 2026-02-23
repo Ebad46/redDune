@@ -210,6 +210,9 @@ export const translations = {
             description: "Comprehensive solutions for every automotive need, delivered by experts.",
             readMore: "Read More"
         },
+        engineeringSection: {
+            readMore: "Read More"
+        },
         serviceContract: {
             hero: {
                 title1: "Premium Service Contract",
@@ -1310,6 +1313,18 @@ export const translations = {
                     description: "One visit. Complete care. Visit Red Dune Experts for the most thorough and reliable car maintenance package available.",
                     button: "Book Now"
                 }
+            },
+            common: {
+                section01: "Section 01",
+                section02: "Section 02",
+                section03: "Section 03",
+                section04: "Section 04",
+                section05: "Section 05",
+                warningSigns: "Warning Signs",
+                fullPackage: "Full Package",
+                whyUs: "Why Us",
+                warning: "Warning",
+                symptoms: "Symptoms"
             }
         },
         bodyshopServices: {
@@ -1541,6 +1556,9 @@ export const translations = {
         workshopFlipGrid: {
             title: "خدماتنا المتخصصة",
             description: "حلول شاملة لكل احتياجات السيارات، يقدمها خبراء.",
+            readMore: "اقرأ المزيد"
+        },
+        engineeringSection: {
             readMore: "اقرأ المزيد"
         },
         serviceContract: {
@@ -2644,6 +2662,18 @@ export const translations = {
                     description: "زيارة واحدة. عناية كاملة. تفضل بزيارة خبراء ريد ديون للحصول على باقة صيانة السيارات الأكثر شمولاً وموثوقية.",
                     button: "احجز الآن"
                 }
+            },
+            common: {
+                section01: "القسم ٠١",
+                section02: "القسم ٠٢",
+                section03: "القسم ٠٣",
+                section04: "القسم ٠٤",
+                section05: "القسم ٠٥",
+                warningSigns: "علامات التحذير",
+                fullPackage: "باقة كاملة",
+                whyUs: "لماذا نحن؟",
+                warning: "تحذير",
+                symptoms: "الأعراض"
             }
         },
         bodyshopServices: {

@@ -84,7 +84,7 @@ export default function ComfortSystemPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Wrench size={14} />
-                  Service 01
+                  {t("workshopPages.common.section01")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.comfortSystem.ac.title")}
@@ -158,7 +158,7 @@ export default function ComfortSystemPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Wrench size={14} />
-                  Service 02
+                  {t("workshopPages.common.section02")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.comfortSystem.suspension.title")}
@@ -174,7 +174,7 @@ export default function ComfortSystemPage() {
                   {t("workshopPages.comfortSystem.suspension.whyUsTitle")}
                 </h3>
                 <ul className="space-y-4">
-                  {(t("workshopPages.comfortSystem.suspension.benefits") as string[]).map((item, i) => (
+                  {(t("workshopPages.comfortSystem.suspension.benefits") as unknown as string[]).map((item, i) => (
                     <li
                       key={i}
                       className="flex items-center gap-4 text-gray-700 font-medium"
