@@ -93,10 +93,10 @@ export function WorkshopServices() {
           <div className="workshop-text opacity-0">
             <div className="inline-block w-12 h-1 bg-primary mb-6" />
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight uppercase text-secondary">
-              {workshopData.title}
+              {t(workshopData.title)}
             </h2>
             <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8 font-light">
-              {workshopData.description}
+              {t(workshopData.description)}
             </p>
             <Link href="/services/workshop">
               <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">

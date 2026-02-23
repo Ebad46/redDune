@@ -19,7 +19,8 @@ export function Footer() {
   // Helper to translate nav labels
 
   const getTranslatedLabel = (label: string) => {
-    const key = label.toLowerCase().replace(/ /g, "");
+    if (label.includes(".")) return t(label);
+    const key = label.toLowerCase();
     if (key === "home") return t("nav.home");
     if (key === "services") return t("nav.services");
     if (key === "brands") return t("nav.brands");

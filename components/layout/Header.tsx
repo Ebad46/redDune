@@ -54,8 +54,10 @@ export function Header() {
 
   // Helper to translate nav labels
   const getTranslatedLabel = (label: string) => {
-    const key = label.toLowerCase().replace(/ /g, "");
-    // Map specific cases if needed, otherwise rely on key matching
+    // If it looks like a translation key, use it
+    if (label.includes(".")) return t(label);
+
+    const key = label.toLowerCase();
     if (key === "home") return t("nav.home");
     if (key === "services") return t("nav.services");
     if (key === "brands") return t("nav.brands");
@@ -203,19 +205,19 @@ export function Header() {
                         {/* Services & Products (Horizontal) */}
                         {(item.label === "Services" ||
                           item.label === "Products") && (
-                          <div className="flex gap-8 whitespace-nowrap">
-                            {(dropdownData as NavItem[]).map((subItem) => (
-                              <Link
-                                key={subItem.label}
-                                href={subItem.href}
-                                className="flex items-center gap-2 hover:text-primary transition-colors group/item"
-                              >
-                                <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover/item:opacity-100 transition-opacity" />
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                            <div className="flex gap-8 whitespace-nowrap">
+                              {(dropdownData as NavItem[]).map((subItem) => (
+                                <Link
+                                  key={subItem.label}
+                                  href={subItem.href}
+                                  className="flex items-center gap-2 hover:text-primary transition-colors group/item"
+                                >
+                                  <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                                  {t(subItem.label)}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                       </div>
                     </div>
                   )}
@@ -319,27 +321,27 @@ export function Header() {
                     <div className="flex flex-col gap-3 pl-4 border-l-2 border-primary/20">
                       {item.label === "Brands"
                         ? // Flatten Brands for Mobile
-                          (dropdownData as Column[]).flat().map((brand) => (
-                            <Link
-                              key={brand.label}
-                              href={brand.href}
-                              className="text-muted-foreground hover:text-primary text-sm flex items-center gap-2"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              {brand.label}
-                            </Link>
-                          ))
+                        (dropdownData as Column[]).flat().map((brand) => (
+                          <Link
+                            key={brand.label}
+                            href={brand.href}
+                            className="text-muted-foreground hover:text-primary text-sm flex items-center gap-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {brand.label}
+                          </Link>
+                        ))
                         : // Services & Products
-                          (dropdownData as NavItem[]).map((subItem) => (
-                            <Link
-                              key={subItem.label}
-                              href={subItem.href}
-                              className="text-muted-foreground hover:text-primary text-sm flex items-center gap-2"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              {subItem.label}
-                            </Link>
-                          ))}
+                        (dropdownData as NavItem[]).map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            href={subItem.href}
+                            className="text-muted-foreground hover:text-primary text-sm flex items-center gap-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {getTranslatedLabel(subItem.label)}
+                          </Link>
+                        ))}
                     </div>
                   </div>
                 )}

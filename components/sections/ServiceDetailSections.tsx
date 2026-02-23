@@ -6,6 +6,7 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useLanguage } from "@/components/providers/LanguageProvider";
 
 interface ServiceSection {
   heading: string;
@@ -22,6 +23,8 @@ interface ServiceData {
 }
 
 export default function ServiceDetailSections({ data }: { data: ServiceData }) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     AOS.refresh();
   }, [data]);
@@ -33,9 +36,8 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
           {data.sections.map((section, index) => (
             <div
               key={index}
-              className={`flex flex-col ${
-                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } items-center gap-12 lg:gap-20`}
+              className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                } items-center gap-12 lg:gap-20`}
             >
               {/* Text Content */}
               <div
@@ -46,11 +48,11 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
                 <div className="space-y-2">
                   <div className="w-20 h-0.5 bg-red-600 mb-6"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                    {section.heading}
+                    {t(section.heading)}
                   </h2>
                 </div>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  {section.description}
+                  {t(section.description)}
                 </p>
 
                 {section.list && (
@@ -62,7 +64,7 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
                     {section.list.map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <ChevronRight className="w-5 h-5 text-red-600 mt-1 shrink-0" />
-                        <span className="text-gray-700">{item}</span>
+                        <span className="text-gray-700">{t(item)}</span>
                       </li>
                     ))}
                   </ul>
@@ -75,7 +77,7 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
                       className="inline-block px-10 py-4 bg-red-600 text-white font-bold rounded-lg -skew-x-12 hover:bg-red-700 transition-colors uppercase tracking-wider text-sm"
                     >
                       <span className="inline-block skew-x-12">
-                        {section.cta}
+                        {t(section.cta)}
                       </span>
                     </Link>
                   </div>
@@ -91,7 +93,7 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
                 <div className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={section.image}
-                    alt={section.heading}
+                    alt={t(section.heading)}
                     fill
                     className="object-cover"
                   />

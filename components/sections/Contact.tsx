@@ -45,15 +45,15 @@ export function Contact() {
 
             if (data.success) {
                 setStatus("success");
-                setStatusMessage("Your message has been sent! We'll get back to you soon.");
+                setStatusMessage(t("contact.status.success"));
                 setFormData({ firstName: "", phone: "", email: "", make: "", model: "", message: "" });
             } else {
                 setStatus("error");
-                setStatusMessage(data.message || "Something went wrong. Please try again.");
+                setStatusMessage(data.message || t("contact.status.error"));
             }
         } catch {
             setStatus("error");
-            setStatusMessage("Network error. Please check your connection and try again.");
+            setStatusMessage(t("contact.status.networkError"));
         }
     };
 

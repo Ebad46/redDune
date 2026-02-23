@@ -7,8 +7,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Target } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function WheelAlignmentPage() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
       <Header />
@@ -24,23 +27,22 @@ export default function WheelAlignmentPage() {
               data-aos-duration="900"
             >
               <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-black mb-3">
-                Steering &amp; Suspension Specialists
+                {t("workshopPages.wheelAlignment.hero.specialists")}
                 <span className="block w-12 h-[2px] bg-primary mt-2" />
               </span>
 
               <h1 className="font-heading text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[1.1] text-black mt-4 mb-6">
-                Wheel Alignment In Dubai
+                {t("workshopPages.wheelAlignment.hero.title")}
               </h1>
 
               <p className="text-lg text-gray-600 leading-[1.7] max-w-xl mb-10">
-                Precision computerized wheel alignment to improve driving
-                stability, tire life, and fuel efficiency on UAE roads.
+                {t("workshopPages.wheelAlignment.hero.description")}
               </p>
 
               <div>
                 <Link href="#contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
-                    Book Wheel Alignment
+                    {t("workshopPages.wheelAlignment.hero.button")}
                   </Button>
                 </Link>
               </div>
@@ -83,26 +85,16 @@ export default function WheelAlignmentPage() {
                   Section 01
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Why Get a Wheel Alignment From Us?
+                  {t("workshopPages.wheelAlignment.whyUs.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  We use advanced computerized alignment machines that precisely
-                  measure and correct camber, caster, and toe angles to
-                  manufacturer specifications. Our technicians inspect every
-                  suspension angle and steering component to deliver lasting
-                  results — not just a quick fix.
+                  {t("workshopPages.wheelAlignment.whyUs.description")}
                 </p>
               </div>
 
               <ul className="space-y-4">
-                {[
-                  "Advanced alignment machines",
-                  "Accurate camber, caster & toe adjustment",
-                  "Suspension angle inspection",
-                  "Improved steering control",
-                  "Even tire wear",
-                ].map((item, i) => (
+                {(t("workshopPages.wheelAlignment.whyUs.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -114,12 +106,7 @@ export default function WheelAlignmentPage() {
               </ul>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                {[
-                  "Certified technicians",
-                  "Precision calibration",
-                  "Transparent service",
-                  "Fast turnaround",
-                ].map((item, i) => (
+                {(t("workshopPages.wheelAlignment.whyUs.grid") as string[]).map((item, i) => (
                   <div
                     key={i}
                     className="border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors flex items-center gap-3"
@@ -134,7 +121,7 @@ export default function WheelAlignmentPage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Schedule Alignment
+                  {t("workshopPages.wheelAlignment.whyUs.button")}
                 </Button>
               </Link>
             </div>
@@ -174,27 +161,16 @@ export default function WheelAlignmentPage() {
                   Section 02
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  How Often Do You Need a Wheel Alignment?
+                  {t("workshopPages.wheelAlignment.frequency.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  UAE road conditions — including speed breakers, potholes, and
-                  extreme desert heat that expands road surfaces — place
-                  additional stress on your vehicle&apos;s suspension and
-                  alignment. We recommend checking alignment more frequently
-                  than in temperate climates.
+                  {t("workshopPages.wheelAlignment.frequency.description")}
                 </p>
               </div>
 
               <ul className="space-y-4">
-                {[
-                  "Every 10,000 – 15,000 km",
-                  "After suspension repairs",
-                  "After tire replacement",
-                  "If steering pulls to one side",
-                  "If steering wheel is off-center",
-                  "If tires wear unevenly",
-                ].map((item, i) => (
+                {(t("workshopPages.wheelAlignment.frequency.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 text-gray-700 font-medium"
@@ -207,7 +183,7 @@ export default function WheelAlignmentPage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Check My Alignment
+                  {t("workshopPages.wheelAlignment.frequency.button")}
                 </Button>
               </Link>
             </div>
@@ -243,7 +219,7 @@ export default function WheelAlignmentPage() {
               Warning Signs
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-              Signs Your Car Needs Wheel Alignment
+              {t("workshopPages.wheelAlignment.signs.title")}
             </h2>
             <div className="w-12 h-[3px] bg-primary mx-auto" />
           </div>
@@ -253,16 +229,12 @@ export default function WheelAlignmentPage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {[
-              "Vehicle drifting left or right",
-              "Steering vibration",
-              "Crooked steering wheel",
-              "Uneven tire wear",
-              "Reduced fuel efficiency",
-            ].map((item, i) => (
+            {(t("workshopPages.wheelAlignment.signs.list") as string[]).map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"
+                data-aos="fade-up"
+                data-aos-delay={Math.floor(i / 3) * 60}
               >
                 <span className="text-3xl font-black text-gray-100 select-none flex-shrink-0 leading-none">
                   {String(i + 1).padStart(2, "0")}
@@ -280,14 +252,11 @@ export default function WheelAlignmentPage() {
             data-aos-delay="200"
           >
             <p className="text-lg text-gray-600 leading-[1.7]">
-              If you experience any of these symptoms, have your alignment
-              checked immediately. Driving with incorrect alignment causes
-              accelerated tire wear, poor fuel consumption, and puts unnecessary
-              strain on steering and suspension components.
+              {t("workshopPages.wheelAlignment.signs.description")}
             </p>
             <Link href="#contact" className="inline-block w-full sm:w-auto">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                Get Inspection Today
+                {t("workshopPages.wheelAlignment.signs.button")}
               </Button>
             </Link>
           </div>
@@ -301,16 +270,14 @@ export default function WheelAlignmentPage() {
             className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6"
             data-aos="fade-up"
           >
-            Visit Us At <span className="text-primary">Red Dune Experts</span>
+            {t("workshopPages.wheelAlignment.finalCta.title")}
           </h2>
           <p
             className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Ensure smooth driving, better control, and longer tire life with
-            professional wheel alignment service performed using modern
-            computerized equipment.
+            {t("workshopPages.wheelAlignment.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
             <Link href="/#contact">
@@ -318,7 +285,7 @@ export default function WheelAlignmentPage() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"
               >
-                Book Appointment
+                {t("workshopPages.wheelAlignment.finalCta.button")}
               </Button>
             </Link>
           </div>

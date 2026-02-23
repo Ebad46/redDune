@@ -7,8 +7,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Zap } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function FuelInjectionPage() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
       <Header />
@@ -24,23 +27,22 @@ export default function FuelInjectionPage() {
               data-aos-duration="900"
             >
               <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-black mb-3">
-                Engine Performance Specialists
+                {t("workshopPages.fuelInjection.hero.specialists")}
                 <span className="block w-12 h-[2px] bg-primary mt-2" />
               </span>
 
               <h1 className="font-heading text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[1.1] text-black mt-4 mb-6">
-                Fuel Injector Cleaning In Dubai &amp; Abu Dhabi
+                {t("workshopPages.fuelInjection.hero.title")}
               </h1>
 
               <p className="text-lg text-gray-600 leading-[1.7] max-w-xl mb-10">
-                Advanced fuel system diagnostics and precision injector cleaning
-                to restore engine power, efficiency, and smooth performance.
+                {t("workshopPages.fuelInjection.hero.description")}
               </p>
 
               <div>
                 <Link href="#contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
-                    Book Fuel System Check
+                    {t("workshopPages.fuelInjection.hero.button")}
                   </Button>
                 </Link>
               </div>
@@ -83,27 +85,16 @@ export default function FuelInjectionPage() {
                   Section 01
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Why Get a Fuel Injection Service From Us?
+                  {t("workshopPages.fuelInjection.whyUs.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  Our fuel system specialists use advanced diagnostic scanning
-                  and injector flow testing equipment to identify blockages,
-                  leaks, and pressure irregularities before they escalate into
-                  serious engine faults. We perform ultrasonic injector cleaning
-                  and full fuel rail inspections to restore peak engine
-                  performance.
+                  {t("workshopPages.fuelInjection.whyUs.description")}
                 </p>
               </div>
 
               <ul className="space-y-4">
-                {[
-                  "Advanced diagnostic scanning",
-                  "Injector flow testing",
-                  "Ultrasonic injector cleaning",
-                  "Fuel rail inspection",
-                  "Pressure testing",
-                ].map((item, i) => (
+                {(t("workshopPages.fuelInjection.whyUs.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -115,12 +106,7 @@ export default function FuelInjectionPage() {
               </ul>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                {[
-                  "Experienced technicians",
-                  "OEM-standard equipment",
-                  "Accurate fault detection",
-                  "Transparent pricing",
-                ].map((item, i) => (
+                {(t("workshopPages.fuelInjection.whyUs.grid") as string[]).map((item, i) => (
                   <div
                     key={i}
                     className="border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors flex items-center gap-3"
@@ -135,7 +121,7 @@ export default function FuelInjectionPage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Schedule Inspection
+                  {t("workshopPages.fuelInjection.whyUs.button")}
                 </Button>
               </Link>
             </div>
@@ -171,13 +157,11 @@ export default function FuelInjectionPage() {
               Warning Symptoms
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-              Symptoms of a Damaged Fuel Injection System
+              {t("workshopPages.fuelInjection.symptoms.title")}
             </h2>
             <div className="w-12 h-[3px] bg-primary mx-auto mb-6" />
             <p className="text-lg text-gray-600 leading-[1.7]">
-              Early detection prevents minor fuel system issues from developing
-              into catastrophic engine damage. If you notice any of the
-              following, arrange an inspection immediately.
+              {t("workshopPages.fuelInjection.symptoms.description")}
             </p>
           </div>
 
@@ -186,20 +170,7 @@ export default function FuelInjectionPage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {[
-              "Starting issues",
-              "Poor idle",
-              "Failed emissions",
-              "Poor engine performance",
-              "Engine not reaching full RPM",
-              "Increased fuel consumption",
-              "Rough engine operation",
-              "Surging or bucking under throttle",
-              "Smoke from tailpipe",
-              "Engine knock or detonation",
-              "Fuel odor inside or outside vehicle",
-              "Oil thinning / Hydro lock",
-            ].map((item, i) => (
+            {(t("workshopPages.fuelInjection.symptoms.list") as string[]).map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-white border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"
@@ -220,13 +191,11 @@ export default function FuelInjectionPage() {
             data-aos-delay="200"
           >
             <p className="text-gray-600 leading-[1.7] text-lg">
-              Do not delay if any of these symptoms are present. Fuel system
-              faults worsen rapidly under the demanding heat conditions in the
-              UAE and can lead to complete engine failure if left untreated.
+              {t("workshopPages.fuelInjection.symptoms.disclaimer")}
             </p>
             <Link href="#contact" className="inline-block w-full sm:w-auto">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                Check My Engine
+                {t("workshopPages.fuelInjection.symptoms.button")}
               </Button>
             </Link>
           </div>
@@ -249,20 +218,13 @@ export default function FuelInjectionPage() {
                   Section 03
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Complete Fuel Injection System Inspection
+                  {t("workshopPages.fuelInjection.inspection.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
               </div>
 
               <ul className="space-y-4">
-                {[
-                  "Fuel injectors",
-                  "Fuel pump performance",
-                  "Fuel pressure regulator",
-                  "Fuel rail",
-                  "Throttle body",
-                  "Engine control data",
-                ].map((item, i) => (
+                {(t("workshopPages.fuelInjection.inspection.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -274,15 +236,12 @@ export default function FuelInjectionPage() {
               </ul>
 
               <p className="text-lg text-gray-600 leading-[1.7]">
-                A precise fuel-to-air ratio is essential for proper combustion.
-                Even a partially clogged injector can throw off this balance —
-                reducing power, increasing emissions, and raising fuel costs.
-                Our service restores correct delivery to every cylinder.
+                {t("workshopPages.fuelInjection.inspection.description")}
               </p>
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Book Service
+                  {t("workshopPages.fuelInjection.inspection.button")}
                 </Button>
               </Link>
             </div>
@@ -313,16 +272,14 @@ export default function FuelInjectionPage() {
             className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6"
             data-aos="fade-up"
           >
-            Count On <span className="text-primary">German Experts</span>
+            {t("workshopPages.fuelInjection.finalCta.title")}
           </h2>
           <p
-            className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"
+            className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            We provide precise fuel system diagnostics and professional injector
-            cleaning to maintain engine efficiency, power output, and long-term
-            reliability in UAE driving conditions.
+            {t("workshopPages.fuelInjection.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
             <Link href="/#contact">
@@ -330,7 +287,7 @@ export default function FuelInjectionPage() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"
               >
-                Visit Our Workshop
+                {t("workshopPages.fuelInjection.finalCta.button")}
               </Button>
             </Link>
           </div>

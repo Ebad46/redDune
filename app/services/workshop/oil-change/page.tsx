@@ -7,8 +7,10 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Droplets } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function OilChangePage() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
       <Header />
@@ -24,24 +26,22 @@ export default function OilChangePage() {
               data-aos-duration="900"
             >
               <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-black mb-3">
-                Engine Maintenance Specialists
+                {t("workshopPages.oilChange.hero.specialists")}
                 <span className="block w-12 h-[2px] bg-primary mt-2" />
               </span>
 
               <h1 className="font-heading text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[1.1] text-black mt-4 mb-6">
-                Protect Your Engine with Expert Oil Change in Dubai
+                {t("workshopPages.oilChange.hero.title")}
               </h1>
 
               <p className="text-lg text-gray-600 leading-[1.7] max-w-xl mb-10">
-                Professional oil replacement, filter change, and full engine
-                health inspection to keep your car running smoothly in UAE
-                conditions.
+                {t("workshopPages.oilChange.hero.description")}
               </p>
 
               <div>
                 <Link href="#contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
-                    Book Oil Change
+                    {t("workshopPages.oilChange.hero.button")}
                   </Button>
                 </Link>
               </div>
@@ -84,28 +84,16 @@ export default function OilChangePage() {
                   Section 01
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Fast &amp; Reliable Oil Change Service in Dubai
+                  {t("workshopPages.oilChange.service.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  We deliver a complete oil change service — draining old oil,
-                  replacing the filter, and refilling with the correct
-                  specification for your vehicle. Our process is fast, thorough,
-                  and backed by a full leak and fluid-level check. In
-                  Dubai&apos;s extreme heat, engine oil degrades faster than in
-                  moderate climates, making timely changes critical to engine
-                  longevity.
+                  {t("workshopPages.oilChange.service.description")}
                 </p>
               </div>
 
               <ul className="space-y-4">
-                {[
-                  "Engine oil replacement",
-                  "Oil filter replacement",
-                  "Fluid level inspection",
-                  "Leak check",
-                  "Quick turnaround service",
-                ].map((item, i) => (
+                {(t("workshopPages.oilChange.service.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -118,7 +106,7 @@ export default function OilChangePage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Schedule Service
+                  {t("workshopPages.oilChange.service.button")}
                 </Button>
               </Link>
             </div>
@@ -154,13 +142,11 @@ export default function OilChangePage() {
               Warning Signs
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-              Signs You Need a Car Oil Change
+              {t("workshopPages.oilChange.signs.title")}
             </h2>
             <div className="w-12 h-[3px] bg-primary mx-auto mb-6" />
             <p className="text-lg text-gray-600 leading-[1.7]">
-              Your car gives clear warning signs when it&apos;s time for an oil
-              change. Ignoring them leads to increased engine wear, higher fuel
-              consumption, and eventually costly repairs.
+              {t("workshopPages.oilChange.signs.description")}
             </p>
           </div>
 
@@ -169,13 +155,7 @@ export default function OilChangePage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {[
-              "Engine feels louder or rough",
-              "Dashboard warning light",
-              "Mileage interval exceeded",
-              "Oil looks dirty or thin",
-              "Smoke or burning smell",
-            ].map((item, i) => (
+            {(t("workshopPages.oilChange.signs.list") as string[]).map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-white border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"
@@ -196,14 +176,11 @@ export default function OilChangePage() {
             data-aos-delay="200"
           >
             <p className="text-gray-600 leading-[1.7] text-lg">
-              If you&apos;re searching for a{" "}
-              <strong>car oil change near me</strong>, it&apos;s likely time for
-              a professional check. Book with us today for a fast and accurate
-              service.
+              {t("workshopPages.oilChange.signs.disclaimer")}
             </p>
             <Link href="#contact" className="inline-block w-full sm:w-auto">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-10 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                Check My Car
+                {t("workshopPages.oilChange.signs.button")}
               </Button>
             </Link>
           </div>
@@ -226,19 +203,13 @@ export default function OilChangePage() {
                   Section 03
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  What to Expect from Our Engine Oil Service
+                  {t("workshopPages.oilChange.expect.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
               </div>
 
               <ul className="space-y-4">
-                {[
-                  "Complete oil drain",
-                  "Genuine oil filter installation",
-                  "Premium quality oil refill",
-                  "Computer reset (if required)",
-                  "Final engine inspection",
-                ].map((item, i) => (
+                {(t("workshopPages.oilChange.expect.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -251,7 +222,7 @@ export default function OilChangePage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Book Appointment
+                  {t("workshopPages.oilChange.expect.button")}
                 </Button>
               </Link>
             </div>
@@ -291,37 +262,16 @@ export default function OilChangePage() {
                   Section 04
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Types of Engine Oils We Use in Dubai
+                  {t("workshopPages.oilChange.oils.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  Oil selection is not one-size-fits-all. We match the correct
-                  viscosity and specification to your vehicle&apos;s engine
-                  type, age, and the demands of the UAE climate — where
-                  temperatures regularly exceed 45°C and place maximum stress on
-                  engine lubrication.
+                  {t("workshopPages.oilChange.oils.description")}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  {
-                    label: "Fully Synthetic Oil",
-                    desc: "Maximum protection for modern, high-performance engines.",
-                  },
-                  {
-                    label: "Semi Synthetic Oil",
-                    desc: "Balanced performance for everyday driving.",
-                  },
-                  {
-                    label: "High Mileage Oil",
-                    desc: "Formulated for vehicles over 100,000 km.",
-                  },
-                  {
-                    label: "Manufacturer Recommended Oils",
-                    desc: "OEM-spec oil to maintain factory warranty.",
-                  },
-                ].map((item, i) => (
+                {(t("workshopPages.oilChange.oils.items") as any[]).map((item, i) => (
                   <div
                     key={i}
                     className="border border-gray-200 p-5 hover:border-primary/40 transition-colors"
@@ -340,7 +290,7 @@ export default function OilChangePage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Get Oil Recommendation
+                  {t("workshopPages.oilChange.oils.button")}
                 </Button>
               </Link>
             </div>
@@ -379,19 +329,13 @@ export default function OilChangePage() {
                   Section 05
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Why Red Dune Experts Are the Go-To for Car Oil Change in Dubai
+                  {t("workshopPages.oilChange.whyUs.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
               </div>
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  "Experienced technicians",
-                  "OEM-grade oils",
-                  "Transparent pricing",
-                  "Fast service",
-                  "Clean workshop environment",
-                ].map((item, i) => (
+                {(t("workshopPages.oilChange.whyUs.list") as string[]).map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -404,7 +348,7 @@ export default function OilChangePage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Visit Our Workshop
+                  {t("workshopPages.oilChange.whyUs.button")}
                 </Button>
               </Link>
             </div>
@@ -435,17 +379,14 @@ export default function OilChangePage() {
             className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6"
             data-aos="fade-up"
           >
-            Book Your Car Oil Change in{" "}
-            <span className="text-primary">Dubai Today</span>
+            {t("workshopPages.oilChange.finalCta.title")}
           </h2>
           <p
-            className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"
+            className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Regular oil changes are the single most effective way to protect
-            your engine&apos;s performance and fuel efficiency. Don&apos;t wait
-            until warning lights appear — book your service today.
+            {t("workshopPages.oilChange.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
             <Link href="/#contact">
@@ -453,7 +394,7 @@ export default function OilChangePage() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"
               >
-                Book Now
+                {t("workshopPages.oilChange.finalCta.button")}
               </Button>
             </Link>
           </div>

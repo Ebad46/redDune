@@ -399,28 +399,28 @@ export default function SparePartsPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {[
-              "Audi",
-              "BMW",
-              "Mercedes-Benz",
-              "Porsche",
-              "Ferrari",
-              "Bentley",
-              "Range Rover",
-              "Rolls Royce",
-              "Lamborghini",
-              "Jaguar",
-              "McLaren",
-              "Volkswagen",
+              { key: "audi", label: "Audi" },
+              { key: "bmw", label: "BMW" },
+              { key: "mercedes", label: "Mercedes-Benz" },
+              { key: "porsche", label: "Porsche" },
+              { key: "ferrari", label: "Ferrari" },
+              { key: "bentley", label: "Bentley" },
+              { key: "rangeRover", label: "Range Rover" },
+              { key: "rollsRoyce", label: "Rolls Royce" },
+              { key: "lamborghini", label: "Lamborghini" },
+              { key: "jaguar", label: "Jaguar" },
+              { key: "mclaren", label: "McLaren" },
+              { key: "volkswagen", label: "Volkswagen" },
             ].map((brand, idx) => (
               <div
-                key={brand}
+                key={brand.key}
                 className="h-24 bg-card border border-border flex items-center justify-center hover:border-primary hover:shadow-sm transition-all group"
                 data-aos="fade-up"
                 data-aos-delay={idx * 50}
                 data-aos-duration="800"
               >
-                <span className="text-muted-foreground font-bold group-hover:text-primary transition-colors">
-                  {brand}
+                <span className="text-muted-foreground font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
+                  {t(`brands.names.${brand.key}`)}
                 </span>
               </div>
             ))}

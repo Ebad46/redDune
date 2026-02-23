@@ -76,11 +76,11 @@ export function WorkshopFlipGrid() {
                     </div>
 
                     <h3 className="font-heading text-xl font-bold uppercase tracking-wide mb-4 text-secondary">
-                      {service.title}
+                      {t(service.title)}
                     </h3>
 
                     <p className="font-sans text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                      {service.description}
+                      {t(service.description)}
                     </p>
                   </div>
 
@@ -100,7 +100,7 @@ export function WorkshopFlipGrid() {
                     <div className="relative z-20 h-full flex flex-col items-center justify-center text-white p-8 text-center space-y-6">
                       <IconComponent size={48} className="text-primary" />
                       <h3 className="font-heading text-2xl font-bold uppercase">
-                        {service.title}
+                        {t(service.title)}
                       </h3>
                       <Link
                         href={(service as { href?: string }).href || "#contact"}

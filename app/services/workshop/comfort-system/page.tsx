@@ -7,8 +7,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Wrench } from "lucide-react";
 import { Contact } from "@/components/sections/Contact";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function ComfortSystemPage() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
       <Header />
@@ -24,23 +27,22 @@ export default function ComfortSystemPage() {
               data-aos-duration="900"
             >
               <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-black mb-3">
-                Our Workshop Services
+                {t("workshopPages.comfortSystem.hero.specialists")}
                 <span className="block w-12 h-[2px] bg-primary mt-2" />
               </span>
 
               <h1 className="font-heading text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[1.1] text-black mt-4 mb-6">
-                Professional Automotive Repair &amp; Diagnostic Services
+                {t("workshopPages.comfortSystem.hero.title")}
               </h1>
 
               <p className="text-lg text-gray-600 leading-[1.7] max-w-xl mb-10">
-                Complete engine, AC, suspension, gearbox, and electrical system
-                solutions delivered by experienced technicians in Dubai.
+                {t("workshopPages.comfortSystem.hero.description")}
               </p>
 
               <div>
                 <Link href="#contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
-                    Book Inspection
+                    {t("workshopPages.comfortSystem.hero.button")}
                   </Button>
                 </Link>
               </div>
@@ -85,32 +87,20 @@ export default function ComfortSystemPage() {
                   Service 01
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Comfort System Service In Dubai
+                  {t("workshopPages.comfortSystem.ac.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  Your comfort system is essential for a pleasant and safe
-                  driving experience in Dubai&apos;s extreme heat. We deliver
-                  comprehensive diagnostics and repair across all AC and comfort
-                  system components, including gas refill, leak detection,
-                  cooling performance restoration, and resolution of electrical
-                  AC faults.
+                  {t("workshopPages.comfortSystem.ac.description")}
                 </p>
               </div>
 
               <div>
                 <h3 className="font-heading text-2xl font-bold uppercase text-black mb-5">
-                  What Parts of the AC System We Repair
+                  {t("workshopPages.comfortSystem.ac.partsTitle")}
                 </h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    "Compressors",
-                    "Condensers",
-                    "Evaporators",
-                    "Cabin Filters",
-                    "Expansion Valves",
-                    "Blower Motors",
-                  ].map((item, i) => (
+                  {(t("workshopPages.comfortSystem.ac.parts") as string[]).map((item, i) => (
                     <li
                       key={i}
                       className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -125,15 +115,12 @@ export default function ComfortSystemPage() {
               </div>
 
               <p className="text-gray-600 leading-[1.7]">
-                Beyond mechanical parts, we also service the AC&apos;s
-                electronic control panels, ambient temperature sensors, and
-                climate calibration modules — ensuring your entire comfort
-                ecosystem operates as intended by the manufacturer.
+                {t("workshopPages.comfortSystem.ac.disclaimer")}
               </p>
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Schedule AC Service
+                  {t("workshopPages.comfortSystem.ac.button")}
                 </Button>
               </Link>
             </div>
@@ -174,30 +161,20 @@ export default function ComfortSystemPage() {
                   Service 02
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
-                  Car Suspension System Repair
+                  {t("workshopPages.comfortSystem.suspension.title")}
                 </h2>
                 <div className="w-12 h-[3px] bg-primary mb-6" />
                 <p className="text-lg text-gray-600 leading-[1.7]">
-                  A compromised suspension affects your safety, steering
-                  accuracy, and tyre lifespan. Our specialists diagnose and
-                  repair shock absorbers, control arms, suspension bushings, and
-                  struts — restoring ride stability and steering balance to
-                  factory specification.
+                  {t("workshopPages.comfortSystem.suspension.description")}
                 </p>
               </div>
 
               <div>
                 <h3 className="font-heading text-2xl font-bold uppercase text-black mb-5">
-                  Why Get Suspension Repair From Us?
+                  {t("workshopPages.comfortSystem.suspension.whyUsTitle")}
                 </h3>
                 <ul className="space-y-4">
-                  {[
-                    "Improved ride comfort",
-                    "Better road handling",
-                    "Reduced tire wear",
-                    "Safe braking performance",
-                    "Accurate diagnostics",
-                  ].map((item, i) => (
+                  {(t("workshopPages.comfortSystem.suspension.benefits") as string[]).map((item, i) => (
                     <li
                       key={i}
                       className="flex items-center gap-4 text-gray-700 font-medium"
@@ -211,7 +188,7 @@ export default function ComfortSystemPage() {
 
               <Link href="#contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
-                  Book Suspension Check
+                  {t("workshopPages.comfortSystem.suspension.button")}
                 </Button>
               </Link>
             </div>
@@ -322,7 +299,7 @@ export default function ComfortSystemPage() {
             className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6"
             data-aos="fade-up"
           >
-          
+
           </h2>
           <p
             className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"

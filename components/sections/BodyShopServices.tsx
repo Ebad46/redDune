@@ -113,10 +113,10 @@ export function BodyShopServices() {
           <div className="bs-text opacity-0">
             <div className="inline-block w-12 h-1 bg-primary mb-6" />
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight uppercase text-secondary">
-              {bodyShopData.title}
+              {t(bodyShopData.title)}
             </h2>
             <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8 font-light">
-              {bodyShopData.description}
+              {t(bodyShopData.description)}
             </p>
             {/* <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
                             Read More
@@ -172,7 +172,7 @@ export function BodyShopServices() {
                     className={cn(
                       "relative h-full w-full transition-all duration-700 transform-3d group-hover:transform-[rotateY(180deg)]",
                       flippedCardId === service.id &&
-                        "transform-[rotateY(180deg)]",
+                      "transform-[rotateY(180deg)]",
                     )}
                   >
                     {/* FRONT SIDE */}
@@ -186,11 +186,11 @@ export function BodyShopServices() {
                       </div>
 
                       <h3 className="font-heading text-xl font-bold uppercase tracking-wide mb-4 text-secondary">
-                        {service.title}
+                        {t(service.title)}
                       </h3>
 
                       <p className="font-sans text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                        {service.description}
+                        {t(service.description)}
                       </p>
                     </div>
 
@@ -210,7 +210,7 @@ export function BodyShopServices() {
                       <div className="relative z-20 h-full flex flex-col items-center justify-center text-white p-8 text-center space-y-6">
                         <IconComponent size={48} className="text-primary" />
                         <h3 className="font-heading text-2xl font-bold uppercase">
-                          {service.title}
+                          {t(service.title)}
                         </h3>
                         <Link href={service.href || "#contact"}>
                           <Button className="rounded-full bg-primary hover:bg-primary/90 text-white font-bold px-8 shadow-[0_0_20px_rgba(209,50,50,0.4)] hover:scale-110 transition-all duration-300">

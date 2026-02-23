@@ -250,30 +250,30 @@ export default function ServiceContractPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              "Audi",
-              "BMW",
-              "Mercedes-Benz",
-              "Porsche",
-              "Ferrari",
-              "Bentley",
-              "Range Rover",
-              "Rolls Royce",
-              "Lamborghini",
-              "Jaguar",
-              "McLaren",
+              { key: "audi", label: "Audi" },
+              { key: "bmw", label: "BMW" },
+              { key: "mercedes", label: "Mercedes-Benz" },
+              { key: "porsche", label: "Porsche" },
+              { key: "ferrari", label: "Ferrari" },
+              { key: "bentley", label: "Bentley" },
+              { key: "rangeRover", label: "Range Rover" },
+              { key: "rollsRoyce", label: "Rolls Royce" },
+              { key: "lamborghini", label: "Lamborghini" },
+              { key: "jaguar", label: "Jaguar" },
+              { key: "mclaren", label: "McLaren" },
             ].map((brand, idx) => (
               <div
                 key={idx}
                 className="h-24 bg-neutral-950 border border-white/10 flex items-center justify-center hover:border-primary/50 hover:shadow-[0_0_15px_rgba(209,50,50,0.1)] transition-all group"
               >
                 <span className="text-gray-600 font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                  {brand}
+                  {t(`brands.names.${brand.key}`)}
                 </span>
               </div>
             ))}
             <div className="h-24 bg-neutral-950 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all group">
               <span className="text-gray-600 font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                {t("serviceContract.more")}
+                {t("brands.names.more")}
               </span>
             </div>
           </div>

@@ -245,31 +245,31 @@ export default function InspectionsPage() {
           </p>
           <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4">
             {[
-              "Audi",
-              "BMW",
-              "Mercedes",
-              "Bentley",
-              "Ferrari",
-              "Jaguar",
-              "Lamborghini",
-              "Maserati",
-              "Maybach",
-              "McLaren",
-              "Porsche",
-              "Range Rover",
-              "Rolls Royce",
-              "Smart",
-              "VW",
-              "Alfa Romeo",
-              "Aston Martin",
-              "More...",
+              { key: "audi", label: "Audi" },
+              { key: "bmw", label: "BMW" },
+              { key: "mercedes", label: "Mercedes" },
+              { key: "bentley", label: "Bentley" },
+              { key: "ferrari", label: "Ferrari" },
+              { key: "jaguar", label: "Jaguar" },
+              { key: "lamborghini", label: "Lamborghini" },
+              { key: "maserati", label: "Maserati" },
+              { key: "maybach", label: "Maybach" },
+              { key: "mclaren", label: "McLaren" },
+              { key: "porsche", label: "Porsche" },
+              { key: "rangeRover", label: "Range Rover" },
+              { key: "rollsRoyce", label: "Rolls Royce" },
+              { key: "smart", label: "Smart" },
+              { key: "vw", label: "VW" },
+              { key: "alfaRomeo", label: "Alfa Romeo" },
+              { key: "astonMartin", label: "Aston Martin" },
+              { key: "more", label: "More..." },
             ].map((brand, idx) => (
               <div
                 key={idx}
                 className="h-20 bg-neutral-950 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all group"
               >
                 <span className="text-xs md:text-sm text-gray-600 font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                  {brand}
+                  {t(`brands.names.${brand.key}`)}
                 </span>
               </div>
             ))}

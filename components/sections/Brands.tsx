@@ -5,22 +5,22 @@ import { gsap } from "gsap";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 const BRANDS = [
-  "Porsche",
-  "Ferrari",
-  "Lamborghini",
-  "Audi",
-  "BMW",
-  "Mercedes-Benz",
-  "Bentley",
-  "Rolls Royce",
-  "Maserati",
-  "McLaren",
-  "Aston Martin",
-  "Range Rover",
-  "Land Rover",
-  "Jaguar",
-  "Volkswagen",
-  "Mini Cooper",
+  { key: "porsche", label: "Porsche" },
+  { key: "ferrari", label: "Ferrari" },
+  { key: "lamborghini", label: "Lamborghini" },
+  { key: "audi", label: "Audi" },
+  { key: "bmw", label: "BMW" },
+  { key: "mercedes", label: "Mercedes-Benz" },
+  { key: "bentley", label: "Bentley" },
+  { key: "rollsRoyce", label: "Rolls Royce" },
+  { key: "maserati", label: "Maserati" },
+  { key: "mclaren", label: "McLaren" },
+  { key: "astonMartin", label: "Aston Martin" },
+  { key: "rangeRover", label: "Range Rover" },
+  { key: "landRover", label: "Land Rover" },
+  { key: "jaguar", label: "Jaguar" },
+  { key: "volkswagen", label: "Volkswagen" },
+  { key: "miniCooper", label: "Mini Cooper" },
 ];
 
 export function Brands() {
@@ -105,7 +105,7 @@ export function Brands() {
               key={i}
               className="font-heading text-2xl font-bold text-primary uppercase tracking-widest hover:text-primary/80 transition-colors cursor-default select-none"
             >
-              {brand}
+              {t(`brands.names.${brand.key}`)}
             </div>
           ))}
         </div>

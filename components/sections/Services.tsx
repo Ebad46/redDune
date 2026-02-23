@@ -11,22 +11,10 @@ export function Services() {
     const sectionRef = useRef<HTMLElement>(null);
     const { t } = useLanguage();
 
-    const getTranslationKey = (id: string) => {
-        const map: Record<string, string> = {
-            "service": "service",
-            "workshop": "workshop",
-            "body-shop": "bodyShop",
-            "engineering": "engineering",
-            "engine-gearbox": "engineGearbox",
-            "recovery": "recovery"
-        };
-        return map[id] || id;
-    };
-
     const displayServices = SERVICE_DETAILS.map(service => ({
         ...service,
-        title: t(`services.items.${getTranslationKey(service.id)}.title`),
-        description: t(`services.items.${getTranslationKey(service.id)}.description`),
+        title: t(service.title),
+        description: t(service.description),
     }));
 
     return (
