@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
         { label: "nav.home", href: "/" },
         { label: "nav.services", href: "/services" },
         { label: "nav.products", href: "/#products" },
-        { label: "nav.contact", href: "/#contact" },
+        { label: "nav.contact", href: "/contact" },
     ],
 };
 
@@ -63,6 +63,16 @@ export const NAV_DROPDOWNS = {
         { label: "nav.serviceContract", href: "/products/service-contract" },
         { label: "nav.inspections", href: "/products/360-inspections" },
     ],
+};
+
+export const CONTACT_DATA = {
+    phone: "+971 56 776 5665",
+    phoneDisplay: "+971 56 776 5665",
+    email: "info@reddune.ae",
+    address: "footer.address",
+    workingHours: "nav.workingHours",
+    googleMapsUrl: "https://www.google.com/maps?q=25.10978889465332,55.227561950683594&z=17&hl=en",
+    embedMapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.02874133959!2d55.15555627622875!3d25.02980590326476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f727c9135a575%3A0x633d749be9d4a8e3!2sGerman%20Experts%20Car%20Maintenance%20-%20Dubai!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
 };
 
 export const PRODUCT_DETAILS = [

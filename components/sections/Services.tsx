@@ -51,7 +51,7 @@ export function Services() {
 
                             {/* Image Container */}
                             <div className="h-1/2 w-full relative overflow-hidden">
-                                <Link href={service.link || "#contact"}>
+                                <Link href={service.link || "/contact"}>
                                     <Image
                                         src={service.image}
                                         alt={service.title}
@@ -69,14 +69,14 @@ export function Services() {
                             {/* Content Container */}
                             <div className="h-1/2 p-8 flex flex-col relative">
                                 {/* Title with underline effect */}
-                                <Link href={service.link || "#contact"} className="inline-block relative w-fit mb-3">
+                                <Link href={service.link || "/contact"} className="inline-block relative w-fit mb-3">
                                     <h3 className="font-heading text-xl font-bold text-secondary uppercase tracking-tight group-hover:text-primary transition-colors">
                                         {service.title}
                                     </h3>
                                     <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                                 </Link>
 
-                                <p className="font-sans text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-6 flex-grow">
+                                <p className="font-sans text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-6 grow">
                                     {service.description}
                                 </p>
                             </div>

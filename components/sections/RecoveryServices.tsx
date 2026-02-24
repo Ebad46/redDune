@@ -13,12 +13,12 @@ export const RecoveryServices = () => {
   return (
     <div className="bg-white selection:bg-red-600 selection:text-white">
       {/* ─── HERO SECTION ─── */}
-      <section className="relative pt-20 pb-0 overflow-hidden bg-white">
+      <section className="relative pt-24 md:pt-32 pb-0 overflow-hidden bg-white">
         <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="flex flex-col lg:flex-row items-stretch gap-0 min-h-[600px]">
+          <div className="flex flex-col lg:flex-row items-stretch gap-8 lg:gap-0 min-h-[500px] lg:min-h-[600px]">
             {/* Text Content */}
             <div
-              className="w-full lg:w-1/2 flex flex-col justify-center pr-0 lg:pr-16 pb-16 lg:pb-0"
+              className="w-full lg:w-1/2 flex flex-col justify-center pr-0 lg:pr-16 pb-8 lg:pb-0 text-center lg:text-left items-center lg:items-start"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
@@ -27,21 +27,21 @@ export const RecoveryServices = () => {
                 <span className="text-primary text-xs font-bold uppercase tracking-widest">{t("recovery.hero.premium")}</span>
               </div>
 
-              <h1 className="font-heading text-4xl md:text-6xl font-black uppercase tracking-tight leading-[1.05] text-black mb-8">
+              <h1 className="font-heading text-4xl md:text-6xl font-black uppercase tracking-tight leading-[1.05] text-black mb-6 md:mb-8">
                 {t("recovery.hero.title")}
               </h1>
 
-              <p className="text-lg text-gray-600 leading-relaxed max-w-xl mb-10">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl mb-8 md:mb-10">
                 {t("recovery.hero.description")}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/#contact">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-7 text-base uppercase tracking-wider w-full sm:w-auto shadow-lg shadow-red-200">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-7 text-base uppercase tracking-wider w-full shadow-lg shadow-red-200">
                     {t("recovery.hero.bookNow")}
                   </Button>
                 </Link>
-                <a href="tel:0501116000" className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-neutral-800 transition-colors">
+                <a href="tel:0501116000" className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-neutral-800 transition-colors w-full sm:w-auto">
                   <Phone className="w-5 h-5 text-primary" />
                   {t("recovery.hero.callNow")}
                 </a>
@@ -50,7 +50,7 @@ export const RecoveryServices = () => {
 
             {/* Visual Side */}
             <div
-              className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-auto"
+              className="w-full lg:w-1/2 relative min-h-[300px] md:min-h-[400px] lg:min-h-auto"
               data-aos="fade-left"
               data-aos-duration="1000"
             >
@@ -64,12 +64,12 @@ export const RecoveryServices = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent lg:block hidden" />
 
               {/* Floating Status */}
-              <div className="absolute bottom-10 left-10 right-10 lg:right-auto bg-black p-6 text-white max-w-sm">
+              <div className="absolute bottom-6 left-6 right-6 lg:left-10 lg:bottom-10 lg:right-auto bg-black p-4 md:p-6 text-white max-w-sm">
                 <div className="flex items-center gap-4 mb-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                   <span className="text-xs font-bold uppercase tracking-widest text-gray-400">{t("recovery.status.label")}</span>
                 </div>
-                <p className="font-bold text-lg uppercase tracking-tight">{t("recovery.status.description")}</p>
+                <p className="font-bold text-base md:text-lg uppercase tracking-tight">{t("recovery.status.description")}</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export const RecoveryServices = () => {
       {/* ─── TRUST BAR ─── */}
       <div className="bg-neutral-50 border-y border-gray-100 py-10">
         <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
               { label: "Response", value: "30-45m", icon: Clock },
               { label: "Availability", value: "24/7", icon: Shield },
@@ -97,11 +97,11 @@ export const RecoveryServices = () => {
       </div>
 
       {/* ─── FLATBED SERVICE ─── */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-20">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div
-              className="w-full lg:w-1/2 relative h-[300px] md:h-[500px]"
+              className="w-full lg:w-1/2 relative h-[250px] sm:h-[350px] md:h-[500px]"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
@@ -111,33 +111,33 @@ export const RecoveryServices = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 border-[20px] border-white m-8 pointer-events-none" />
+              <div className="absolute inset-0 border-10 md:border-20 border-white m-4 md:m-8 pointer-events-none" />
             </div>
 
             <div
-              className="w-full lg:w-1/2 px-0 lg:px-10"
+              className="w-full lg:w-1/2 px-0 lg:px-10 text-center lg:text-left items-center lg:items-start flex flex-col"
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <h2 className="font-heading text-4xl md:text-5xl font-black uppercase tracking-tight text-black mb-8 leading-[1.1]">
+              <h2 className="font-heading text-3xl md:text-5xl font-black uppercase tracking-tight text-black mb-6 md:mb-8 leading-[1.1]">
                 {t("recovery.flatbed.title")}
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
                 {t("recovery.flatbed.description")}
               </p>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-8 w-full">
                 {(t("recovery.flatbed.items") as unknown as string[]).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <li key={i} className="flex items-start gap-3 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay={i * 100}>
                     <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
-                    <p className="text-black font-bold uppercase text-sm tracking-wide">{item}</p>
+                    <p className="text-black font-bold uppercase text-xs md:text-sm tracking-wide">{item}</p>
                   </li>
                 ))}
               </ul>
 
-              <div className="p-6 bg-neutral-950 text-white italic text-sm border-l-4 border-primary">
+              <div className="p-6 bg-neutral-950 text-white italic text-xs md:text-sm border-l-4 border-primary w-full">
                 "{t("recovery.flatbed.disclaimer")}"
               </div>
             </div>
@@ -146,11 +146,11 @@ export const RecoveryServices = () => {
       </section>
 
       {/* ─── DUBAI RECOVERY ─── */}
-      <section className="py-24 bg-neutral-50 overflow-hidden">
+      <section className="py-16 md:py-24 bg-neutral-50 overflow-hidden">
         <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
             <div
-              className="w-full lg:w-1/2 relative h-[300px] md:h-[500px]"
+              className="w-full lg:w-1/2 relative h-[250px] sm:h-[350px] md:h-[500px]"
               data-aos="fade-left"
               data-aos-duration="1000"
             >
@@ -160,31 +160,31 @@ export const RecoveryServices = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 border-[20px] border-white/50 m-8 pointer-events-none" />
+              <div className="absolute inset-0 border-10 md:border-20 border-white/50 m-4 md:m-8 pointer-events-none" />
             </div>
 
             <div
-              className="w-full lg:w-1/2 px-0 lg:px-10"
+              className="w-full lg:w-1/2 px-0 lg:px-10 text-center lg:text-left items-center lg:items-start flex flex-col"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <h2 className="font-heading text-4xl md:text-5xl font-black uppercase tracking-tight text-black mb-8 leading-[1.1]">
+              <h2 className="font-heading text-3xl md:text-5xl font-black uppercase tracking-tight text-black mb-6 md:mb-8 leading-[1.1]">
                 {t("recovery.dubai.title")}
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
                 {t("recovery.dubai.description")}
               </p>
 
-              <div className="bg-white p-8 border border-gray-200 gap-y-6 flex flex-col mb-10 shadow-sm">
+              <div className="bg-white p-6 md:p-8 border border-gray-200 gap-y-4 md:gap-y-6 flex flex-col mb-10 shadow-sm w-full">
                 {(t("recovery.dubai.items") as unknown as string[]).map((item, i) => (
-                  <div key={i} className="flex items-center gap-5" data-aos="fade-up" data-aos-delay={i * 100}>
-                    <span className="text-primary font-black text-2xl select-none">0{i + 1}</span>
-                    <p className="text-black font-bold uppercase text-sm tracking-wider">{item}</p>
+                  <div key={i} className="flex items-center gap-4 lg:gap-5 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay={i * 100}>
+                    <span className="text-primary font-black text-xl md:text-2xl select-none">0{i + 1}</span>
+                    <p className="text-black font-bold uppercase text-xs md:text-sm tracking-wider">{item}</p>
                   </div>
                 ))}
               </div>
 
-              <p className="text-gray-500 font-medium text-sm border-l-2 border-primary pl-4 uppercase tracking-widest" data-aos="fade-up">
+              <p className="text-gray-500 font-medium text-xs md:text-sm border-l-2 border-primary pl-4 uppercase tracking-widest text-left" data-aos="fade-up">
                 {t("recovery.dubai.disclaimer")}
               </p>
             </div>
@@ -193,22 +193,22 @@ export const RecoveryServices = () => {
       </section>
 
       {/* ─── WHY CHOOSE SECTION ─── */}
-      <section className="py-24 bg-black text-white relative overflow-hidden" id="why-choose-us">
-        <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
+      <section className="py-16 md:py-24 bg-black text-white relative overflow-hidden" id="why-choose-us">
+        <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none lg:block hidden">
           <Truck className="w-full h-full text-white" />
         </div>
 
         <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="mb-20" data-aos="fade-up">
-            <h2 className="font-heading text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">
+          <div className="mb-12 md:mb-20 text-center lg:text-left" data-aos="fade-up">
+            <h2 className="font-heading text-3xl md:text-6xl font-black uppercase tracking-tighter mb-4 md:mb-6">
               {t("recovery.whyChoose.title")}
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
+            <p className="text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
               {t("recovery.whyChoose.description")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-neutral-800 border border-neutral-800">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-neutral-800 border border-neutral-800">
             {Object.entries({
               available: { icon: Clock, title: "recovery.whyChoose.items.available.title", desc: "recovery.whyChoose.items.available.desc" },
               protect: { icon: Shield, title: "recovery.whyChoose.items.protect.title", desc: "recovery.whyChoose.items.protect.desc" },
@@ -216,16 +216,17 @@ export const RecoveryServices = () => {
               pricing: { icon: Shield, title: "recovery.whyChoose.items.pricing.title", desc: "recovery.whyChoose.items.pricing.desc" },
               personal: { icon: Phone, title: "recovery.whyChoose.items.personal.title", desc: "recovery.whyChoose.items.personal.desc" },
             }).map(([key, config], i) => (
-              <div key={i} className="bg-black p-10 hover:bg-neutral-900 transition-colors group" data-aos="fade-up" data-aos-delay={i * 100}>
-                <div className="w-12 h-[2px] bg-primary mb-8 group-hover:w-20 transition-all" />
+              <div key={i} className="bg-black p-8 md:p-10 hover:bg-neutral-900 transition-colors group flex flex-col items-center lg:items-start text-center lg:text-left" data-aos="fade-up" data-aos-delay={i * 100}>
+                <div className="w-12 h-[2px] bg-primary mb-6 md:mb-8 group-hover:w-20 transition-all" />
                 <config.icon className="w-8 h-8 text-primary mb-6" />
-                <h3 className="font-black text-xl uppercase tracking-tight mb-4">{t(config.title as any)}</h3>
+                <h3 className="font-black text-lg md:text-xl uppercase tracking-tight mb-4">{t(config.title as any)}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{t(config.desc as any)}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* ─── VEHICLE TYPES ─── */}
       <section className="py-24 bg-white overflow-hidden">
@@ -389,7 +390,7 @@ export const RecoveryServices = () => {
             <Button onClick={() => window.location.href = "tel:0501116000"} className="bg-primary hover:bg-primary/90 text-white rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest shadow-2xl shadow-primary/20 w-full sm:w-auto">
               {t("recovery.finalCta.callButton")}
             </Button>
-            <Link href="/#contact" className="w-full sm:w-auto">
+            <Link href="/contact" className="w-full sm:w-auto">
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest w-full sm:w-auto">
                 {t("recovery.finalCta.quoteButton")}
               </Button>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "../providers/LanguageProvider";
 import { Button } from "@/components/ui/Button";
 import { ENGINEERING_SERVICES, SERVICE_DETAILS } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ export function EngineeringServices() {
   const containerRef = useRef<HTMLDivElement>(null);
   const engineeringSectionRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const [flippedCardId, setFlippedCardId] = useState<string | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -116,7 +118,7 @@ export function EngineeringServices() {
               {t(engineeringData.description)}
             </p>
             <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
-              Read More
+              {t("engineeringSection.readMore")}
             </Button>
           </div>
         </div>
@@ -155,12 +157,20 @@ export function EngineeringServices() {
           >
             {ENGINEERING_SERVICES.map((service, index) => {
               const IconComponent = service.icon;
+              const isFlipped = flippedCardId === service.id;
+
               return (
                 <div
                   key={service.id}
-                  className="flip-card-eng group h-[400px] w-full perspective-[1000px]"
+                  className="flip-card-eng group h-[400px] w-full perspective-[1000px] cursor-pointer"
+                  onClick={() => setFlippedCardId(isFlipped ? null : service.id)}
                 >
-                  <div className="relative h-full w-full transition-all duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
+                  <div
+                    className={cn(
+                      "relative h-full w-full transition-all duration-700 transform-3d group-hover:transform-[rotateY(180deg)]",
+                      isFlipped && "transform-[rotateY(180deg)]"
+                    )}
+                  >
                     {/* FRONT SIDE */}
                     <div className="absolute inset-0 h-full w-full bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col items-center justify-center text-center backface-hidden">
                       <span className="absolute top-6 left-6 text-4xl font-black text-gray-100 select-none">
@@ -198,7 +208,10 @@ export function EngineeringServices() {
                         <h3 className="font-heading text-2xl font-bold uppercase">
                           {t(service.title)}
                         </h3>
-                        <Link href={service.href || "#contact"}>
+                        <Link
+                          href={service.href || "/contact"}
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           <Button className="rounded-full bg-primary hover:bg-primary/90 text-white font-bold px-8 shadow-[0_0_20px_rgba(209,50,50,0.4)] hover:scale-110 transition-all duration-300">
                             {t("engineeringSection.readMore")}
                           </Button>
@@ -213,5 +226,6 @@ export function EngineeringServices() {
         </div>
       </section >
     </div >
+
   );
 }

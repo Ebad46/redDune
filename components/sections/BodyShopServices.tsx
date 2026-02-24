@@ -158,21 +158,20 @@ export function BodyShopServices() {
           >
             {BODYSHOP_SERVICES.map((service, index) => {
               const IconComponent = service.icon;
+              const isFlipped = flippedCardId === service.id;
+
               return (
                 <div
                   key={service.id}
-                  className="flip-card-bs group h-[400px] w-full perspective-[1000px]"
+                  className="flip-card-bs group h-[400px] w-full perspective-[1000px] cursor-pointer"
                   onClick={() =>
-                    setFlippedCardId(
-                      flippedCardId === service.id ? null : service.id,
-                    )
+                    setFlippedCardId(isFlipped ? null : service.id)
                   }
                 >
                   <div
                     className={cn(
                       "relative h-full w-full transition-all duration-700 transform-3d group-hover:transform-[rotateY(180deg)]",
-                      flippedCardId === service.id &&
-                      "transform-[rotateY(180deg)]",
+                      isFlipped && "transform-[rotateY(180deg)]",
                     )}
                   >
                     {/* FRONT SIDE */}
@@ -212,7 +211,10 @@ export function BodyShopServices() {
                         <h3 className="font-heading text-2xl font-bold uppercase">
                           {t(service.title)}
                         </h3>
-                        <Link href={service.href || "#contact"}>
+                        <Link
+                          href={service.href || "/contact"}
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           <Button className="rounded-full bg-primary hover:bg-primary/90 text-white font-bold px-8 shadow-[0_0_20px_rgba(209,50,50,0.4)] hover:scale-110 transition-all duration-300">
                             {t("bodyShopSection.readMore")}
                           </Button>

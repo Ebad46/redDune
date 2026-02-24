@@ -48,7 +48,7 @@ export function ServiceList() {
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8 font-light">
                   {t(service.description)} {/* Apply t() directly to the service description */}
                 </p>
-                <Link href={service.link || "#contact"}>
+                <Link href={service.link || "/contact"}>
                   <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
                     {t("servicesPage.readMore")}
                   </Button>

@@ -73,7 +73,7 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
                 {section.cta && (
                   <div className="pt-8">
                     <Link
-                      href="#contact"
+                      href="/contact"
                       className="inline-block px-10 py-4 bg-red-600 text-white font-bold rounded-lg -skew-x-12 hover:bg-red-700 transition-colors uppercase tracking-wider text-sm"
                     >
                       <span className="inline-block skew-x-12">
