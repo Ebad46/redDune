@@ -895,3 +895,48 @@ export const SPARE_PARTS_DATA = {
         itemsKey: "spareParts.faq.items",
     }
 };
+
+export const WORKSHOP_PAGE_CONFIG = {
+    hero: {
+        title: "workshop.hero.title",
+        description: "workshop.hero.description",
+        image: "/images/services.jpg",
+    }
+};
+
+export const ENGINE_GEARBOX_DATA = {
+    hero: {
+        subtitle: "services.items.engineGearbox.hero.subtitle",
+        title: "services.items.engineGearbox.hero.title",
+        description: "services.items.engineGearbox.hero.description",
+        image: "/images/engi/gear (3).jpg",
+        cta: "services.items.engineGearbox.hero.cta",
+    },
+    overhaulDubai: {
+        subtitle: "services.items.engineGearbox.overhaulDubai.subtitle",
+        title: "services.items.engineGearbox.overhaulDubai.title",
+        description: "services.items.engineGearbox.overhaulDubai.description",
+        image: "/images/engi/gear (1).jpg",
+        cta: "services.items.engineGearbox.overhaulDubai.cta",
+    },
+    whyChooseUs: {
+        title: "services.items.engineGearbox.whyChooseUs.title",
+        description: "services.items.engineGearbox.whyChooseUs.description",
+        image: "/images/transmission.jpg",
+        cta: "services.items.engineGearbox.whyChooseUs.cta",
+    },
+    whenToGet: {
+        title: "services.items.engineGearbox.whenToGet.title",
+        description: "services.items.engineGearbox.whenToGet.description",
+        signsKey: "services.items.engineGearbox.whenToGet.signs",
+        signsFooter: "services.items.engineGearbox.whenToGet.signsFooter",
+        image: "/images/engi/gear (2).jpg",
+        cta: "services.items.engineGearbox.whenToGet.cta",
+    },
+    atRedDune: {
+        title: "services.items.engineGearbox.atRedDune.title",
+        description: "services.items.engineGearbox.atRedDune.description",
+        image: "/images/services.jpg",
+        cta: "services.items.engineGearbox.atRedDune.cta",
+    }
+};

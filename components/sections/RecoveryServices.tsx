@@ -270,45 +270,6 @@ export const RecoveryServices = () => {
         </div>
       </section>
 
-      {/* ─── QUICK DISPATCH ─── */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="container mx-auto max-w-[1200px] px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
-            <div className="w-full lg:w-1/2" data-aos="fade-right">
-              <h2 className="font-heading text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 leading-none">
-                {t("recovery.response.title")}
-              </h2>
-              <div className="space-y-6">
-                {(t("recovery.response.items") as unknown as string[]).map((item, i) => (
-                  <div key={i} className="flex items-center gap-5 group" data-aos="fade-right" data-aos-delay={i * 100}>
-                    <div className="w-2 h-2 bg-white rounded-full group-hover:scale-150 transition-transform" />
-                    <p className="font-bold text-lg uppercase tracking-tight">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-full lg:w-1/2 bg-white p-10 text-black border-l-8 border-black shadow-2xl" data-aos="fade-left">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-red-50 flex items-center justify-center">
-                  <MapPin className="text-primary w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Our Main Hub</p>
-                  <p className="font-black text-xl uppercase">Al Quoz Industrial, Dubai</p>
-                </div>
-              </div>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                {t("recovery.response.hubDescription")}
-              </p>
-              <Button onClick={() => window.location.href = "tel:0501111111"} className="w-full bg-black hover:bg-neutral-800 text-white rounded-none font-bold py-8 text-lg uppercase tracking-widest flex items-center justify-center gap-4">
-                <Truck className="w-6 h-6" />
-                {t("recovery.response.deployButton")}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ─── PROCESS STEPS ─── */}
       <section className="py-24 bg-white border-b border-gray-100 overflow-hidden">
@@ -384,18 +345,8 @@ export const RecoveryServices = () => {
         <div className="absolute inset-0 bg-primary opacity-5 animate-pulse" />
         <div className="container mx-auto max-w-[1200px] px-6 relative z-10" data-aos="zoom-in">
           <h2 className="font-heading text-4xl md:text-6xl font-black uppercase tracking-tighter mb-10 leading-none">
-            {t("recovery.finalCta.title1")} <span className="text-primary italic">{t("recovery.finalCta.titleHighlight")}</span> {t("recovery.finalCta.title2")}
+            {t("recovery.finalCta.title1")} <span className="text-primary italic"> {t("recovery.finalCta.titleHighlight")}</span> {t("recovery.finalCta.title2")}
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button onClick={() => window.location.href = "tel:0501116000"} className="bg-primary hover:bg-primary/90 text-white rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest shadow-2xl shadow-primary/20 w-full sm:w-auto">
-              {t("recovery.finalCta.callButton")}
-            </Button>
-            <Link href="/contact" className="w-full sm:w-auto">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-none font-black px-12 py-8 text-xl uppercase tracking-widest w-full sm:w-auto">
-                {t("recovery.finalCta.quoteButton")}
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
     </div>

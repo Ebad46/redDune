@@ -78,7 +78,59 @@ export const translations = {
                 },
                 engineGearbox: {
                     title: "ENGINE AND GEARBOX",
-                    description: "The heart of your vehicle deserves the utmost care. Our engine and gearbox specialists are experts in diagnosing and repairing complex mechanical issues."
+                    description: "The heart of your vehicle deserves the utmost care. Our engine and gearbox specialists are experts in diagnosing and repairing complex mechanical issues.",
+                    hero: {
+                        subtitle: "Red Dune German Experts Overhauling",
+                        title: "Gearbox Overhauling",
+                        description: [
+                            "Gearboxes are complex pieces of machinery that require in-depth care and grade maintenance. The term “gearbox overhaul” may sometimes be used alternately with the terms “transmission overhaul” and “transmission rebuild.” To put it more simply, gearbox overhauling is the process of disassembling the intricate sections, replacing the parts required with precision to restore them to working order, and reassembling them.",
+                            "Our professional team uses the highest quality, best-performing products and services available. With the help of skilled technicians and the most advanced tools, your gearbox will always be in its peak condition."
+                        ],
+                        cta: "Contact us"
+                    },
+                    overhaulDubai: {
+                        subtitle: "Red Dune Overhauling",
+                        title: "Gearbox Overhauling In Dubai",
+                        description: [
+                            "In general, the earlier you detect a transmission problem and bring it to a certified mechanic, the more likely it is that the repair will be quick and straightforward. Since it may not be easy to diagnose transmission problems at first, it is always a good idea to have your car inspected and repaired.",
+                            "A transmission overhaul requires the removal and dismantling of the whole transmission. Our technicians will thoroughly examine each part of the transmission to indicate any damage or wear. When your gearbox goes wrong, you must give it a quality repair."
+                        ],
+                        cta: "Reach us now"
+                    },
+                    whyChooseUs: {
+                        title: "Why Get A Gearbox & Engine Overhauling Service from Us?",
+                        description: [
+                            "Our research and development program for engines and transmissions is extensive just to stay in the loop with all the latest developments. No matter how difficult the task may be, red Dune German Experts will never compromise on the quality or performance of our products.",
+                            "Additionally, our skilled team uses an ultrasonic tank to completely clean all engine and gearbox components through high-frequency sound waves that scrub the surface of immersed parts. Furthermore, the high-frequency sound waves agitate the liquid solution of solvent in it.",
+                            "Providing quality repair service is your transmission and engine doesn't go through multiple parts or repair sessions that are not required. At our shop, our highly skilled team can accurately diagnose transmission and engine issues."
+                        ],
+                        cta: "Book your appointment"
+                    },
+                    whenToGet: {
+                        title: "When To Get A Gearbox & Engine Overhauling Service?",
+                        description: "There are several advantages to undergoing a transmission overhaul rather than a replacement. One of the most important factors is that transmission rebuilds are a low-cost alternative to transmission replacements. With the cost of a brand-new transmission unit retailing at over $15,000, it makes sense to investigate and repair your existing gearbox. However, there are some signs that indicate your engine needs an overhaul:",
+                        signs: [
+                            "Engine Oil is missing",
+                            "Your Fuel Efficiency is dropping",
+                            "Engine overheating",
+                            "Smoke billowing from exhaust pipe",
+                            "Whining Noise",
+                            "Slipping Gears",
+                            "Dragging clutch",
+                            "Resistance",
+                            "Leaking transmission fluid"
+                        ],
+                        signsFooter: "Don’t hesitate to contact our experts for engine or gearbox repairs; we provide you with complete engine diagnostic that makes your vehicle run like new.",
+                        cta: "Get in touch"
+                    },
+                    atRedDune: {
+                        title: "At Red Dune",
+                        description: [
+                            "Whenever you experience a problem with your engine or gearbox, you must give it a quality repair service. At our workshop, our professional team uses the best quality products and services to ensure your vehicle remains at its peak condition.",
+                            "At Red Dune, you will meet the most professional technicians in the field that are skilled, talented, and passionate about fresh every part of your vehicle. Don't think twice; let's fulfill your car with the best repair services!"
+                        ],
+                        cta: "Book Now"
+                    }
                 },
                 recovery: {
                     title: "RECOVERY SERVICE",
@@ -330,6 +382,12 @@ export const translations = {
             brandsWeServe: "Brands We Serve",
             more: "More...",
             brandsDisclaimer: "* Logos are placeholders and not official partnerships."
+        },
+        workshop: {
+            hero: {
+                title: "WORKSHOP",
+                description: "Our world-class workshop is equipped with the latest technology to handle any automotive challenge. We maintain a pristine, organized environment that reflects the quality of work we deliver. Whether it's a minor adjustment or a major overhaul, your car is in the safest hands."
+            }
         },
         spareParts: {
             hero: {
@@ -1426,7 +1484,59 @@ export const translations = {
                 },
                 engineGearbox: {
                     title: "المحرك وناقل الحركة",
-                    description: "قلب مركبتك يستحق أقصى درجات العناية. المتخصصون لدينا خبراء في تشخيص وإصلاح المشاكل الميكانيكية."
+                    description: "قلب مركبتك يستحق أقصى درجات العناية. المتخصصون لدينا خبراء في تشخيص وإصلاح المشاكل الميكانيكية.",
+                    hero: {
+                        subtitle: "ريد ديون الألمان لخدمات التجديد",
+                        title: "تجديد ناقل الحركة (القير)",
+                        description: [
+                            "تعد نواقل الحركة قطعاً ميكانيكية معقدة تتطلب عناية دقيقة وصيانة عالية المستوى. قد يُستخدم مصطلح 'تجديد القير' أحياناً بالتبادل مع 'تجديد ناقل الحركة' أو 'إعادة بناء ناقل الحركة'. ببساطة، تجديد ناقل الحركة هو عملية تفكيك الأجزاء المعقدة، واستبدال الأجزاء المطلوبة بدقة لإعادتها إلى حالة العمل الأصلية، ثم إعادة تجميعها.",
+                            "يستخدم فريقنا المحترف أفضل المنتجات والخدمات عالية الجودة المتاحة. وبفضل الفنيين المهرة والأدوات الأكثر تقدماً، سيبقى ناقل الحركة لديك دائماً في أفضل حالاته."
+                        ],
+                        cta: "تواصل معنا"
+                    },
+                    overhaulDubai: {
+                        subtitle: "ريد ديون للتجديد",
+                        title: "تجديد ناقل الحركة في دبي",
+                        description: [
+                            "بشكل عام، كلما تم اكتشاف مشكلة ناقل الحركة مبكراً وإحضارها إلى ميكانيكي معتمد، زادت احتمالية أن يكون الإصلاح سريعاً وسهلاً. وبما أنه قد لا يكون من السهل تشخيص مشاكل ناقل الحركة في البداية، فمن الأفضل دائماً فحص سيارتك وإصلاحها.",
+                            "يتطلب تجديد ناقل الحركة إزالة وتفكيك ناقل الحركة بالكامل. سيقوم فنيونا بفحص كل جزء من ناقل الحركة بدقة لتحديد أي تلف أو تآكل. عندما يتعطل ناقل الحركة، يجب أن يحصل على إصلاح عالي الجودة."
+                        ],
+                        cta: "اتصل بنا الآن"
+                    },
+                    whyChooseUs: {
+                        title: "لماذا تحصل على خدمة تجديد المحرك وناقل الحركة منا؟",
+                        description: [
+                            "برنامج البحث والتطوير لدينا للمحركات ونواقل الحركة شامل فقط للبقاء على اطلاع بجميع التطورات الحديثة. مهما كانت المهمة صعبة، لن يتنازل خبراء ريد ديون الألمان أبداً عن جودة أو أداء منتجاتنا.",
+                            "بالإضافة إلى ذلك، يستخدم فريقنا الماهر خزاناً يعمل بالموجات فوق الصوتية لتنظيف جميع مكونات المحرك وناقل الحركة تماماً من خلال موجات صوتية عالية التردد تنظف أسطح الأجزاء المغمورة. علاوة على ذلك، تقوم الموجات الصوتية عالية التردد بتحريك المحلول السائل المذيب فيه.",
+                            "إن توفير خدمة إصلاح عالية الجودة يضمن عدم مرور المحرك وناقل الحركة بعدة أجزاء أو جلسات إصلاح غير مطلوبة. في ورشتنا، يمكن لفريقنا عالي المهارة تشخيص مشاكل المحرك وناقل الحركة بدقة."
+                        ],
+                        cta: "احجز موعدك"
+                    },
+                    whenToGet: {
+                        title: "متى تحصل على خدمة تجديد المحرك وناقل الحركة؟",
+                        description: "هناك عدة مزايا لإجراء تجديد لناقل الحركة بدلاً من استبداله. أحد أهم العوامل هو أن تجديد ناقل الحركة هو بديل منخفض التكلفة للاستبدال الكامل. مع تكلفة وحدة ناقل حركة جديدة تماماً تزيد عن 15,000 دولار، فمن المنطقي فحص وإصلاح ناقل الحركة الحالي لديك. ومع ذلك، هناك بعض العلامات التي تشير إلى أن محركك يحتاج إلى تجديد:",
+                        signs: [
+                            "نقص زيت المحرك",
+                            "انخفاض كفاءة الوقود",
+                            "ارتفاع درجة حرارة المحرك",
+                            "دخان يتصاعد من أنبوب العادم",
+                            "صوت أنين",
+                            "انزلاق التروس",
+                            "ثقل الكلتش",
+                            "مقاومة في الحركة",
+                            "تسرب سائل ناقل الحركة"
+                        ],
+                        signsFooter: "لا تتردد في الاتصال بخبرائنا لإصلاح المحرك أو ناقل الحركة؛ فنحن نقدم لك فحصاً كاملاً للمحرك يجعل سيارتك تعمل كأنها جديدة.",
+                        cta: "تواصل معنا"
+                    },
+                    atRedDune: {
+                        title: "في ريد ديون",
+                        description: [
+                            "كلما واجهت مشكلة في المحرك أو ناقل الحركة، يجب أن تمنحه خدمة إصلاح عالية الجودة. في ورشتنا، يستخدم فريقنا المحترف أفضل المنتجات والخدمات لضمان بقاء سيارتك في أفضل حالاتها.",
+                            "في ريد ديون، ستقابل أكثر الفنيين احترافاً في هذا المجال، وهم مهرة وموهوبون وشغوفون بتجديد كل جزء في سيارتك. لا تفكر مرتين؛ دعنا نمنح سيارتك أفضل خدمات الإصلاح!"
+                        ],
+                        cta: "احجز الآن"
+                    }
                 },
                 recovery: {
                     title: "خدمة المساعدة",
@@ -1679,6 +1789,12 @@ export const translations = {
             brandsWeServe: "العلامات التجارية التي نخدمها",
             more: "المزيد...",
             brandsDisclaimer: "* الشعارات هي عناصر نائبة وليست شراكات رسمية."
+        },
+        workshop: {
+            hero: {
+                title: "الورشة",
+                description: "ورشتنا ذات المستوى العالمي مجهزة بأحدث التقنيات للتعامل مع أي تحدٍ في عالم السيارات. نحن نحافظ على بيئة نظيفة ومنظمة تعكس جودة العمل الذي نقدمه. سواء كان تعديلاً بسيطاً أو فحصاً شاملاً، سيارتك في أيدٍ أمينة."
+            }
         },
         spareParts: {
             hero: {
