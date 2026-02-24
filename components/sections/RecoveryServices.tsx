@@ -360,7 +360,7 @@ export const RecoveryServices = () => {
             </div>
 
             <div className="w-full lg:w-2/3 space-y-4" data-aos="fade-left">
-              {(t("recovery.faq.items") as any[]).map((faq, i) => (
+              {(t("recovery.faq.items") as unknown as any[]).map((faq, i) => (
                 <details key={i} className="group bg-white border border-gray-200 open:border-primary transition-all duration-300">
                   <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
                     <span className="font-bold uppercase tracking-tight text-lg pr-10">{faq.q}</span>
