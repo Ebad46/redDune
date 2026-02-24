@@ -217,7 +217,7 @@ export function Contact() {
                     {/* Map */}
                     <div className="lg:sticky lg:top-32 h-[600px] lg:h-[800px] w-full bg-gray-100 rounded-3xl overflow-hidden shadow-2xl shadow-gray-300/50 border-4 border-white mb-12 lg:mb-0 relative group" data-aos="fade-left" data-aos-duration="1000">
                         <iframe
-                            src={CONTACT_DATA.embedMapUrl}
+                            src="https://maps.google.com/maps?q=25.10978889465332,55.227561950683594&z=17&hl=en&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -228,7 +228,7 @@ export function Contact() {
                         />
                         <div className="absolute top-6 left-6 right-6 p-6 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                             <h3 className="font-heading font-bold text-xl mb-2">Our Location</h3>
-                            <p className="text-sm text-muted-foreground mb-4">{t(CONTACT_DATA.address)}</p>
+                            <p className="text-sm text-muted-foreground mb-4">https://www.google.com/maps?q=25.10978889465332,55.227561950683594&z=17&hl=en</p>
                             <Link
                                 href={CONTACT_DATA.googleMapsUrl}
                                 target="_blank"
