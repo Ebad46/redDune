@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from "next/image";
 import Link from "next/link";
@@ -155,10 +155,10 @@ export default function EngineManagementSystemPage() {
 
                 <div className="pt-4">
                   <h4 className="text-2xl font-bold mb-6 font-heading uppercase">
-                    {t("workshopPages.engineManagement.signs.title")}
+                    {t("workshopPages.engineManagement.ecu.symptomsTitle")}
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {(t("workshopPages.engineManagement.signs.items") as unknown as string[]).map((item, i) => (
+                    {(t("workshopPages.engineManagement.ecu.symptoms") as unknown as string[]).map((item, i) => (
                       <div
                         key={i}
                         className="flex items-center gap-3 bg-white p-4 shadow-sm border border-gray-100 hover:border-primary/30 transition-colors"

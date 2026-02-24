@@ -310,7 +310,7 @@ export default function ComfortSystemPage() {
             us directly for a free consultation.
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <Link href="/#contact">
+            <Link href="/services/workshop/comfort-system/#contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"

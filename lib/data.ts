@@ -2,7 +2,7 @@ import {
     Car, Settings, BarChart3, AppWindow, ShieldCheck, Zap,
     Cpu, CircleDot, Disc,
     Armchair, Cog,
-    MoveVertical
+    MoveVertical, Battery, Clock, RotateCcw
 } from "lucide-react";
 
 export const SITE_CONFIG = {
@@ -831,3 +831,67 @@ export const ENGINEERING_PAGE_DATA = [
         ]
     }
 ];
+
+export const SPARE_PARTS_DATA = {
+    hero: {
+        title1: "spareParts.hero.title1",
+        title2: "spareParts.hero.title2",
+        description: "spareParts.hero.description",
+        image: "/images/spare/part4.jpeg",
+        cta: "spareParts.hero.inquireNow",
+    },
+    about: {
+        title1: "spareParts.about.title1",
+        title2: "spareParts.about.title2",
+        description: "spareParts.about.description",
+        image: "/images/spare/part5.jpg",
+        itemsKey: "spareParts.about.items",
+        cta: "spareParts.about.talkToExpert",
+    },
+    warranty: {
+        title1: "spareParts.warranty.title1",
+        title2: "spareParts.warranty.title2",
+        items: [
+            { key: "certified", icon: ShieldCheck },
+            { key: "battery", icon: Battery },
+            { key: "leak", icon: Zap },
+            { key: "fast", icon: Clock },
+            { key: "longTerm", icon: RotateCcw },
+            { key: "dealer", icon: Settings },
+        ],
+    },
+    solutions: {
+        title1: "spareParts.solutions.title1",
+        title2: "spareParts.solutions.title2",
+        items: [
+            { key: "mechanical", imageLabel: "Engine Components", image: "/images/spare/part1.jpg" },
+            { key: "electrical", imageLabel: "Electrical Wiring" },
+            { key: "battery", imageLabel: "Battery Replacement" },
+            { key: "restoration", imageLabel: "Engine Repair" },
+        ],
+        cta: "spareParts.solutions.bookService",
+    },
+    process: {
+        title1: "spareParts.process.title1",
+        title2: "spareParts.process.title2",
+        itemsKey: "spareParts.process.steps",
+    },
+    whyChoose: {
+        title1: "spareParts.whyRedDune.title1",
+        title2: "spareParts.whyRedDune.title2",
+        imageLabel: "Workshop Section Area",
+        items: ["specialists", "equipment", "inventory", "facility"],
+    },
+    specialization: {
+        title: "spareParts.weSpecialize",
+        brands: [
+            "audi", "bmw", "mercedes", "porsche", "ferrari", "bentley",
+            "rangeRover", "rollsRoyce", "lamborghini", "jaguar", "mclaren", "volkswagen"
+        ]
+    },
+    faq: {
+        title1: "spareParts.faq.title1",
+        title2: "spareParts.faq.title2",
+        itemsKey: "spareParts.faq.items",
+    }
+};

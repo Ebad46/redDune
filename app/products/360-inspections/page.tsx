@@ -34,7 +34,7 @@ export default function InspectionsPage() {
 
   return (
     <main
-      className="min-h-screen bg-background text-white font-[family-name:var(--font-inter)] overflow-x-hidden selection:bg-primary selection:text-white"
+      className="min-h-screen bg-background text-black font-[family-name:var(--font-inter)] overflow-x-hidden selection:bg-primary selection:text-black"
       dir={direction}
     >
       <Header />
@@ -58,7 +58,7 @@ export default function InspectionsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-[family-name:var(--font-playfair)] font-bold text-white mb-6 drop-shadow-lg tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-[family-name:var(--font-playfair)] font-bold text-black mb-6 drop-shadow-lg tracking-tight">
               {t("inspections.hero.title1")}{" "}
               <span className="text-primary">
                 {t("inspections.hero.title2")}
@@ -68,8 +68,8 @@ export default function InspectionsPage() {
               {t("inspections.hero.description")}
             </p>
             <div className="flex justify-center">
-              <Link href="#booking">
-                <Button className="bg-primary text-white hover:bg-red-700 text-xl px-10 py-6 rounded-none font-bold tracking-widest transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(209,50,50,0.4)]">
+              <Link href="/contact">
+                <Button className="bg-primary text-black hover:bg-red-700 text-xl px-10 py-6 rounded-none font-bold tracking-widest transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(209,50,50,0.4)]">
                   {t("inspections.hero.bookNow")}
                 </Button>
               </Link>
@@ -83,7 +83,7 @@ export default function InspectionsPage() {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-white leading-tight">
+              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-black leading-tight">
                 {t("inspections.prePurchase.title1")}{" "}
                 <span className="text-primary">
                   {t("inspections.prePurchase.title2")}
@@ -115,7 +115,7 @@ export default function InspectionsPage() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-white">
+              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-black">
                 {t("inspections.whyPickUs.title1")}{" "}
                 <span className="text-primary">
                   {t("inspections.whyPickUs.title2")}
@@ -146,7 +146,7 @@ export default function InspectionsPage() {
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-black mb-4">
               {t("inspections.highlights.title1")}{" "}
               <span className="text-primary">
                 {t("inspections.highlights.title2")}
@@ -160,10 +160,10 @@ export default function InspectionsPage() {
                 key={idx}
                 className="bg-neutral-950 p-8 border border-white/5 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
                   <item.icon size={28} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white font-[family-name:var(--font-playfair)]">
+                <h3 className="text-xl font-bold mb-3 text-black font-[family-name:var(--font-playfair)]">
                   {t(`inspections.highlights.items.${item.key}.title`)}
                 </h3>
                 <p className="text-gray-500 group-hover:text-gray-400 transition-colors">
@@ -180,7 +180,7 @@ export default function InspectionsPage() {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-white">
+              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-black">
                 {t("inspections.howInspect.title1")}{" "}
                 <span className="text-primary">
                   {t("inspections.howInspect.title2")}
@@ -211,7 +211,7 @@ export default function InspectionsPage() {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-white">
+              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-black">
                 {t("inspections.buyBest.title1")}{" "}
                 <span className="text-primary">
                   {t("inspections.buyBest.title2")}
@@ -236,52 +236,7 @@ export default function InspectionsPage() {
           </div>
         </div>
       </section>
-
-      {/* 8️⃣ Brands We Serve */}
-      <section className="py-24 bg-background border-t border-white/5">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-primary uppercase tracking-widest font-bold mb-10 text-sm">
-            {t("inspections.brandsWeServe")}
-          </p>
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4">
-            {[
-              { key: "audi", label: "Audi" },
-              { key: "bmw", label: "BMW" },
-              { key: "mercedes", label: "Mercedes" },
-              { key: "bentley", label: "Bentley" },
-              { key: "ferrari", label: "Ferrari" },
-              { key: "jaguar", label: "Jaguar" },
-              { key: "lamborghini", label: "Lamborghini" },
-              { key: "maserati", label: "Maserati" },
-              { key: "maybach", label: "Maybach" },
-              { key: "mclaren", label: "McLaren" },
-              { key: "porsche", label: "Porsche" },
-              { key: "rangeRover", label: "Range Rover" },
-              { key: "rollsRoyce", label: "Rolls Royce" },
-              { key: "smart", label: "Smart" },
-              { key: "vw", label: "VW" },
-              { key: "alfaRomeo", label: "Alfa Romeo" },
-              { key: "astonMartin", label: "Aston Martin" },
-              { key: "more", label: "More..." },
-            ].map((brand, idx) => (
-              <div
-                key={idx}
-                className="h-20 bg-neutral-950 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all group"
-              >
-                <span className="text-xs md:text-sm text-gray-600 font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                  {t(`brands.names.${brand.key}`)}
-                </span>
-              </div>
-            ))}
-          </div>
-          <p className="text-gray-600 text-xs mt-8">
-            {t("inspections.brandsDisclaimer")}
-          </p>
-        </div>
-      </section>
-      <div className="md:mx-[5%]">
-        <Contact />
-      </div>
+      <Contact />
       <Footer />
     </main>
   );

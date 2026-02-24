@@ -16,7 +16,10 @@ export default function EngineGearboxPage() {
       <section className="py-20 px-6 lg:px-20 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT SIDE */}
-          <div className="flex flex-col items-start space-y-6">
+          <div
+            className="flex flex-col items-start space-y-6"
+            data-aos="fade-right"
+          >
             <span className="text-[#E10600] font-bold tracking-widest uppercase text-sm">
               Red Dune German Experts Overhauling
             </span>
@@ -42,7 +45,7 @@ export default function EngineGearboxPage() {
               </p>
             </div>
             <Link
-              href="/#contact"
+              href="/services/enginegear#contact"
               className="inline-block bg-[#E10600] text-white font-bold py-3 px-8 uppercase text-sm tracking-wider hover:bg-black transition-colors duration-300"
             >
               Contact us
@@ -50,7 +53,10 @@ export default function EngineGearboxPage() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="relative h-[500px] w-full">
+          <div
+            className="relative h-[500px] w-full"
+            data-aos="fade-left"
+          >
             <Image
               src="/images/engi/gear (3).jpg"
               alt="Technician working on gearbox"
@@ -65,7 +71,10 @@ export default function EngineGearboxPage() {
       <section className="py-20 px-6 lg:px-20 container mx-auto bg-gray-50/50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT: Image */}
-          <div className="relative h-[600px] w-full">
+          <div
+            className="relative h-[600px] w-full"
+            data-aos="fade-right"
+          >
             <Image
               src="/images/engi/gear (1).jpg"
               alt="Mechanic working on engine"
@@ -75,7 +84,10 @@ export default function EngineGearboxPage() {
           </div>
 
           {/* RIGHT: Text */}
-          <div className="flex flex-col items-start space-y-6">
+          <div
+            className="flex flex-col items-start space-y-6"
+            data-aos="fade-left"
+          >
             <span className="text-[#E10600] font-bold tracking-widest uppercase text-sm">
               Red Dune Overhauling
             </span>
@@ -99,7 +111,7 @@ export default function EngineGearboxPage() {
               </p>
             </div>
             <Link
-              href="/#contact"
+              href="/services/enginegear#contact"
               className="inline-block bg-[#E10600] text-white font-bold py-3 px-8 uppercase text-sm tracking-wider hover:bg-black transition-colors duration-300"
             >
               Reach us now
@@ -112,7 +124,10 @@ export default function EngineGearboxPage() {
       <section className="py-20 px-6 lg:px-20 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT: Text */}
-          <div className="flex flex-col items-start space-y-6">
+          <div
+            className="flex flex-col items-start space-y-6"
+            data-aos="fade-right"
+          >
             <h2 className="text-3xl md:text-4xl font-extrabold text-black leading-tight">
               Why Get A Gearbox & Engine Overhauling Service from Us?
             </h2>
@@ -140,7 +155,7 @@ export default function EngineGearboxPage() {
               </p>
             </div>
             <Link
-              href="/#contact"
+              href="/services/enginegear#contact"
               className="inline-block bg-[#E10600] text-white font-bold py-3 px-8 uppercase text-sm tracking-wider hover:bg-black transition-colors duration-300"
             >
               Book your appointment
@@ -148,7 +163,10 @@ export default function EngineGearboxPage() {
           </div>
 
           {/* RIGHT: Image */}
-          <div className="relative h-[500px] w-full">
+          <div
+            className="relative h-[500px] w-full"
+            data-aos="fade-left"
+          >
             <Image
               src="/images/transmission.jpg"
               alt="Close-up of gearbox part"
@@ -301,7 +319,10 @@ export default function EngineGearboxPage() {
                 I'll stick to Text Left as per "LEFT: Heading..." instruction.
              */}
           {/* LEFT: Text & Bullets */}
-          <div className="flex flex-col items-start space-y-6">
+          <div
+            className="flex flex-col items-start space-y-6"
+            data-aos="fade-up"
+          >
             <h2 className="text-3xl md:text-4xl font-extrabold text-black leading-tight">
               When To Get A Gearbox & Engine Overhauling Service?
             </h2>
@@ -331,7 +352,12 @@ export default function EngineGearboxPage() {
                   "Resistance",
                   "Leaking transmission fluid",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-center space-x-2">
+                  <li
+                    key={index}
+                    className="flex items-center space-x-2"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                  >
                     <span className="w-2 h-2 bg-[#E10600] rounded-full"></span>
                     <span>{item}</span>
                   </li>
@@ -344,7 +370,7 @@ export default function EngineGearboxPage() {
               </p>
             </div>
             <Link
-              href="/#contact"
+              href="/services/enginegear#contact"
               className="inline-block bg-[#E10600] text-white font-bold py-3 px-8 uppercase text-sm tracking-wider hover:bg-black transition-colors duration-300"
             >
               Get in touch
@@ -352,7 +378,10 @@ export default function EngineGearboxPage() {
           </div>
 
           {/* RIGHT: Image */}
-          <div className="relative h-[600px] w-full">
+          <div
+            className="relative h-[600px] w-full"
+            data-aos="zoom-in"
+          >
             <Image
               src="/images/engi/gear (2).jpg"
               alt="Red mechanical engine stands"
@@ -367,7 +396,10 @@ export default function EngineGearboxPage() {
       <section className="py-20 px-6 lg:px-20 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT: Text */}
-          <div className="flex flex-col items-start space-y-6">
+          <div
+            className="flex flex-col items-start space-y-6"
+            data-aos="fade-right"
+          >
             <h2 className="text-3xl md:text-4xl font-extrabold text-black leading-tight">
               At Red Dune
             </h2>
@@ -387,7 +419,7 @@ export default function EngineGearboxPage() {
               </p>
             </div>
             <Link
-              href="/#contact"
+              href="/services/enginegear#contact"
               className="inline-block bg-[#E10600] text-white font-bold py-3 px-8 uppercase text-sm tracking-wider hover:bg-black transition-colors duration-300"
             >
               Book Now
@@ -395,7 +427,10 @@ export default function EngineGearboxPage() {
           </div>
 
           {/* RIGHT: Image */}
-          <div className="relative h-[500px] w-full">
+          <div
+            className="relative h-[500px] w-full"
+            data-aos="fade-left"
+          >
             <Image
               src="/images/services.jpg"
               alt="Transmission gearbox"

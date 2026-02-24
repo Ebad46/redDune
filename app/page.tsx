@@ -13,7 +13,6 @@ import { Brands } from "@/components/sections/Brands";
 import { Features } from "@/components/sections/Features";
 import { Stats } from "@/components/sections/Stats";
 import { Contact } from "@/components/sections/Contact";
-import SplashScreen from "@/components/sections/SplashScreen";
 
 export default function Home() {
   const [isFinished, setIsFinished] = useState(false);
@@ -32,22 +31,16 @@ export default function Home() {
   }, [isFinished]);
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      {!isFinished && <SplashScreen onFinish={() => setIsFinished(true)} />}
-
-      {isFinished && (
-        <div className="animate-fadeIn">
-          <Header />
-          <Hero />
-          <PremiumWorkshop />
-          <Brands />
-          <Services />
-          <Stats />
-          <Features />
-          <Contact />
-          <Footer />
-        </div>
-      )}
-    </main>
+    <div className="animate-fadeIn">
+      <Header />
+      <Hero />
+      <PremiumWorkshop />
+      <Brands />
+      <Services />
+      <Stats />
+      <Features />
+      <Contact />
+      <Footer />
+    </div>
   );
 }

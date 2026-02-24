@@ -61,7 +61,7 @@ export default function ServiceContractPage() {
 
   return (
     <main
-      className="min-h-screen bg-background text-white font-[family-name:var(--font-inter)] overflow-x-hidden selection:bg-primary selection:text-white"
+      className="min-h-screen bg-background text-black font-[family-name:var(--font-inter)] overflow-x-hidden selection:bg-primary selection:text-black"
       dir={direction}
     >
       <Header />
@@ -86,7 +86,7 @@ export default function ServiceContractPage() {
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-playfair)] font-bold text-primary leading-tight mb-6 drop-shadow-lg">
               {t("serviceContract.hero.title1")} <br />
-              <span className="text-white">
+              <span className="text-black">
                 {t("serviceContract.hero.title2")}
               </span>
             </h1>
@@ -94,15 +94,15 @@ export default function ServiceContractPage() {
               {t("serviceContract.hero.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#contact">
-                <Button className="bg-primary text-white hover:bg-red-700 text-lg px-8 py-6 rounded-none font-bold tracking-wide transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(209,50,50,0.3)]">
+              <Link href="/contact">
+                <Button className="bg-primary text-black hover:bg-red-700 text-lg px-8 py-6 rounded-none font-bold tracking-wide transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(209,50,50,0.3)]">
                   {t("serviceContract.hero.getQuote")}
                 </Button>
               </Link>
               <Link href="#benefits">
                 <Button
                   variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 text-lg px-8 py-6 rounded-none font-semibold tracking-wide transition-all duration-300"
+                  className="border-white/20 text-black hover:bg-white/10 text-lg px-8 py-6 rounded-none font-semibold tracking-wide transition-all duration-300"
                 >
                   {t("serviceContract.hero.viewBenefits")}
                 </Button>
@@ -121,7 +121,7 @@ export default function ServiceContractPage() {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-white">
+              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-black">
                 {t("serviceContract.whatIs.title1")} <br />
                 <span className="text-primary">
                   {t("serviceContract.whatIs.title2")}
@@ -131,7 +131,7 @@ export default function ServiceContractPage() {
               <p className="text-gray-400 text-lg leading-relaxed text-justify">
                 {t("serviceContract.whatIs.description")}
               </p>
-              <Link href="#contact">
+              <Link href="/contact">
                 <span className="inline-flex items-center text-primary font-bold uppercase tracking-widest hover:text-red-400 transition-colors cursor-pointer group">
                   {t("serviceContract.whatIs.learnMore")}
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">
@@ -158,7 +158,7 @@ export default function ServiceContractPage() {
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-black mb-4">
               {t("serviceContract.whyChoose.title1")}{" "}
               <span className="text-primary">
                 {t("serviceContract.whyChoose.title2")}
@@ -173,10 +173,10 @@ export default function ServiceContractPage() {
                   key={idx}
                   className="bg-neutral-950 p-8 border border-white/5 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1"
                 >
-                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
                     <Icon size={28} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white font-[family-name:var(--font-playfair)]">
+                  <h3 className="text-xl font-bold mb-3 text-black font-[family-name:var(--font-playfair)]">
                     {t(`serviceContract.whyChoose.items.${key}.title`)}
                   </h3>
                   <p className="text-gray-500 group-hover:text-gray-400 transition-colors">
@@ -200,7 +200,7 @@ export default function ServiceContractPage() {
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <div className="lg:w-1/2 space-y-8">
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-white">
+              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4 text-black">
                 {t("serviceContract.howHelps.title1")}{" "}
                 <span className="text-primary">
                   {t("serviceContract.howHelps.title2")}
@@ -217,7 +217,7 @@ export default function ServiceContractPage() {
                         <Icon className="text-primary" size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-1 text-white">
+                        <h4 className="font-bold text-lg mb-1 text-black">
                           {t(`serviceContract.howHelps.items.${key}.title`)}
                         </h4>
                         <p className="text-gray-400">
@@ -242,48 +242,11 @@ export default function ServiceContractPage() {
         </div>
       </section>
 
-      {/* 7️⃣ Supported Car Brands (Grey Placeholders) */}
-      <section className="py-24 bg-neutral-900/30 border-y border-white/5">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-primary uppercase tracking-widest font-bold mb-10 text-sm">
-            {t("serviceContract.supportedBrands")}
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[
-              { key: "audi", label: "Audi" },
-              { key: "bmw", label: "BMW" },
-              { key: "mercedes", label: "Mercedes-Benz" },
-              { key: "porsche", label: "Porsche" },
-              { key: "ferrari", label: "Ferrari" },
-              { key: "bentley", label: "Bentley" },
-              { key: "rangeRover", label: "Range Rover" },
-              { key: "rollsRoyce", label: "Rolls Royce" },
-              { key: "lamborghini", label: "Lamborghini" },
-              { key: "jaguar", label: "Jaguar" },
-              { key: "mclaren", label: "McLaren" },
-            ].map((brand, idx) => (
-              <div
-                key={idx}
-                className="h-24 bg-neutral-950 border border-white/10 flex items-center justify-center hover:border-primary/50 hover:shadow-[0_0_15px_rgba(209,50,50,0.1)] transition-all group"
-              >
-                <span className="text-gray-600 font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                  {t(`brands.names.${brand.key}`)}
-                </span>
-              </div>
-            ))}
-            <div className="h-24 bg-neutral-950 border border-white/10 flex items-center justify-center hover:border-primary/50 transition-all group">
-              <span className="text-gray-600 font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                {t("brands.names.more")}
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-24 bg-background px-6 mb-20">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-center mb-16 text-white">
+          <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-center mb-16 text-black">
             {t("serviceContract.faq.title1")}{" "}
             <span className="text-primary">
               {t("serviceContract.faq.title2")}

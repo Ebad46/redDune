@@ -95,7 +95,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  href="/services/engineering"
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
                 >
                   {t("services.items.engineering.title")}
@@ -103,7 +103,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services/bodyshop"
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
                 >
                   {t("services.items.bodyShop.title")}
@@ -111,7 +111,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services/enginegear"
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
                 >
                   {t("services.items.engineGearbox.title")}
@@ -119,7 +119,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services/workshop"
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
                 >
                   {t("services.items.workshop.title")}
@@ -127,7 +127,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services/recovery"
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
                 >
                   {t("services.items.recovery.title")}
