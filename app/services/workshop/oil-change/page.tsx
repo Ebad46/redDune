@@ -39,7 +39,7 @@ export default function OilChangePage() {
               </p>
 
               <div>
-                <Link href="#contact">
+                <Link href="/contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
                     {t("workshopPages.oilChange.hero.button")}
                   </Button>
@@ -104,7 +104,7 @@ export default function OilChangePage() {
                 ))}
               </ul>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.oilChange.service.button")}
                 </Button>
@@ -178,7 +178,7 @@ export default function OilChangePage() {
             <p className="text-gray-600 leading-[1.7] text-lg">
               {t("workshopPages.oilChange.signs.disclaimer")}
             </p>
-            <Link href="#contact" className="inline-block w-full sm:w-auto">
+            <Link href="/contact" className="inline-block w-full sm:w-auto">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-10 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                 {t("workshopPages.oilChange.signs.button")}
               </Button>
@@ -220,7 +220,7 @@ export default function OilChangePage() {
                 ))}
               </ul>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.oilChange.expect.button")}
                 </Button>
@@ -288,7 +288,7 @@ export default function OilChangePage() {
                 ))}
               </div>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.oilChange.oils.button")}
                 </Button>
@@ -346,7 +346,7 @@ export default function OilChangePage() {
                 ))}
               </div>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.oilChange.whyUs.button")}
                 </Button>
@@ -389,7 +389,7 @@ export default function OilChangePage() {
             {t("workshopPages.oilChange.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-sm font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"

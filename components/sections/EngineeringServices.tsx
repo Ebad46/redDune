@@ -117,9 +117,6 @@ export function EngineeringServices() {
             <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8 font-light">
               {t(engineeringData.description)}
             </p>
-            <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
-              {t("engineeringSection.readMore")}
-            </Button>
           </div>
         </div>
 
@@ -144,10 +141,10 @@ export function EngineeringServices() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-secondary uppercase">
-              {t("engineeringData.mainTitle")}
+              {t("ENGINEERING AND PROGRAMMING")}
             </h2>
             <p className="font-sans text-muted-foreground max-w-2xl mx-auto">
-              {t("engineeringData.mainDescription")}
+              {t("Our Services About")}
             </p>
           </div>
 

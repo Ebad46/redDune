@@ -47,7 +47,7 @@ export default function EngineManagementSystemPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8">
-              <Link href="#contact" className="w-full sm:w-auto">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg px-12 py-6 rounded-none uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.3)] hover:shadow-[0_0_30px_rgba(209,50,50,0.5)] transition-all"
@@ -115,7 +115,7 @@ export default function EngineManagementSystemPage() {
 
                 <div className="pt-4">
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="inline-block w-full sm:w-auto"
                   >
                     <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-none px-8 py-6 uppercase tracking-wider w-full sm:w-auto transition-all">
@@ -181,7 +181,7 @@ export default function EngineManagementSystemPage() {
 
                 <div className="pt-4">
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="inline-block w-full sm:w-auto"
                   >
                     <Button className="bg-black hover:bg-neutral-800 text-white font-bold rounded-none px-8 py-6 uppercase tracking-wider w-full transition-all">
@@ -250,7 +250,7 @@ export default function EngineManagementSystemPage() {
 
                 <div className="pt-6">
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="inline-block w-full sm:w-auto"
                   >
                     <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-none px-8 py-6 uppercase tracking-wider w-full sm:w-auto transition-all">
@@ -319,7 +319,7 @@ export default function EngineManagementSystemPage() {
 
                 <div className="pt-6">
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="inline-block w-full sm:w-auto"
                   >
                     <Button className="bg-black hover:bg-neutral-800 text-white font-bold rounded-none px-8 py-6 uppercase tracking-wider w-full transition-all">
@@ -398,7 +398,7 @@ export default function EngineManagementSystemPage() {
 
                 <div className="pt-6">
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="inline-block w-full sm:w-auto"
                   >
                     <Button className="bg-primary hover:bg-primary/90 text-white font-bold rounded-none px-8 py-6 uppercase tracking-wider w-full sm:w-auto transition-all shadow-xl hover:shadow-primary/30">
@@ -444,7 +444,7 @@ export default function EngineManagementSystemPage() {
             {t("workshopPages.engineManagement.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white px-12 py-6 rounded-none font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.4)]"

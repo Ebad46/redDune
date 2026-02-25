@@ -87,8 +87,7 @@ export default function InspectionsPage() {
                 {t("inspections.prePurchase.title1")}{" "}
                 <span className="text-primary">
                   {t("inspections.prePurchase.title2")}
-                </span>{" "}
-                {t("inspections.prePurchase.title3")}
+                </span>
               </h2>
               <div className="w-24 h-1 bg-primary" />
               <p className="text-gray-400 text-lg leading-relaxed text-justify">

@@ -40,7 +40,7 @@ export default function WheelAlignmentPage() {
               </p>
 
               <div>
-                <Link href="#contact">
+                <Link href="/contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
                     {t("workshopPages.wheelAlignment.hero.button")}
                   </Button>
@@ -119,7 +119,7 @@ export default function WheelAlignmentPage() {
                 ))}
               </div>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.wheelAlignment.whyUs.button")}
                 </Button>
@@ -181,7 +181,7 @@ export default function WheelAlignmentPage() {
                 ))}
               </ul>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.wheelAlignment.frequency.button")}
                 </Button>
@@ -254,7 +254,7 @@ export default function WheelAlignmentPage() {
             <p className="text-lg text-gray-600 leading-[1.7]">
               {t("workshopPages.wheelAlignment.signs.description")}
             </p>
-            <Link href="#contact" className="inline-block w-full sm:w-auto">
+            <Link href="/contact" className="inline-block w-full sm:w-auto">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                 {t("workshopPages.wheelAlignment.signs.button")}
               </Button>
@@ -280,7 +280,7 @@ export default function WheelAlignmentPage() {
             {t("workshopPages.wheelAlignment.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"

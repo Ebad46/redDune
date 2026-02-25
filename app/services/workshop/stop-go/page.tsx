@@ -39,7 +39,7 @@ export default function StopGoPage() {
               </p>
 
               <div>
-                <Link href="#contact">
+                <Link href="/contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
                     {t("workshopPages.stopGo.hero.button")}
                   </Button>
@@ -98,7 +98,7 @@ export default function StopGoPage() {
                 </p>
               </div>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.stopGo.care.button")}
                 </Button>
@@ -160,7 +160,7 @@ export default function StopGoPage() {
                 ))}
               </ul>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.stopGo.whyUs.button")}
                 </Button>
@@ -233,7 +233,7 @@ export default function StopGoPage() {
             <p className="text-lg text-gray-600 leading-[1.7]">
               {t("workshopPages.stopGo.included.description")}
             </p>
-            <Link href="#contact" className="inline-block w-full sm:w-auto">
+            <Link href="/contact" className="inline-block w-full sm:w-auto">
               <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                 {t("workshopPages.stopGo.included.button")}
               </Button>
@@ -284,7 +284,7 @@ export default function StopGoPage() {
                 ))}
               </div>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.stopGo.maintenance.button")}
                 </Button>
@@ -333,7 +333,7 @@ export default function StopGoPage() {
               </p>
             </div>
             <div>
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.stopGo.perfection.button")}
                 </Button>
@@ -360,7 +360,7 @@ export default function StopGoPage() {
             {t("workshopPages.stopGo.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"

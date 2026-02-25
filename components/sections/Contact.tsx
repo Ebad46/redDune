@@ -65,11 +65,11 @@ export function Contact() {
                     {/* Contact Info & Form */}
                     <div className="space-y-10">
                         <div data-aos="fade-right" data-aos-duration="800">
-                            <div className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-primary uppercase bg-primary/10 rounded-full">
-                                {t("contact.prefix")}
-                            </div>
                             <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight mb-6 uppercase">
-                                {t("contact.title")} <span className="text-primary">US</span>
+                                {t("contact.prefix")}{" "}
+                                <span className="text-primary">
+                                    {t("contact.title")}
+                                </span>
                             </h2>
                             <p className="font-sans text-muted-foreground text-xl leading-relaxed max-w-xl">
                                 {t("contact.description")}

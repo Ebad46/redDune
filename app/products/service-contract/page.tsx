@@ -93,21 +93,6 @@ export default function ServiceContractPage() {
             <p className="text-gray-300 text-lg md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
               {t("serviceContract.hero.description")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button className="bg-primary text-black hover:bg-red-700 text-lg px-8 py-6 rounded-none font-bold tracking-wide transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(209,50,50,0.3)]">
-                  {t("serviceContract.hero.getQuote")}
-                </Button>
-              </Link>
-              <Link href="#benefits">
-                <Button
-                  variant="outline"
-                  className="border-white/20 text-black hover:bg-white/10 text-lg px-8 py-6 rounded-none font-semibold tracking-wide transition-all duration-300"
-                >
-                  {t("serviceContract.hero.viewBenefits")}
-                </Button>
-              </Link>
-            </div>
           </motion.div>
         </div>
 
@@ -256,12 +241,12 @@ export default function ServiceContractPage() {
           <div className="space-y-4">
             {faqItems.map(
               (faq: { question: string; answer: string }, index: number) => (
-                <div key={index} className="border-b border-white/10">
+                <div key={index} className="border-b border-white/10 text-black">
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full text-left py-6 flex justify-between items-center hover:text-primary transition-colors focus:outline-none"
                   >
-                    <span className="text-lg font-medium text-gray-200">
+                    <span className="text-lg font-medium text-black">
                       {faq.question}
                     </span>
                     <ChevronDown

@@ -52,7 +52,7 @@ export function BodyShopServices() {
             duration: 1,
             scrollTrigger: {
               trigger: bodyShopSectionRef.current,
-              start: "top 70%",
+              start: "top 90%", // Trigger earlier on mobile/scroll
             },
           },
         );
@@ -65,7 +65,7 @@ export function BodyShopServices() {
             duration: 1,
             scrollTrigger: {
               trigger: bodyShopSectionRef.current,
-              start: "top 70%",
+              start: "top 90%", // Trigger earlier on mobile/scroll
             },
           },
         );
@@ -126,7 +126,7 @@ export function BodyShopServices() {
 
         {/* Image Side (Right) */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
-          <div className="bs-image opacity-0 w-full h-full relative overflow-hidden group">
+          <div className="bs-image opacity-0 w-full h-full relative overflow-hidden group" data-aos-offset="0">
             <div className="absolute inset-0 bg-neutral-200" />
             <Image
               src={bodyShopData.image}

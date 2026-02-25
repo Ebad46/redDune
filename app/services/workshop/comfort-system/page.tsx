@@ -40,7 +40,7 @@ export default function ComfortSystemPage() {
               </p>
 
               <div>
-                <Link href="#contact">
+                <Link href="/contact">
                   <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-10 py-6 text-base uppercase tracking-wider w-full sm:w-auto transition-all">
                     {t("workshopPages.comfortSystem.hero.button")}
                   </Button>
@@ -118,7 +118,7 @@ export default function ComfortSystemPage() {
                 {t("workshopPages.comfortSystem.ac.disclaimer")}
               </p>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.comfortSystem.ac.button")}
                 </Button>
@@ -186,7 +186,7 @@ export default function ComfortSystemPage() {
                 </ul>
               </div>
 
-              <Link href="#contact" className="inline-block w-full sm:w-auto">
+              <Link href="/contact" className="inline-block w-full sm:w-auto">
                 <Button className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-8 py-5 uppercase tracking-wider w-full sm:w-auto transition-all">
                   {t("workshopPages.comfortSystem.suspension.button")}
                 </Button>
@@ -260,7 +260,7 @@ export default function ComfortSystemPage() {
               {
                 title: "Brake System",
                 desc: "Complete brake inspection, pad & rotor replacement, and brake fluid service for total stopping confidence.",
-                href: "#contact",
+                href: "/contact",
               },
             ].map((s, i) => (
               <div
@@ -310,7 +310,7 @@ export default function ComfortSystemPage() {
             us directly for a free consultation.
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
-            <Link href="/services/workshop/comfort-system/#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"

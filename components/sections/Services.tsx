@@ -41,49 +41,48 @@ export function Services() {
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {displayServices.map((service, index) => (
-                        <div
-                            key={service.id}
-                            className="group relative h-[420px] bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                            data-aos="fade-up"
-                            data-aos-delay={index * 100}
-                            data-aos-duration="800"
-                        >
+                        <Link href={service.link || "/contact"} className="inline-block relative w-fit mb-3">
+                            <div
+                                key={service.id}
+                                className="group relative h-[420px] bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                                data-aos-duration="800"
+                            >
+                                {/* Image Container */}
+                                <div className="h-1/2 w-full relative overflow-hidden">
+                                    <Link href={service.link || "/contact"}>
+                                        <Image
+                                            src={service.image}
+                                            alt={service.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+                                    </Link>
+                                    {/* Category Tag */}
+                                    <div className="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+                                        Service
+                                    </div>
+                                </div>
+                                {/* Content Container */}
+                                <div className="h-fit p-8 flex flex-col relative">
+                                    {/* Title with underline effect */}
+                                    <Link href={service.link || "/contact"} className="inline-block relative w-fit mb-3">
+                                        <h3 className="font-heading text-xl font-bold text-secondary uppercase tracking-tight group-hover:text-primary transition-colors">
+                                            {service.title}
+                                        </h3>
+                                        <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
+                                    </Link>
 
-                            {/* Image Container */}
-                            <div className="h-1/2 w-full relative overflow-hidden">
-                                <Link href={service.link || "/contact"}>
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
-                                </Link>
-                                {/* Category Tag */}
-                                <div className="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
-                                    Service
+                                    <p className="font-sans text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-6 grow">
+                                        {service.description}
+                                    </p>
                                 </div>
                             </div>
-
-                            {/* Content Container */}
-                            <div className="h-1/2 p-8 flex flex-col relative">
-                                {/* Title with underline effect */}
-                                <Link href={service.link || "/contact"} className="inline-block relative w-fit mb-3">
-                                    <h3 className="font-heading text-xl font-bold text-secondary uppercase tracking-tight group-hover:text-primary transition-colors">
-                                        {service.title}
-                                    </h3>
-                                    <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
-                                </Link>
-
-                                <p className="font-sans text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-6 grow">
-                                    {service.description}
-                                </p>
-                            </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
-
                 {/* View All Button */}
                 <div className="mt-16 text-center" data-aos="fade-up" data-aos-duration="800">
                     <Link href="/services">
