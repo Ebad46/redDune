@@ -47,24 +47,24 @@ export function Footer() {
               {t("footer.description")}
             </p>
             <div className="flex gap-4 pt-2">
-              <a
+              <Link
                 href="#"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Facebook size={16} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Instagram size={16} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
               >
                 <Twitter size={16} />
-              </a>
+              </Link>
             </div>
           </div>
 

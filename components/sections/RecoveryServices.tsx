@@ -41,10 +41,10 @@ export const RecoveryServices = () => {
                     {t("recovery.hero.bookNow")}
                   </Button>
                 </Link>
-                <a href="tel:0501116000" className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-neutral-800 transition-colors w-full sm:w-auto">
+                <Link href="tel:0501116000" className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-neutral-800 transition-colors w-full sm:w-auto">
                   <Phone className="w-5 h-5 text-primary" />
                   {t("recovery.hero.callNow")}
-                </a>
+                </Link>
               </div>
             </div>
 

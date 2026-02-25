@@ -72,14 +72,14 @@ export function Header() {
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex gap-6">
-            <a href="tel:+971567765665" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Link href="tel:+971567765665" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone size={14} className="text-primary" />
               <span dir="ltr">+971 56 776 5665</span>
-            </a>
-            <a href="https://wa.me/971567765665" className="flex items-center gap-2 hover:text-green-500 transition-colors">
+            </Link>
+            <Link href="https://wa.me/971567765665" className="flex items-center gap-2 hover:text-green-500 transition-colors">
               <MessageCircle size={14} className="text-green-500" />
               <span>{t("nav.whatsapp")}</span>
-            </a>
+            </Link>
           </div>
           <div className="hidden md:flex gap-4 opacity-80">
             <span>{t("nav.workingHours")}</span>

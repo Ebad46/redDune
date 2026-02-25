@@ -31,9 +31,9 @@ export function Hero() {
             clipPath: "polygon(55% 0, 100% 0, 100% 100%, 35% 100%)",
           }}
         >
-          <div className="absolute inset-0 shadow-2xs shadow-red-500">
+          <div className="absolute inset-0 shadow-2xs shadow-red-500 -mr-80">
             <Image
-              src="/BG2.png"
+              src="/BG.png"
               alt="Engine Background"
               fill
               className="object-cover opacity-40"
@@ -135,7 +135,7 @@ export function Hero() {
         {/* Right Part - Car Image (goes to top on mobile) */}
         <div
           className="relative w-full md:w-1/2 flex items-center justify-center
-                    h-[35vh] xs:h-[40vh] sm:h-[45vh] md:h-screen
+                    h-[35vh] xs:h-[40vh] sm:h-[45vh] md:h-screen xl:-ml-36
                    "
         >
           <div
@@ -154,7 +154,7 @@ export function Hero() {
             data-aos-offset="0"
           >
             <Image
-              src="/BG2.png"
+              src="/BG.png"
               alt="Red Dune Car"
               fill
               className="object-contain drop-shadow-2xl translate-x-4 md:translate-x-0"
