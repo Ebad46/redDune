@@ -122,7 +122,7 @@ export function EngineeringServices() {
 
         {/* Image Side (Right) */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
-          <div className="eng-image opacity-0 w-full h-full relative overflow-hidden group">
+          <div className="eng-image opacity-0 absolute inset-0 overflow-hidden group">
             <div className="absolute inset-0 bg-neutral-200" />
             <Image
               src={engineeringData.image}

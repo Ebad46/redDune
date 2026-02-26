@@ -78,8 +78,7 @@ export function WorkshopServices() {
 
   return (
     <div ref={containerRef} className="flex flex-col w-full" dir={direction}>
-      {/* STEP 1: RED SEPARATOR LINE */}
-      <div className="w-full h-[1px] bg-gray-100 relative mt-20 mb-20 overflow-hidden">
+      <div className="w-full h-px bg-gray-100 relative mt-20 mb-20 overflow-hidden">
         <div className="red-separator absolute top-0 left-0 h-[3px] bg-primary w-full" />
       </div>
 
@@ -108,7 +107,7 @@ export function WorkshopServices() {
 
         {/* Image Side (Right) */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
-          <div className="workshop-image opacity-0 w-full h-full relative overflow-hidden group">
+          <div className="workshop-image opacity-0 absolute inset-0 overflow-hidden group">
             <div className="absolute inset-0 bg-neutral-200" />
             <Image
               src={workshopData.image}

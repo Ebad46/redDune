@@ -40,7 +40,7 @@ export default function WorkshopPage() {
           data-aos="fade-left"
           data-aos-duration="1000"
         >
-          <div className="w-full h-full relative overflow-hidden group">
+          <div className="absolute inset-0 overflow-hidden group">
             <div className="absolute inset-0 bg-neutral-200" />
             <Image
               src={WORKSHOP_PAGE_CONFIG.hero.image}

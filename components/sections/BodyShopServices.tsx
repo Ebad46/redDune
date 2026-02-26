@@ -126,7 +126,7 @@ export function BodyShopServices() {
 
         {/* Image Side (Right) */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
-          <div className="bs-image opacity-0 w-full h-full relative overflow-hidden group" data-aos-offset="0">
+          <div className="bs-image opacity-0 absolute inset-0 overflow-hidden group" data-aos-offset="0">
             <div className="absolute inset-0 bg-neutral-200" />
             <Image
               src={bodyShopData.image}
