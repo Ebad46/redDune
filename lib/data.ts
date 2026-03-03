@@ -880,7 +880,7 @@ export const SPARE_PARTS_DATA = {
         title1: "spareParts.whyRedDune.title1",
         title2: "spareParts.whyRedDune.title2",
         imageLabel: "Workshop Section Area",
-        image: "/images/spare/part3.jpeg",
+        image: "/images/services.jpg",
         items: ["specialists", "equipment", "inventory", "facility"],
     },
     specialization: {

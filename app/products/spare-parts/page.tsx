@@ -361,12 +361,12 @@ export default function SparePartsPage() {
                   src={SPARE_PARTS_DATA.whyChoose.image}
                   alt={SPARE_PARTS_DATA.whyChoose.imageLabel}
                   fill
-                  className="rounded-sm object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="rounded-sm object-cover transition-all duration-500"
                 />
               ) : (
                 <PlaceholderImage
                   label={SPARE_PARTS_DATA.whyChoose.imageLabel}
-                  className="rounded-sm grayscale hover:grayscale-0 transition-all duration-500"
+                  className="rounded-sm transition-all duration-500"
                 />
               )}
             </div>
