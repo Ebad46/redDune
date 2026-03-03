@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -11,10 +11,24 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 export function ServiceList() {
   const { t } = useLanguage();
 
+  const getTranslationKey = (id: string) => {
+    const map: Record<string, string> = {
+      service: "service",
+      workshop: "workshop",
+      "body-shop": "bodyShop",
+      engineering: "engineering",
+      "engine-gearbox": "engineGearbox",
+      recovery: "recovery",
+    };
+    return map[id] || id;
+  };
+
   const displayServices = SERVICE_DETAILS.map((service) => ({
     ...service,
-    title: t(service.title),
-    description: t(service.description),
+    title: t(`services.items.${getTranslationKey(service.id)}.title`),
+    description: t(
+      `services.items.${getTranslationKey(service.id)}.description`,
+    ),
   }));
 
   return (
@@ -43,12 +57,12 @@ export function ServiceList() {
               <div className="service-text">
                 <div className="inline-block w-12 h-1 bg-primary mb-6" />
                 <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight uppercase text-secondary">
-                  {t(service.title)} {/* Apply t() directly to the service title */}
+                  {service.title}
                 </h2>
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8 font-light">
-                  {t(service.description)} {/* Apply t() directly to the service description */}
+                  {service.description}
                 </p>
-                <Link href={service.link || "/contact"}>
+                <Link href={service.link || "#contact"}>
                   <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
                     {t("servicesPage.readMore")}
                   </Button>
@@ -65,7 +79,7 @@ export function ServiceList() {
               data-aos={isEven ? "fade-left" : "fade-right"}
               data-aos-duration="1200"
             >
-              <div className="service-image absolute inset-0 group" data-aos-offset="0">
+              <div className="service-image w-full h-full relativegroup">
                 <div className="absolute inset-0 bg-neutral-200" />
                 <Image
                   src={service.image}

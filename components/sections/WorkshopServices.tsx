@@ -78,7 +78,8 @@ export function WorkshopServices() {
 
   return (
     <div ref={containerRef} className="flex flex-col w-full" dir={direction}>
-      <div className="w-full h-px bg-gray-100 relative mt-20 mb-20 overflow-hidden">
+      {/* STEP 1: RED SEPARATOR LINE */}
+      <div className="w-full h-[1px] bg-gray-100 relative mt-20 mb-20 overflow-hidden">
         <div className="red-separator absolute top-0 left-0 h-[3px] bg-primary w-full" />
       </div>
 
@@ -92,10 +93,10 @@ export function WorkshopServices() {
           <div className="workshop-text opacity-0">
             <div className="inline-block w-12 h-1 bg-primary mb-6" />
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tight uppercase text-secondary">
-              {t(workshopData.title)}
+              {workshopData.title}
             </h2>
             <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-8 font-light">
-              {t(workshopData.description)}
+              {workshopData.description}
             </p>
             <Link href="/services/workshop">
               <Button className="rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20 hover:scale-105 transition-transform duration-300">
@@ -107,7 +108,7 @@ export function WorkshopServices() {
 
         {/* Image Side (Right) */}
         <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
-          <div className="workshop-image opacity-0 absolute inset-0 overflow-hidden group">
+          <div className="workshop-image opacity-0 w-full h-full relative overflow-hidden group">
             <div className="absolute inset-0 bg-neutral-200" />
             <Image
               src={workshopData.image}

@@ -16,12 +16,34 @@ import {
   ChevronDown,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { Contact } from "@/components/sections/Contact";
 
-import { SPARE_PARTS_DATA } from "@/lib/data";
+const WARRANTY_KEYS = [
+  "certified",
+  "battery",
+  "leak",
+  "fast",
+  "longTerm",
+  "dealer",
+] as const;
+const WARRANTY_ICONS = [ShieldCheck, Battery, Zap, Clock, RotateCcw, Settings];
+
+const SOLUTION_KEYS = [
+  "mechanical",
+  "electrical",
+  "battery",
+  "restoration",
+] as const;
+const SOLUTION_IMG_LABELS = [
+  "Engine Components",
+  "Electrical Wiring",
+  "Battery Replacement",
+  "Engine Repair",
+];
+
+const WHY_KEYS = ["specialists", "equipment", "inventory", "facility"] as const;
 
 export default function SparePartsPage() {
   const { t, direction } = useLanguage();
@@ -31,16 +53,16 @@ export default function SparePartsPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const faqItems = t(SPARE_PARTS_DATA.faq.itemsKey) as unknown as Array<{
+  const faqItems = t("spareParts.faq.items") as unknown as Array<{
     question: string;
     answer: string;
   }>;
-  const processSteps = t(SPARE_PARTS_DATA.process.itemsKey) as unknown as Array<{
+  const processSteps = t("spareParts.process.steps") as unknown as Array<{
     step: string;
     title: string;
     desc: string;
   }>;
-  const aboutItems = t(SPARE_PARTS_DATA.about.itemsKey) as unknown as string[];
+  const aboutItems = t("spareParts.about.items") as unknown as string[];
 
   return (
     <main
@@ -52,10 +74,8 @@ export default function SparePartsPage() {
       {/* 1️⃣ Hero Section */}
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src={SPARE_PARTS_DATA.hero.image}
-            alt="Hero Banner (Luxury Workshop)"
-            fill
+          <PlaceholderImage
+            label="Hero Banner (Luxury Workshop)"
             className="opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-background" />
@@ -64,9 +84,9 @@ export default function SparePartsPage() {
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl pt-20">
           <div data-aos="fade-up" data-aos-duration="1000">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-playfair)] font-bold text-white leading-tight mb-6">
-              {t(SPARE_PARTS_DATA.hero.title1)} <br />
+              {t("spareParts.hero.title1")} <br />
               <span className="text-primary">
-                {t(SPARE_PARTS_DATA.hero.title2)}
+                {t("spareParts.hero.title2")}
               </span>
             </h1>
             <p
@@ -75,16 +95,16 @@ export default function SparePartsPage() {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              {t(SPARE_PARTS_DATA.hero.description)}
+              {t("spareParts.hero.description")}
             </p>
             <div
               data-aos="fade-up"
               data-aos-delay="400"
               data-aos-duration="1000"
             >
-              <Link href="/contact">
+              <Link href="#contact">
                 <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-none font-semibold tracking-wide transition-all duration-300 transform hover:scale-105 shadow-xl shadow-primary/20">
-                  {t(SPARE_PARTS_DATA.hero.cta)}
+                  {t("spareParts.hero.inquireNow")}
                 </Button>
               </Link>
             </div>
@@ -106,14 +126,14 @@ export default function SparePartsPage() {
               data-aos-duration="800"
             >
               <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4">
-                {t(SPARE_PARTS_DATA.about.title1)} <br />
+                {t("spareParts.about.title1")} <br />
                 <span className="text-primary">
-                  {t(SPARE_PARTS_DATA.about.title2)}
+                  {t("spareParts.about.title2")}
                 </span>
               </h2>
               <div className="w-20 h-1 bg-primary" />
               <p className="text-muted-foreground text-lg leading-relaxed">
-                {t(SPARE_PARTS_DATA.about.description)}
+                {t("spareParts.about.description")}
               </p>
               <ul className="space-y-4">
                 {aboutItems.map((item: string, i: number) => (
@@ -128,12 +148,12 @@ export default function SparePartsPage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contact">
+              <Link href="#contact">
                 <Button
                   variant="outline"
                   className="border-primary text-primary hover:bg-primary hover:text-white rounded-none px-8 py-6 mt-4"
                 >
-                  {t(SPARE_PARTS_DATA.about.cta)}
+                  {t("spareParts.about.talkToExpert")}
                 </Button>
               </Link>
             </div>
@@ -143,10 +163,8 @@ export default function SparePartsPage() {
               data-aos-duration="800"
             >
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30" />
-              <Image
-                src={SPARE_PARTS_DATA.about.image}
-                alt="Spare Parts Close-up"
-                fill
+              <PlaceholderImage
+                label="Spare Parts Close-up"
                 className="relative z-10"
               />
             </div>
@@ -164,15 +182,15 @@ export default function SparePartsPage() {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            {t(SPARE_PARTS_DATA.warranty.title1)}{" "}
+            {t("spareParts.warranty.title1")}{" "}
             <span className="text-primary">
-              {t(SPARE_PARTS_DATA.warranty.title2)}
+              {t("spareParts.warranty.title2")}
             </span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SPARE_PARTS_DATA.warranty.items.map((item, idx) => {
-              const Icon = item.icon;
+            {WARRANTY_KEYS.map((key, idx) => {
+              const Icon = WARRANTY_ICONS[idx];
               return (
                 <div
                   key={idx}
@@ -185,10 +203,10 @@ export default function SparePartsPage() {
                     <Icon size={28} />
                   </div>
                   <h3 className="text-xl font-bold mb-3 font-[family-name:var(--font-playfair)]">
-                    {t(`spareParts.warranty.items.${item.key}.title`)}
+                    {t(`spareParts.warranty.items.${key}.title`)}
                   </h3>
                   <p className="text-muted-foreground">
-                    {t(`spareParts.warranty.items.${item.key}.desc`)}
+                    {t(`spareParts.warranty.items.${key}.desc`)}
                   </p>
                 </div>
               );
@@ -205,16 +223,16 @@ export default function SparePartsPage() {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            {t(SPARE_PARTS_DATA.solutions.title1)}{" "}
+            {t("spareParts.solutions.title1")}{" "}
             <span className="text-primary">
-              {t(SPARE_PARTS_DATA.solutions.title2)}
+              {t("spareParts.solutions.title2")}
             </span>
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {SPARE_PARTS_DATA.solutions.items.map((solution, idx) => {
+            {SOLUTION_KEYS.map((key, idx) => {
               const items = t(
-                `spareParts.solutions.${solution.key}.items`,
+                `spareParts.solutions.${key}.items`,
               ) as unknown as string[];
               return (
                 <div
@@ -225,12 +243,12 @@ export default function SparePartsPage() {
                   data-aos-duration="800"
                 >
                   <div className="h-64 overflow-hidden relative">
-                    <PlaceholderImage label={solution.imageLabel} />
+                    <PlaceholderImage label={SOLUTION_IMG_LABELS[idx]} />
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                   </div>
                   <div className="p-8">
                     <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-primary mb-4">
-                      {t(`spareParts.solutions.${solution.key}.title`)}
+                      {t(`spareParts.solutions.${key}.title`)}
                     </h3>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {items.map((item: string) => (
@@ -243,10 +261,10 @@ export default function SparePartsPage() {
                       ))}
                     </div>
                     <Link
-                      href="/contact"
+                      href="#contact"
                       className="inline-flex items-center text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors group/link"
                     >
-                      {t(SPARE_PARTS_DATA.solutions.cta)}
+                      {t("spareParts.solutions.bookService")}
                       <span className="ml-2 group-hover/link:translate-x-1 transition-transform">
                         →
                       </span>
@@ -267,9 +285,9 @@ export default function SparePartsPage() {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            {t(SPARE_PARTS_DATA.process.title1)}{" "}
+            {t("spareParts.process.title1")}{" "}
             <span className="text-primary">
-              {t(SPARE_PARTS_DATA.process.title2)}
+              {t("spareParts.process.title2")}
             </span>
           </h2>
 
@@ -322,13 +340,13 @@ export default function SparePartsPage() {
               data-aos-duration="800"
             >
               <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-8">
-                {t(SPARE_PARTS_DATA.whyChoose.title1)}{" "}
+                {t("spareParts.whyRedDune.title1")}{" "}
                 <span className="text-primary">
-                  {t(SPARE_PARTS_DATA.whyChoose.title2)}
+                  {t("spareParts.whyRedDune.title2")}
                 </span>
               </h2>
               <div className="space-y-6">
-                {SPARE_PARTS_DATA.whyChoose.items.map((key, i) => (
+                {WHY_KEYS.map((key, i) => (
                   <div
                     key={i}
                     className="flex gap-4"
@@ -356,7 +374,7 @@ export default function SparePartsPage() {
               data-aos-duration="800"
             >
               <PlaceholderImage
-                label={SPARE_PARTS_DATA.whyChoose.imageLabel}
+                label="Workshop Section Area"
                 className="rounded-sm grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
@@ -372,19 +390,32 @@ export default function SparePartsPage() {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            {t(SPARE_PARTS_DATA.specialization.title)}
+            {t("spareParts.weSpecialize")}
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {SPARE_PARTS_DATA.specialization.brands.map((brandKey, idx) => (
+            {[
+              "Audi",
+              "BMW",
+              "Mercedes-Benz",
+              "Porsche",
+              "Ferrari",
+              "Bentley",
+              "Range Rover",
+              "Rolls Royce",
+              "Lamborghini",
+              "Jaguar",
+              "McLaren",
+              "Volkswagen",
+            ].map((brand, idx) => (
               <div
-                key={brandKey}
+                key={brand}
                 className="h-24 bg-card border border-border flex items-center justify-center hover:border-primary hover:shadow-sm transition-all group"
                 data-aos="fade-up"
                 data-aos-delay={idx * 50}
                 data-aos-duration="800"
               >
-                <span className="text-muted-foreground font-bold group-hover:text-primary transition-colors uppercase tracking-wider">
-                  {t(`brands.names.${brandKey}`)}
+                <span className="text-muted-foreground font-bold group-hover:text-primary transition-colors">
+                  {brand}
                 </span>
               </div>
             ))}
@@ -400,8 +431,8 @@ export default function SparePartsPage() {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            {t(SPARE_PARTS_DATA.faq.title1)}{" "}
-            <span className="text-primary">{t(SPARE_PARTS_DATA.faq.title2)}</span>
+            {t("spareParts.faq.title1")}{" "}
+            <span className="text-primary">{t("spareParts.faq.title2")}</span>
           </h2>
 
           <div className="space-y-4">

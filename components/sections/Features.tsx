@@ -2,16 +2,32 @@
 
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { ShieldCheck, BarChart3, Settings, AppWindow } from "lucide-react";
-import { FEATURES } from "@/lib/data";
 
 export function Features() {
     const { t } = useLanguage();
 
-    const features = FEATURES.map(feature => ({
-        ...feature,
-        title: t(feature.title),
-        description: t(feature.description),
-    }));
+    const features = [
+        {
+            title: t("features.cards.germanExperts.title"),
+            description: t("features.cards.germanExperts.description"),
+            icon: ShieldCheck,
+        },
+        {
+            title: t("features.cards.diagnostics.title"),
+            description: t("features.cards.diagnostics.description"),
+            icon: BarChart3,
+        },
+        {
+            title: t("features.cards.parts.title"),
+            description: t("features.cards.parts.description"),
+            icon: Settings,
+        },
+        {
+            title: t("features.cards.experience.title"),
+            description: t("features.cards.experience.description"),
+            icon: AppWindow,
+        },
+    ];
 
     return (
         <section id="features" className="py-24 bg-white relative overflow-hidden">

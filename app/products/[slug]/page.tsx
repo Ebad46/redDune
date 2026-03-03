@@ -9,12 +9,10 @@ import { Check } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/components/providers/LanguageProvider";
-import { use } from "react";
 
-export default function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+export default function ProductPage({ params }: { params: { slug: string } }) {
   const { t, direction } = useLanguage();
-  const product = PRODUCT_DETAILS.find((p) => p.id === slug);
+  const product = PRODUCT_DETAILS.find((p) => p.id === params.slug);
 
   if (!product) {
     notFound();
@@ -169,7 +167,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   </p>
                 </div>
               </div>
-              {/* Decorative Elements */}
+              {/* Decorative Element */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -z-10" />
             </div>
