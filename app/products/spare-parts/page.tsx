@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
@@ -26,6 +28,10 @@ import { SPARE_PARTS_DATA } from "@/lib/data";
 export default function SparePartsPage() {
   const { t, direction } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);

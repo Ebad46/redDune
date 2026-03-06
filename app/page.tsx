@@ -15,19 +15,9 @@ import { Stats } from "@/components/sections/Stats";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
-  const [isFinished, setIsFinished] = useState(false);
-
   useEffect(() => {
-    if (isFinished) {
-      setTimeout(() => {
-        AOS.init({
-          duration: 1000,
-          once: true,
-        });
-        AOS.refresh();
-      }, 100);
-    }
-  }, [isFinished]);
+    AOS.refresh();
+  }, []);
 
   return (
     <div className="animate-fadeIn">

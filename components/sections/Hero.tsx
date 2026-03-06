@@ -126,7 +126,6 @@ export function Hero() {
                                 lg:text-3xl
                             "
               >
-                {t("hero.tagline")}
               </p>
             </div>
           </div>

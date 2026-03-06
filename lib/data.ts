@@ -110,7 +110,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.serviceContract.benefits.2.title", description: "products.serviceContract.benefits.2.desc" },
             { title: "products.serviceContract.benefits.3.title", description: "products.serviceContract.benefits.3.desc" },
         ],
-        image: "/images/spare/part1.jpeg",
+        image: "/images/spare/part1.jpg",
     },
     {
         id: "warranty-contract",
@@ -128,7 +128,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.warrantyContract.benefits.2.title", description: "products.warrantyContract.benefits.2.desc" },
             { title: "products.warrantyContract.benefits.3.title", description: "products.warrantyContract.benefits.3.desc" },
         ],
-        image: "/images/spare/part2.jpeg",
+        image: "/images/spare/part2.jpg",
     },
     {
         id: "360-inspections",
@@ -146,7 +146,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.inspections360.benefits.2.title", description: "products.inspections360.benefits.2.desc" },
             { title: "products.inspections360.benefits.3.title", description: "products.inspections360.benefits.3.desc" },
         ],
-        image: "/images/spare/part3.jpeg",
+        image: "/images/spare/part3.jpg",
     },
     {
         id: "insurance",
@@ -164,7 +164,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.insurance.benefits.2.title", description: "products.insurance.benefits.2.desc" },
             { title: "products.insurance.benefits.3.title", description: "products.insurance.benefits.3.desc" },
         ],
-        image: "/images/spare/part4.jpeg",
+        image: "/images/spare/part4.jpg",
     },
 ];
 
@@ -566,7 +566,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.upholstery.s1.heading",
                 description: "bodyshopData.upholstery.s1.description",
-                image: "/images/Upholstery & Refurbishment.jpg",
+                image: "/images/upholstery-and-refurbishment.jpg",
             },
             {
                 heading: "bodyshopData.upholstery.s2.heading",
@@ -595,7 +595,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.dent.s1.heading",
                 description: "bodyshopData.dent.s1.description",
-                image: "/images/car painting.jpg",
+                image: "/images/car-painting.jpg",
             },
             {
                 heading: "bodyshopData.dent.s2.heading",
@@ -837,7 +837,7 @@ export const SPARE_PARTS_DATA = {
         title1: "spareParts.hero.title1",
         title2: "spareParts.hero.title2",
         description: "spareParts.hero.description",
-        image: "/images/spare/part4.jpeg",
+        image: "/images/spare/part4.jpg",
         cta: "spareParts.hero.inquireNow",
     },
     about: {
