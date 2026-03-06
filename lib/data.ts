@@ -217,21 +217,21 @@ export const SERVICE_DETAILS = [
         id: "engineering",
         title: "services.items.engineering.title",
         description: "services.items.engineering.description",
-        image: "/images/recovery/nop-2.jfif",
+        image: "/images/recovery/nop-2.jpg",
         link: "/services/engineering",
     },
     {
         id: "engine-gearbox",
         title: "services.items.engineGearbox.title",
         description: "services.items.engineGearbox.description",
-        image: "/images/recovery/nop-3.jfif",
+        image: "/images/recovery/nop-3.jpg",
         link: "/services/enginegear",
     },
     {
         id: "recovery",
         title: "services.items.recovery.title",
         description: "services.items.recovery.description",
-        image: "/images/recovery/nop-1.jfif",
+        image: "/images/recovery/nop-1.jpg",
         link: "/services/recovery",
     },
 ];
@@ -307,7 +307,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.classicCar.title",
         icon: Car,
         description: "bodyshopServices.classicCar.description",
-        image: "/images/classic.jfif",
+        image: "/images/classic.jpg",
         href: "/services/bodyshop/classic-car-restoration",
     },
     {
@@ -331,7 +331,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.roofLining.title",
         icon: MoveVertical,
         description: "bodyshopServices.roofLining.description",
-        image: "/images/roof lining.jpg",
+        image: "/images/roof-lining.jpg",
         href: "/services/bodyshop/roof-lining-repair",
     },
     {
@@ -421,7 +421,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.classicCar.s1.heading",
                 description: "bodyshopData.classicCar.s1.description",
-                image: "/images/classic.jfif",
+                image: "/images/classic.jpg",
             },
             {
                 heading: "bodyshopData.classicCar.s2.heading",
@@ -508,7 +508,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.roofLining.s1.heading",
                 description: "bodyshopData.roofLining.s1.description",
-                image: "/images/roof lining.jpg",
+                image: "/images/roof-lining.jpg",
             },
             {
                 heading: "bodyshopData.roofLining.s2.heading",
@@ -707,10 +707,10 @@ export const BODYSHOP_PAGE_DATA = [
 ];
 
 export const ENGINEERING_SERVICES = [
-    { id: "eng-retrofit", title: "engineeringServices.retrofit.title", icon: Settings, description: "engineeringServices.retrofit.description", image: "/images/retrofit.jfif", href: "/services/engineering/retrofit" },
-    { id: "eng-radar", title: "engineeringServices.radar.title", icon: CircleDot, description: "engineeringServices.radar.description", image: "/images/radar.jfif", href: "/services/engineering/radar" },
-    { id: "eng-nav", title: "engineeringServices.navigation.title", icon: AppWindow, description: "engineeringServices.navigation.description", image: "/images/navigation.jfif", href: "/services/engineering/navigation" },
-    { id: "eng-programming", title: "engineeringServices.programming.title", icon: Cpu, description: "engineeringServices.programming.description", image: "/images/programming.jfif", href: "/services/engineering/programming" },
+    { id: "eng-retrofit", title: "engineeringServices.retrofit.title", icon: Settings, description: "engineeringServices.retrofit.description", image: "/images/retrofit.jpg", href: "/services/engineering/retrofit" },
+    { id: "eng-radar", title: "engineeringServices.radar.title", icon: CircleDot, description: "engineeringServices.radar.description", image: "/images/radar.jpg", href: "/services/engineering/radar" },
+    { id: "eng-nav", title: "engineeringServices.navigation.title", icon: AppWindow, description: "engineeringServices.navigation.description", image: "/images/navigation.jpg", href: "/services/engineering/navigation" },
+    { id: "eng-programming", title: "engineeringServices.programming.title", icon: Cpu, description: "engineeringServices.programming.description", image: "/images/programming.jpg", href: "/services/engineering/programming" },
 ];
 
 export const ENGINEERING_PAGE_DATA = [
@@ -721,7 +721,7 @@ export const ENGINEERING_PAGE_DATA = [
             {
                 heading: "engineeringData.radar.s1.heading",
                 description: "engineeringData.radar.s1.description",
-                image: "/images/radar.jfif",
+                image: "/images/radar.jpg",
             },
             {
                 heading: "engineeringData.radar.s2.heading",
@@ -750,7 +750,7 @@ export const ENGINEERING_PAGE_DATA = [
             {
                 heading: "engineeringData.programming.s1.heading",
                 description: "engineeringData.programming.s1.description",
-                image: "/images/programming.jfif",
+                image: "/images/programming.jpg",
             },
             {
                 heading: "engineeringData.programming.s2.heading",
@@ -779,7 +779,7 @@ export const ENGINEERING_PAGE_DATA = [
             {
                 heading: "engineeringData.retrofit.s1.heading",
                 description: "engineeringData.retrofit.s1.description",
-                image: "/images/retrofit.jfif",
+                image: "/images/retrofit.jpg",
             },
             {
                 heading: "engineeringData.retrofit.s2.heading",
@@ -796,7 +796,7 @@ export const ENGINEERING_PAGE_DATA = [
             {
                 heading: "engineeringData.retrofit.s3.heading",
                 description: "engineeringData.retrofit.s3.description",
-                image: "/images/classic.jfif",
+                image: "/images/classic.jpg",
                 cta: "engineeringData.retrofit.s3.cta"
             }
         ]
@@ -808,7 +808,7 @@ export const ENGINEERING_PAGE_DATA = [
             {
                 heading: "engineeringData.navigation.s1.heading",
                 description: "engineeringData.navigation.s1.description",
-                image: "/images/navigation.jfif",
+                image: "/images/navigation.jpg",
             },
             {
                 heading: "engineeringData.navigation.s2.heading",

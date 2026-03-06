@@ -33,7 +33,7 @@ export function Hero() {
         >
           <div className="absolute inset-0 shadow-2xs shadow-red-500 -mr-80">
             <Image
-              src="/BG.png"
+              src="/bg.png"
               alt="Engine Background"
               fill
               className="object-cover opacity-40"
@@ -154,7 +154,7 @@ export function Hero() {
             data-aos-offset="0"
           >
             <Image
-              src="/BG.png"
+              src="/bg.png"
               alt="Red Dune Car"
               fill
               className="object-contain drop-shadow-2xl translate-x-4 md:translate-x-0"
