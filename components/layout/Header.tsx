@@ -63,7 +63,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] flex flex-col" dir={direction}>
+    <header className="fixed top-0 left-0 right-0 z-100 flex flex-col" dir={direction}>
 
       {/* Top Bar */}
       <div
@@ -97,7 +97,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/logo dune.png"
+              src="/logo-dune.png"
               alt="Red Dune"
               width={200}
               height={50}

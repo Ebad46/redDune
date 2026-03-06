@@ -92,7 +92,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.spareParts.benefits.2.title", description: "products.spareParts.benefits.2.desc" },
             { title: "products.spareParts.benefits.3.title", description: "products.spareParts.benefits.3.desc" },
         ],
-        image: "/images/products/spare-parts.jpg",
+        image: "/images/spare/part5.jpg",
     },
     {
         id: "service-contract",
@@ -110,7 +110,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.serviceContract.benefits.2.title", description: "products.serviceContract.benefits.2.desc" },
             { title: "products.serviceContract.benefits.3.title", description: "products.serviceContract.benefits.3.desc" },
         ],
-        image: "/images/products/service-contract.jpg",
+        image: "/images/spare/part1.jpeg",
     },
     {
         id: "warranty-contract",
@@ -128,7 +128,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.warrantyContract.benefits.2.title", description: "products.warrantyContract.benefits.2.desc" },
             { title: "products.warrantyContract.benefits.3.title", description: "products.warrantyContract.benefits.3.desc" },
         ],
-        image: "/images/products/warranty.jpg",
+        image: "/images/spare/part2.jpeg",
     },
     {
         id: "360-inspections",
@@ -146,7 +146,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.inspections360.benefits.2.title", description: "products.inspections360.benefits.2.desc" },
             { title: "products.inspections360.benefits.3.title", description: "products.inspections360.benefits.3.desc" },
         ],
-        image: "/images/products/inspection.jpg",
+        image: "/images/spare/part3.jpeg",
     },
     {
         id: "insurance",
@@ -164,7 +164,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.insurance.benefits.2.title", description: "products.insurance.benefits.2.desc" },
             { title: "products.insurance.benefits.3.title", description: "products.insurance.benefits.3.desc" },
         ],
-        image: "/images/products/insurance.jpg",
+        image: "/images/spare/part4.jpeg",
     },
 ];
 
@@ -217,21 +217,21 @@ export const SERVICE_DETAILS = [
         id: "engineering",
         title: "services.items.engineering.title",
         description: "services.items.engineering.description",
-        image: "/images/recovery/nop 2.jfif",
+        image: "/images/recovery/nop-2.jfif",
         link: "/services/engineering",
     },
     {
         id: "engine-gearbox",
         title: "services.items.engineGearbox.title",
         description: "services.items.engineGearbox.description",
-        image: "/images/recovery/nop 3.jfif",
+        image: "/images/recovery/nop-3.jfif",
         link: "/services/enginegear",
     },
     {
         id: "recovery",
         title: "services.items.recovery.title",
         description: "services.items.recovery.description",
-        image: "/images/recovery/nop 1.jfif",
+        image: "/images/recovery/nop-1.jfif",
         link: "/services/recovery",
     },
 ];
@@ -284,7 +284,7 @@ export const BLOG_POSTS = [
 ];
 
 export const WORKSHOP_SERVICES = [
-    { id: "ws-workshop", title: "workshopServices.engineManagement.title", icon: Settings, description: "workshopServices.engineManagement.description", image: "/images/engineering (2).jpg", href: "/services/workshop/engine-management-system" },
+    { id: "ws-workshop", title: "workshopServices.engineManagement.title", icon: Settings, description: "workshopServices.engineManagement.description", image: "/images/engineering-2.jpg", href: "/services/workshop/engine-management-system" },
     { id: "ws-bodyshop", title: "workshopServices.carComfort.title", icon: ShieldCheck, description: "workshopServices.carComfort.description", image: "/images/how.jpg", href: "/services/workshop/comfort-system" },
     { id: "ws-programming", title: "workshopServices.brakeSystem.title", icon: Cpu, description: "workshopServices.brakeSystem.description", image: "/images/s2.jpg", href: "/services/workshop/brake-system" },
     { id: "ws-engine", title: "workshopServices.oilChange.title", icon: Cog, description: "workshopServices.oilChange.description", image: "/images/oil.jpg", href: "/services/workshop/oil-change" },
@@ -299,7 +299,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.dashboard.title",
         icon: Armchair,
         description: "bodyshopServices.dashboard.description",
-        image: "/images/dashboard cover.jpg",
+        image: "/images/dashboard-cover.jpg",
         href: "/services/bodyshop/dashboard-leather-or-replacement",
     },
     {
@@ -347,7 +347,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.upholstery.title",
         icon: Armchair,
         description: "bodyshopServices.upholstery.description",
-        image: "/images/Upholstery & Refurbishment.jpg",
+        image: "/images/upholstery-and-refurbishment.jpg",
         href: "/services/bodyshop/upholstery-and-refurbishment",
     },
     {
@@ -355,7 +355,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.dent.title",
         icon: Disc,
         description: "bodyshopServices.dent.description",
-        image: "/images/car painting.jpg",
+        image: "/images/car-painting.jpg",
         href: "/services/bodyshop/denting-painting",
     },
     {
@@ -379,7 +379,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.bodykit.title",
         icon: Car,
         description: "bodyshopServices.bodykit.description",
-        image: "/images/car body kit.jpg",
+        image: "/images/car-body-kit.jpg",
         href: "/services/bodyshop/car-body-kit",
     },
 ];
@@ -392,7 +392,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.dashboard.s1.heading",
                 description: "bodyshopData.dashboard.s1.description",
-                image: "/images/dashboard cover.jpg",
+                image: "/images/dashboard-cover.jpg",
             },
             {
                 heading: "bodyshopData.dashboard.s2.heading",
@@ -484,7 +484,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.windscreen.s2.heading",
                 description: "bodyshopData.windscreen.s2.description",
-                image: "/images/wind/wind (1).jpg",
+                image: "/images/wind/wind-1.jpg",
                 list: [
                     "bodyshopData.windscreen.s2.items.0",
                     "bodyshopData.windscreen.s2.items.1",
@@ -496,7 +496,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.windscreen.s3.heading",
                 description: "bodyshopData.windscreen.s3.description",
-                image: "/images/wind/wind (2).jpg",
+                image: "/images/wind/wind-2.jpg",
                 cta: "bodyshopData.windscreen.s3.cta",
             },
         ],
@@ -513,7 +513,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.roofLining.s2.heading",
                 description: "bodyshopData.roofLining.s2.description",
-                image: "/images/wind/roof (1).jpg",
+                image: "/images/wind/roof-1.jpg",
                 list: [
                     "bodyshopData.roofLining.s2.items.0",
                     "bodyshopData.roofLining.s2.items.1",
@@ -525,7 +525,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.roofLining.s3.heading",
                 description: "bodyshopData.roofLining.s3.description",
-                image: "/images/wind/roof (2).jpg",
+                image: "/images/wind/roof-2.jpg",
                 cta: "bodyshopData.roofLining.s3.cta",
             },
         ],
@@ -571,7 +571,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.upholstery.s2.heading",
                 description: "bodyshopData.upholstery.s2.description",
-                image: "/images/wind/int (1).jpg",
+                image: "/images/wind/int-1.jpg",
                 list: [
                     "bodyshopData.upholstery.s2.items.0",
                     "bodyshopData.upholstery.s2.items.1",
@@ -600,7 +600,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.dent.s2.heading",
                 description: "bodyshopData.dent.s2.description",
-                image: "/images/wind/dent (2).jpg",
+                image: "/images/wind/dent-2.jpg",
                 list: [
                     "bodyshopData.dent.s2.items.0",
                     "bodyshopData.dent.s2.items.1",
@@ -612,7 +612,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.dent.s3.heading",
                 description: "bodyshopData.dent.s3.description",
-                image: "/images/wind/dent (1).jpg",
+                image: "/images/wind/dent-1.jpg",
                 cta: "bodyshopData.dent.s3.cta",
             },
         ],
@@ -629,7 +629,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.chassis.s2.heading",
                 description: "bodyshopData.chassis.s2.description",
-                image: "/images/wind/chass (1).jpg",
+                image: "/images/wind/chass-1.jpg",
                 list: [
                     "bodyshopData.chassis.s2.items.0",
                     "bodyshopData.chassis.s2.items.1",
@@ -641,7 +641,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.chassis.s3.heading",
                 description: "bodyshopData.chassis.s3.description",
-                image: "/images/wind/chass (3).jpg",
+                image: "/images/wind/chass-3.jpg",
                 cta: "bodyshopData.chassis.s3.cta",
             },
         ],
@@ -658,7 +658,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.rims.s2.heading",
                 description: "bodyshopData.rims.s2.description",
-                image: "/images/wind/rim (2).jpg",
+                image: "/images/wind/rim-2.jpg",
                 list: [
                     "bodyshopData.rims.s2.items.0",
                     "bodyshopData.rims.s2.items.1",
@@ -670,7 +670,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.rims.s3.heading",
                 description: "bodyshopData.rims.s3.description",
-                image: "/images/wind/rim (1).jpg",
+                image: "/images/wind/rim-1.jpg",
                 cta: "bodyshopData.rims.s3.cta",
             },
         ],
@@ -682,7 +682,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.bodykit.s1.heading",
                 description: "bodyshopData.bodykit.s1.description",
-                image: "/images/car body kit.jpg",
+                image: "/images/car-body-kit.jpg",
             },
             {
                 heading: "bodyshopData.bodykit.s2.heading",
@@ -910,14 +910,14 @@ export const ENGINE_GEARBOX_DATA = {
         subtitle: "services.items.engineGearbox.hero.subtitle",
         title: "services.items.engineGearbox.hero.title",
         description: "services.items.engineGearbox.hero.description",
-        image: "/images/engi/gear (3).jpg",
+        image: "/images/engi/gear-3.jpg",
         cta: "services.items.engineGearbox.hero.cta",
     },
     overhaulDubai: {
         subtitle: "services.items.engineGearbox.overhaulDubai.subtitle",
         title: "services.items.engineGearbox.overhaulDubai.title",
         description: "services.items.engineGearbox.overhaulDubai.description",
-        image: "/images/engi/gear (1).jpg",
+        image: "/images/engi/gear-1.jpg",
         cta: "services.items.engineGearbox.overhaulDubai.cta",
     },
     whyChooseUs: {
@@ -931,7 +931,7 @@ export const ENGINE_GEARBOX_DATA = {
         description: "services.items.engineGearbox.whenToGet.description",
         signsKey: "services.items.engineGearbox.whenToGet.signs",
         signsFooter: "services.items.engineGearbox.whenToGet.signsFooter",
-        image: "/images/engi/gear (2).jpg",
+        image: "/images/engi/gear-2.jpg",
         cta: "services.items.engineGearbox.whenToGet.cta",
     },
     atRedDune: {
