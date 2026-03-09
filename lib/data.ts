@@ -92,7 +92,7 @@ export const PRODUCT_DETAILS = [
             { title: "products.spareParts.benefits.2.title", description: "products.spareParts.benefits.2.desc" },
             { title: "products.spareParts.benefits.3.title", description: "products.spareParts.benefits.3.desc" },
         ],
-        image: "/images/spare/part5.jpg",
+        image: "/images/spare/car-body-parts.jpg",
     },
     {
         id: "service-contract",
@@ -844,7 +844,7 @@ export const SPARE_PARTS_DATA = {
         title1: "spareParts.about.title1",
         title2: "spareParts.about.title2",
         description: "spareParts.about.description",
-        image: "/images/spare/part5.jpg",
+        image: "/images/spare/car-body-parts.jpg",
         itemsKey: "spareParts.about.items",
         cta: "spareParts.about.talkToExpert",
     },
@@ -864,7 +864,7 @@ export const SPARE_PARTS_DATA = {
         title1: "spareParts.solutions.title1",
         title2: "spareParts.solutions.title2",
         items: [
-            { key: "mechanical", imageLabel: "Engine Components", image: "/images/spare/part5.jpg" },
+            { key: "mechanical", imageLabel: "Engine Components", image: "/images/spare/car-body-parts.jpg" },
             { key: "electrical", imageLabel: "Electrical Wiring", image: "/images/spare/mac.jpg" },
             { key: "battery", imageLabel: "Battery Replacement", image: "/images/spare/batt.jpg" },
             { key: "restoration", imageLabel: "Engine Repair", image: "/images/spare/res.jpg" },

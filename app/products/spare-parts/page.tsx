@@ -50,7 +50,7 @@ export default function SparePartsPage() {
 
   return (
     <main
-      className="min-h-screen bg-background text-foreground font-[family-name:var(--font-inter)] overflow-x-hidden selection:bg-primary selection:text-white"
+      className="min-h-screen bg-background text-foreground font-(family-name:--font-inter) overflow-x-hidden selection:bg-primary selection:text-white"
       dir={direction}
     >
       <Header />
@@ -64,12 +64,12 @@ export default function SparePartsPage() {
             fill
             className="opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-background" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-background" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl pt-20">
           <div data-aos="fade-up" data-aos-duration="1000">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-[family-name:var(--font-playfair)] font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-(family-name:--font-playfair) font-bold text-white leading-tight mb-6">
               {t(SPARE_PARTS_DATA.hero.title1)} <br />
               <span className="text-primary">
                 {t(SPARE_PARTS_DATA.hero.title2)}
@@ -111,7 +111,7 @@ export default function SparePartsPage() {
               data-aos="fade-right"
               data-aos-duration="800"
             >
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-4">
+              <h2 className="text-3xl md:text-5xl font-(family-name:--font-playfair) font-bold mb-4">
                 {t(SPARE_PARTS_DATA.about.title1)} <br />
                 <span className="text-primary">
                   {t(SPARE_PARTS_DATA.about.title2)}
@@ -154,11 +154,11 @@ export default function SparePartsPage() {
 
       {/* 3️⃣ Warranty Benefits Section (Cards) */}
       <section className="py-24 bg-muted/30 relative">
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-primary/20 to-transparent" />
 
         <div className="container mx-auto px-6">
           <h2
-            className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-center mb-16"
+            className="text-3xl md:text-5xl font-(family-name:--font-playfair) font-bold text-center mb-16"
             data-aos="fade-up"
             data-aos-duration="800"
           >
@@ -182,7 +182,7 @@ export default function SparePartsPage() {
                   <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                     <Icon size={28} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 font-[family-name:var(--font-playfair)]">
+                  <h3 className="text-xl font-bold mb-3 font-(family-name:--font-playfair)">
                     {t(`spareParts.warranty.items.${item.key}.title`)}
                   </h3>
                   <p className="text-muted-foreground">
@@ -199,7 +199,7 @@ export default function SparePartsPage() {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <h2
-            className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-center mb-16"
+            className="text-3xl md:text-5xl font-(family-name:--font-playfair) font-bold text-center mb-16"
             data-aos="fade-up"
             data-aos-duration="800"
           >
@@ -236,7 +236,7 @@ export default function SparePartsPage() {
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold font-[family-name:var(--font-playfair)] text-primary mb-4">
+                    <h3 className="text-2xl font-bold font-(family-name:--font-playfair) text-primary mb-4">
                       {t(`spareParts.solutions.${solution.key}.title`)}
                     </h3>
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -270,7 +270,7 @@ export default function SparePartsPage() {
       <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-6 text-center">
           <h2
-            className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-16"
+            className="text-3xl md:text-5xl font-(family-name:--font-playfair) font-bold mb-16"
             data-aos="fade-up"
             data-aos-duration="800"
           >
@@ -283,7 +283,7 @@ export default function SparePartsPage() {
           <div className="relative">
             {/* Line */}
             <div
-              className="hidden lg:block absolute top-12 left-0 w-full h-[1px] bg-border"
+              className="hidden lg:block absolute top-12 left-0 w-full h-px bg-border"
               data-aos="fade-in"
               data-aos-delay="200"
               data-aos-duration="1000"
@@ -328,7 +328,7 @@ export default function SparePartsPage() {
               data-aos="fade-left"
               data-aos-duration="800"
             >
-              <h2 className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold mb-8">
+              <h2 className="text-3xl md:text-5xl font-(family-name:--font-playfair) font-bold mb-8">
                 {t(SPARE_PARTS_DATA.whyChoose.title1)}{" "}
                 <span className="text-primary">
                   {t(SPARE_PARTS_DATA.whyChoose.title2)}
@@ -412,7 +412,7 @@ export default function SparePartsPage() {
       <section className="py-24 bg-background mb-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2
-            className="text-3xl md:text-5xl font-[family-name:var(--font-playfair)] font-bold text-center mb-16"
+            className="text-3xl md:text-5xl font-(family-name:--font-playfair) font-bold text-center mb-16"
             data-aos="fade-up"
             data-aos-duration="800"
           >
