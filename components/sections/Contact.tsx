@@ -217,18 +217,18 @@ export function Contact() {
                     {/* Map */}
                     <div className="lg:sticky lg:top-32 h-[600px] lg:h-[800px] w-full bg-gray-100 rounded-3xl overflow-hidden shadow-2xl shadow-gray-300/50 border-4 border-white mb-12 lg:mb-0 relative group" data-aos="fade-left" data-aos-duration="1000">
                         <iframe
-                            src="https://maps.google.com/maps?q=25.10978889465332,55.227561950683594&z=17&hl=en&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.675353778403!2d55.224226676080555!3d25.112848635110655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6cae06ddeb37%3A0x4f75f321335d4a6b!2s800CarGuru%20Mobile%20Auto%20Repair%20Services!5e0!3m2!1sen!2s!4v1773783861471!5m2!1sen!2s"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            className="absolute inset-0 grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 brightness-95 group-hover:brightness-100"
+                            className="absolute inset-0 transition-all duration-700"
                         />
                         <div className="absolute top-6 left-6 right-6 p-6 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                             <h3 className="font-heading font-bold text-xl mb-2">Our Location</h3>
-                            <p className="text-sm text-muted-foreground mb-4">https://www.google.com/maps?q=25.10978889465332,55.227561950683594&z=17&hl=en</p>
+                            <p className="text-sm text-muted-foreground mb-4">https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.675353778403!2d55.224226676080555!3d25.112848635110655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6cae06ddeb37%3A0x4f75f321335d4a6b!2s800CarGuru%20Mobile%20Auto%20Repair%20Services!5e0!3m2!1sen!2s!4v1773783861471!5m2!1sen!2s</p>
                             <Link
                                 href={CONTACT_DATA.googleMapsUrl}
                                 target="_blank"
@@ -244,3 +244,4 @@ export function Contact() {
         </section>
     );
 }
+

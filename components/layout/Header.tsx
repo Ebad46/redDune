@@ -63,12 +63,14 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-100 flex flex-col" dir={direction}>
+    <header className="fixed top-0 left-0 right-0 z-[100] flex flex-col" dir={direction}>
 
       {/* Top Bar */}
       <div
-        className="bg-secondary text-secondary-foreground py-2 text-xs md:text-sm transition-all duration-300 overflow-hidden"
-        style={{ height: isScrolled ? 0 : "auto", opacity: isScrolled ? 0 : 1 }}
+        className={cn(
+          "bg-secondary text-secondary-foreground text-xs md:text-sm transition-all duration-300 overflow-hidden",
+          isScrolled ? "h-0 py-0 opacity-0" : "h-auto py-2 opacity-100",
+        )}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex gap-6">
@@ -97,10 +99,11 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/logo-dune.png"
+              src="/logo dune.png"
               alt="Red Dune"
               width={200}
               height={50}
+              loading="eager"
               className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </Link>

@@ -10,7 +10,7 @@ export const translations = {
             whatsapp: "WhatsApp Us",
             chatWhatsApp: "Chat on WhatsApp",
             callNow: "Call Now",
-            workingHours: "Sat - Thu: 8:00 AM - 7:00 PM",
+            workingHours: "Sat - Thus: 9:00 am - 7:00 pm",
             recovery: "Recovery Services",
             engineGear: "Engine & Gearbox",
             engineering: "Engineering & Programming",
@@ -465,7 +465,9 @@ export const translations = {
             whyChoose: "Why Choose This?",
             requestQuote: "Request Quote",
             needAdvice: "Need Expert Advice?",
-            adviceDesc: "Our team is ready to assist you with custom solutions for your vehicle."
+            adviceDesc: "Our team is ready to assist you with custom solutions for your vehicle.",
+            gallery: "Product Gallery",
+            galleryDesc: "Explore our premium products in detail.",
         },
         engineeringData: {
             radar: {
@@ -1385,6 +1387,94 @@ export const translations = {
                 symptoms: "Symptoms"
             }
         },
+        products: {
+            pageTitle: "Explore Our Product Solutions",
+            pageDescription: "From OEM spare parts to maintenance contracts and 360° inspections, browse our premium products engineered for luxury vehicles.",
+            browseProducts: "Browse Products",
+            catalogTitle: "Our Product Catalog",
+            catalogSubtitle: "Select the product that fits your vehicle and needs.",
+            learnMore: "Learn More",
+            spareParts: {
+                title: "Genuine Spare Parts",
+                description: "We source only 100% OEM parts for premium brands, ensuring precise fitment, performance, and safety. Our global supply chain delivers even hard-to-find components quickly.",
+                features: [
+                    "100% OEM genuine parts",
+                    "12-month warranty",
+                    "Global shipping",
+                    "Competitive pricing"
+                ],
+                benefits: [
+                    { title: "Factory Fit", desc: "Perfect fit and finish as intended by the manufacturer." },
+                    { title: "Longer Service Life", desc: "Built to last and reduce the need for frequent replacements." },
+                    { title: "Resale Value", desc: "Keeps your vehicle authentic and preserves its value." },
+                    { title: "Safety First", desc: "No compromises—meets strict OEM safety standards." }
+                ]
+            },
+            serviceContract: {
+                title: "Service Contracts",
+                description: "Gain peace of mind with tailored maintenance contracts that cover scheduled servicing and protect you from unexpected repair costs.",
+                features: [
+                    "Savings up to 40%",
+                    "Inflation protection",
+                    "Transferable benefits",
+                    "Complete service history"
+                ],
+                benefits: [
+                    { title: "Cost Control", desc: "Lock in today’s labor and parts rates for the duration of the contract." },
+                    { title: "Regular Care", desc: "Scheduled maintenance keeps your vehicle performing reliably." },
+                    { title: "Priority Service", desc: "Contract holders receive accelerated booking and service." },
+                    { title: "Professional Expertise", desc: "Work performed by certified technicians following OEM guidelines." }
+                ]
+            },
+            warrantyContract: {
+                title: "Warranty Contracts",
+                description: "Drive with confidence knowing your vehicle is protected from unexpected mechanical and electrical failures beyond factory coverage.",
+                features: [
+                    "Comprehensive coverage",
+                    "No deductible options",
+                    "24/7 roadside assistance",
+                    "High claim limits"
+                ],
+                benefits: [
+                    { title: "Major System Protection", desc: "Covers engine, transmission, electronics, and more." },
+                    { title: "Hassle-Free Claims", desc: "We manage paperwork and payments directly with providers." },
+                    { title: "Transferable Value", desc: "Increase resale value by transferring the remaining coverage." },
+                    { title: "Unlimited Mileage Options", desc: "Choose plans that suit your driving habits." }
+                ]
+            },
+            inspections360: {
+                title: "360° Inspections",
+                description: "Our 360° inspection delivers a detailed digital report covering every major system—perfect for buyers and sellers of luxury vehicles.",
+                features: [
+                    "111-point inspection",
+                    "Digital report",
+                    "Paint depth analysis",
+                    "Computer diagnostics"
+                ],
+                benefits: [
+                    { title: "Hidden Issues Revealed", desc: "Identify previous damage, repairs, and mechanical faults before you buy." },
+                    { title: "Negotiation Power", desc: "Use our report to negotiate a fair price based on the car’s true condition." },
+                    { title: "Confidence", desc: "Buy with certainty knowing the full state of the vehicle." },
+                    { title: "Driver Experience", desc: "We test-drive and evaluate handling, noise, and performance." }
+                ]
+            },
+            insurance: {
+                title: "Car Insurance",
+                description: "We simplify car insurance through trusted UAE providers, handling claims and repairs so you can drive with peace of mind.",
+                features: [
+                    "Competitive premiums",
+                    "Claims management",
+                    "Dealer repair options",
+                    "Courtesy car support"
+                ],
+                benefits: [
+                    { title: "Full-Service", desc: "We handle policy setup, renewals, and claims end-to-end." },
+                    { title: "Guaranteed Repairs", desc: "Claims processed through Red Dune ensure genuine parts and expert workmanship." },
+                    { title: "Claims Advocacy", desc: "We advocate on your behalf to speed up approvals." },
+                    { title: "Custom Coverage", desc: "Plans tailored to your driving profile, including GCC coverage." }
+                ]
+            }
+        },
         bodyshopServices: {
             dashboard: { title: "Dashboard Leather or Replacement", description: "Premium leather wrapping and dashboard restoration." },
             classicCar: { title: "Classic Car Restoration", description: "Bringing vintage beauties back to life." },
@@ -1872,7 +1962,9 @@ export const translations = {
             whyChoose: "لماذا تختار هذا؟",
             requestQuote: "طلب عرض سعر",
             needAdvice: "تحتاج نصيحة خبير؟",
-            adviceDesc: "فريقنا جاهز لمساعدتك بحلول مخصصة لسيارتك."
+            adviceDesc: "فريقنا جاهز لمساعدتك بحلول مخصصة لسيارتك.",
+            gallery: "معرض المنتجات",
+            galleryDesc: "استكشف منتجاتنا المتميزة بالتفصيل.",
         },
         engineeringData: {
             radar: {
@@ -2813,9 +2905,16 @@ export const translations = {
             }
         },
         products: {
+            pageTitle: "استكشف منتجاتنا",
+            pageDescription: "من قطع الغيار الأصلية إلى عقود الصيانة وفحوصات ٣٦٠ درجة، استعرض مجموعة المنتجات المتميزة المصممة للسيارات الفاخرة.",
+            browseProducts: "تصفح المنتجات",
+            catalogTitle: "كتالوج المنتجات",
+            catalogSubtitle: "اختر الحل الذي يناسب سيارتك واحتياجاتك.",
+            learnMore: "اكتشف المزيد",
             spareParts: {
                 title: "قطع غيار أصلية",
                 description: "في ريد ديون، نحن نفهم أن كل قطعة تلعب دوراً حيوياً في أداء سيارتك وسلامتها. نحن نوفر قطع غيار OEM (الشركة المصنعة للمعدات الأصلية) أصلية ١٠٠٪ لجميع العلامات التجارية الفاخرة الكبرى. تضمن شبكة التوريد العالمية لدينا الحصول على المكونات حتى النادرة منها بسرعة، مما يضمن احتفاظ سيارتك بمواصفات المصنع وقيمتها.",
+
                 features: ["قطع غيار OEM أصلية ١٠٠٪", "ضمان لمدة ١٢ شهراً", "شحن عالمي سريع", "أسعار سوق تنافسية"],
                 benefits: [
                     { title: "دقة المصنع", desc: "تضمن القطع المصممة خصيصاً لموديل سيارتك الملاءمة المثالية والأداء الأمثل." },

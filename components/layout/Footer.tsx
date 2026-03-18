@@ -12,9 +12,15 @@ import {
 import { SITE_CONFIG } from "@/lib/data";
 import Image from "next/image";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { useEffect, useState } from "react";
 
 export function Footer() {
   const { t } = useLanguage();
+  const [year, setYear] = useState<number>(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   // Helper to translate nav labels
 
@@ -168,7 +174,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-sans text-gray-500 text-sm">
-            © {new Date().getFullYear()} {t("footer.rights")}
+            © {year} {t("footer.rights")}
           </p>
           <div className="font-sans text-gray-500 text-sm">
             {t("footer.poweredBy")}

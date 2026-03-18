@@ -34,10 +34,12 @@
     "@types/nodemailer": "^7.0.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9.39.3",
     "eslint-config-next": "15.2.3",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
+    "postcss": "^8.5.8",
     "tailwindcss": "^4",
     "typescript": "^5.4.0"
   }

@@ -55,13 +55,13 @@ export const RecoveryServices = () => {
               data-aos-duration="1000"
             >
               <Image
-                src="/images/recovery/nop 1.jfif"
+                src="/images/nop 1.jfif"
                 alt="Car Recovery Service Dubai"
                 fill
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-linear-to-r from-white via-transparent to-transparent lg:block hidden" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent lg:block hidden" />
 
               {/* Floating Status */}
               <div className="absolute bottom-6 left-6 right-6 lg:left-10 lg:bottom-10 lg:right-auto bg-black p-4 md:p-6 text-white max-w-sm">
@@ -106,7 +106,7 @@ export const RecoveryServices = () => {
               data-aos-duration="1000"
             >
               <Image
-                src="/images/recovery/ser (2).jpg"
+                src="/images/ser (2).jpg"
                 alt="Flatbed Towing Dubai"
                 fill
                 className="object-cover"
@@ -129,7 +129,7 @@ export const RecoveryServices = () => {
               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-8 w-full">
                 {(t("recovery.flatbed.items") as unknown as string[]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay={i * 100}>
-                    <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center shrink-0 mt-1">
+                    <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
                     <p className="text-black font-bold uppercase text-xs md:text-sm tracking-wide">{item}</p>
@@ -155,7 +155,7 @@ export const RecoveryServices = () => {
               data-aos-duration="1000"
             >
               <Image
-                src="/images/recovery/ser (1).jpg"
+                src="/images/ser (1).jpg"
                 alt="Reliable Car Recovery Dubai"
                 fill
                 className="object-cover"
@@ -242,10 +242,10 @@ export const RecoveryServices = () => {
         <div className="container mx-auto max-w-[1200px] px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { key: "luxury", img: "/images/recovery/car.jpg" },
-              { key: "suv", img: "/images/recovery/car (2).jpg" },
-              { key: "ev", img: "/images/recovery/car (3).jpg" },
-              { key: "commercial", img: "/images/recovery/car (1).jpg" },
+              { key: "luxury", img: "/images/car.jpg" },
+              { key: "suv", img: "/images/car (2).jpg" },
+              { key: "ev", img: "/images/car (3).jpg" },
+              { key: "commercial", img: "/images/car (1).jpg" },
             ].map((item, i) => (
               <div
                 key={i}

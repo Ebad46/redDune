@@ -12,9 +12,10 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-background">
       <Header />
       {/* Services Hero */}
-      <section className="relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden ">
-        <div className="absolute inset-0 bg-neutral-900 z-0 ">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800 via-neutral-900 to-black" />
+      <section className="relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden mb-8">
+        <div className="absolute inset-0 bg-neutral-900 z-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FybCUyMHNlcnZpY2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60')]">
+          <div className="absolute inset-0 bg-neutral-900/70 z-0 " />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-800 via-neutral-900 to-black opacity-50" />
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
         </div>
 
@@ -44,7 +45,6 @@ export default function ServicesPage() {
         </div>
       </section>
       <ServiceList />
-      v
       <Footer />
     </main>
   );

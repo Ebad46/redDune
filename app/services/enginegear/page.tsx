@@ -133,7 +133,7 @@ export default function EngineGearboxPage() {
             data-aos="fade-left"
           >
             <Image
-              src={ENGINE_GEARBOX_DATA.whyChooseUs.image}
+              src="/images/Gear Box.jfif.jpeg"
               alt="Close-up of gearbox part"
               fill
               className="object-cover"

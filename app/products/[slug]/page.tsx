@@ -36,8 +36,9 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
         >
           <Image
             src={product.image}
-            alt={product.title}
+            alt={t(product.title)}
             fill
+            sizes="100vw"
             className="object-cover brightness-[0.4]"
             priority
           />
@@ -48,7 +49,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {product.title}
+            {t(product.title)}
           </h1>
           <div
             className="w-24 h-1 bg-primary mx-auto rounded-full"
@@ -69,7 +70,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   {t("productDetail.overview")}
                 </h2>
                 <p className="font-sans text-muted-foreground text-lg leading-relaxed">
-                  {product.description}
+                  {t(product.description)}
                 </p>
               </div>
 
@@ -91,7 +92,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                       <Check size={20} strokeWidth={3} />
                     </div>
                     <span className="font-heading text-secondary font-bold text-sm tracking-wide uppercase">
-                      {feature}
+                      {t(feature)}
                     </span>
                   </div>
                 ))}
@@ -124,10 +125,10 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                           <div className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0 group-hover:scale-150 transition-transform" />
                           <div>
                             <h4 className="font-heading font-bold text-secondary text-lg mb-1 group-hover:text-primary transition-colors">
-                              {benefit.title}
+                              {t(benefit.title)}
                             </h4>
                             <p className="font-sans text-muted-foreground text-base leading-relaxed">
-                              {benefit.description}
+                              {t(benefit.description)}
                             </p>
                           </div>
                         </div>
@@ -157,6 +158,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   src={product.image}
                   alt={product.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
@@ -173,6 +175,36 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -z-10" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl font-bold text-secondary mb-4">
+              {t("productDetail.gallery")}
+            </h2>
+            <p className="text-muted-foreground">
+              {t("productDetail.galleryDesc")}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {["z1.jpeg", "z2.jpeg", "z3.jpeg", "z4.jpeg"].map((img, index) => (
+              <div
+                key={index}
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <Image
+                  src={`/images/${img}`}
+                  alt={`Gallery ${index + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

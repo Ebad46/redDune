@@ -18,7 +18,7 @@ export function PlaceholderImage({ label, className }: PlaceholderImageProps) {
             />
 
             {/* Animated Sheer */}
-            <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
             {/* Content */}
             <div className="text-center z-10">

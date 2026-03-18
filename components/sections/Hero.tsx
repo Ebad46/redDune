@@ -33,7 +33,7 @@ export function Hero() {
         >
           <div className="absolute inset-0 shadow-2xs shadow-red-500 -mr-80">
             <Image
-              src="/bg.png"
+              src="/BG.png"
               alt="Engine Background"
               fill
               className="object-cover opacity-40"
@@ -94,7 +94,7 @@ export function Hero() {
               <span className="text-transparent bg-clip-text bg-linear-to-r from-black via-black to-white">
                 RED
               </span>{" "}
-              DUNE German
+              DUNE GERMAN
               <span className="text-transparent bg-clip-text bg-linear-to-r from-black via-black to-white">
                 {" "}
                 EXPERTS.
@@ -115,17 +115,6 @@ export function Hero() {
                             "
               >
                 {t("hero.description")}
-              </p>
-              <p
-                className="
-                                text-white font-medium
-                                text-base
-                                xs:text-lg
-                                sm:text-xl
-                                md:text-2xl
-                                lg:text-3xl
-                            "
-              >
               </p>
             </div>
           </div>
@@ -153,7 +142,7 @@ export function Hero() {
             data-aos-offset="0"
           >
             <Image
-              src="/bg.png"
+              src="/BG.png"
               alt="Red Dune Car"
               fill
               className="object-contain drop-shadow-2xl translate-x-4 md:translate-x-0"
