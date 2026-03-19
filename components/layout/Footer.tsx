@@ -43,7 +43,7 @@ export function Footer() {
           <div className="space-y-4" data-aos="fade-up">
             <div className="flex items-center gap-2 -mt-8">
               <Image
-                src="/images/logo.png"
+                src="https://images.ebadprince49.workers.dev/logo.png"
                 alt="Logo"
                 width={250}
                 height={250}
@@ -192,3 +192,4 @@ export function Footer() {
     </footer>
   );
 }
+

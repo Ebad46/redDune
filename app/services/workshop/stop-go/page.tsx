@@ -54,7 +54,7 @@ export default function StopGoPage() {
               data-aos-duration="900"
             >
               <Image
-                src="/images/car.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/car.jfif.jpeg"
                 alt="Stop & Go Complete Car Service"
                 fill
                 className="object-cover"
@@ -112,7 +112,7 @@ export default function StopGoPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/stop.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/stop.jfif.jpeg"
                 alt="Comprehensive Car Care"
                 fill
                 className="object-cover"
@@ -174,7 +174,7 @@ export default function StopGoPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services1.jpg"
+                src="https://images.ebadprince49.workers.dev/services1.jpg"
                 alt="Expert Technicians"
                 fill
                 className="object-cover"
@@ -298,7 +298,7 @@ export default function StopGoPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services.jpg"
+                src="https://images.ebadprince49.workers.dev/services.jpg"
                 alt="Ideal Repair and Maintenance"
                 fill
                 className="object-cover"
@@ -376,3 +376,4 @@ export default function StopGoPage() {
     </main>
   );
 }
+

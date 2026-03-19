@@ -28,7 +28,7 @@ export default function ProductsPage() {
 
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[480px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/bmw.jpeg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('https://images.ebadprince49.workers.dev/bmw.jpeg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 container mx-auto px-6 text-center">
@@ -153,3 +153,4 @@ export default function ProductsPage() {
     </main>
   );
 }
+

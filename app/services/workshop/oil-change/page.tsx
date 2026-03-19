@@ -54,7 +54,7 @@ export default function OilChangePage() {
               data-aos-duration="900"
             >
               <Image
-                src="/images/oil1.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/oil1.jfif.jpeg"
                 alt="Engine Oil Change Service"
                 fill
                 className="object-cover"
@@ -118,7 +118,7 @@ export default function OilChangePage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/oil2.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/oil2.jfif.jpeg"
                 alt="Oil Change Workshop"
                 fill
                 className="object-cover"
@@ -234,7 +234,7 @@ export default function OilChangePage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services.jpg"
+                src="https://images.ebadprince49.workers.dev/services.jpg"
                 alt="Engine Oil Service"
                 fill
                 className="object-cover"
@@ -302,7 +302,7 @@ export default function OilChangePage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/oil3.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/oil3.jfif.jpeg"
                 alt="Engine Oil Types"
                 fill
                 className="object-cover"
@@ -360,7 +360,7 @@ export default function OilChangePage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services1.jpg"
+                src="https://images.ebadprince49.workers.dev/services1.jpg"
                 alt="Red Dune Workshop"
                 fill
                 className="object-cover"
@@ -405,3 +405,4 @@ export default function OilChangePage() {
     </main>
   );
 }
+

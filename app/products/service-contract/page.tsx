@@ -70,7 +70,7 @@ export default function ServiceContractPage() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/con2.jpeg"
+            src="https://images.ebadprince49.workers.dev/con2.jpeg"
             alt="Detailed Inspection Process"
             fill
             className="opacity-30 mix-blend-overlay object-cover"
@@ -120,7 +120,7 @@ export default function ServiceContractPage() {
             <div className="lg:w-1/2 h-[400px] w-full relative group">
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
               <Image
-                src="/images/con1.jpeg"
+                src="https://images.ebadprince49.workers.dev/con1.jpeg"
                 alt="Contract Explanation"
                 fill
                 className="relative z-10 border-primary/10 bg-neutral-900/50"
@@ -209,7 +209,7 @@ export default function ServiceContractPage() {
             <div className="lg:w-1/2 h-[500px] w-full relative">
               <div className="absolute inset-0 transform -translate-x-4 translate-y-4 border border-primary/30" />
               <Image
-                src="/images/con3.jpeg"
+                src="https://images.ebadprince49.workers.dev/con3.jpeg"
                 alt="How It Helps"
                 fill
                 className="relative z-10 border-primary/10 bg-neutral-900/50"
@@ -273,3 +273,4 @@ export default function ServiceContractPage() {
     </main>
   );
 }
+

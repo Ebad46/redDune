@@ -20,7 +20,7 @@ export default function EngineManagementSystemPage() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/engineering.jpg"
+            src="https://images.ebadprince49.workers.dev/engineering.jpg"
             alt="Premium RED DUNE Workshop"
             fill
             className="object-cover opacity-40 mix-blend-overlay"
@@ -129,7 +129,7 @@ export default function EngineManagementSystemPage() {
                 data-aos="fade-left"
               >
                 <Image
-                  src="/images/engin.jfif.jpeg"
+                  src="https://images.ebadprince49.workers.dev/engin.jfif.jpeg"
                   alt="Engine Management System"
                   fill
                   className="object-cover"
@@ -195,7 +195,7 @@ export default function EngineManagementSystemPage() {
                 data-aos="fade-right"
               >
                 <Image
-                  src="/images/engineering (2).jpg"
+                  src="https://images.ebadprince49.workers.dev/engineering (2).jpg"
                   alt="ECU Repair"
                   fill
                   className="object-cover"
@@ -264,7 +264,7 @@ export default function EngineManagementSystemPage() {
                 data-aos="fade-left"
               >
                 <Image
-                  src="/images/gear box.jfif.jpeg"
+                  src="https://images.ebadprince49.workers.dev/gear box.jfif.jpeg"
                   alt="Recovery Vehicle"
                   fill
                   className="object-cover object-bottom"
@@ -333,7 +333,7 @@ export default function EngineManagementSystemPage() {
                 data-aos="fade-right"
               >
                 <Image
-                  src="/images/radiator.jfif.jpeg"
+                  src="https://images.ebadprince49.workers.dev/radiator.jfif.jpeg"
                   alt="Radiator Service"
                   fill
                   className="object-cover"
@@ -412,7 +412,7 @@ export default function EngineManagementSystemPage() {
                 data-aos="fade-left"
               >
                 <Image
-                  src="/images/battery.jfif.jpeg"
+                  src="https://images.ebadprince49.workers.dev/battery.jfif.jpeg"
                   alt="Battery Replacement"
                   fill
                   className="object-cover"
@@ -460,3 +460,4 @@ export default function EngineManagementSystemPage() {
     </main>
   );
 }
+

@@ -32,3 +32,4 @@ export function PlaceholderImage({ label, className }: PlaceholderImageProps) {
         </div>
     );
 }
+

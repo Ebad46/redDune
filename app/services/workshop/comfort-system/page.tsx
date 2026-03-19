@@ -55,7 +55,7 @@ export default function ComfortSystemPage() {
               data-aos-duration="900"
             >
               <Image
-                src="/images/hero.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/hero.jfif.jpeg"
                 alt="Professional Workshop"
                 fill
                 className="object-cover"
@@ -132,7 +132,7 @@ export default function ComfortSystemPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/ac.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/ac.jfif.jpeg"
                 alt="Comfort System AC Repair"
                 fill
                 className="object-cover"
@@ -200,7 +200,7 @@ export default function ComfortSystemPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/suspension.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/suspension.jfif.jpeg"
                 alt="Suspension System Repair"
                 fill
                 className="object-cover"
@@ -246,3 +246,4 @@ export default function ComfortSystemPage() {
     </main>
   );
 }
+

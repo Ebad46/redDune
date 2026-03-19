@@ -55,7 +55,7 @@ export default function BrakeSystemPage() {
               data-aos-duration="900"
             >
               <Image
-                src="/images/hero.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/hero.jfif.jpeg"
                 alt="Brake System Inspection"
                 fill
                 className="object-cover"
@@ -116,7 +116,7 @@ export default function BrakeSystemPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/s2.jpg"
+                src="https://images.ebadprince49.workers.dev/s2.jpg"
                 alt="Brake Disc Service"
                 fill
                 className="object-cover"
@@ -179,7 +179,7 @@ export default function BrakeSystemPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/abs.jfif.jpeg"
+                src="https://images.ebadprince49.workers.dev/abs.jfif.jpeg"
                 alt="ABS Diagnostics"
                 fill
                 className="object-cover"
@@ -242,7 +242,7 @@ export default function BrakeSystemPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services1.jpg"
+                src="https://images.ebadprince49.workers.dev/services1.jpg"
                 alt="Brake Service Professional"
                 fill
                 className="object-cover"
@@ -353,7 +353,7 @@ export default function BrakeSystemPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services.jpg"
+                src="https://images.ebadprince49.workers.dev/services.jpg"
                 alt="Workshop Perfection"
                 fill
                 className="object-cover"
@@ -393,3 +393,4 @@ export default function BrakeSystemPage() {
     </main>
   );
 }
+

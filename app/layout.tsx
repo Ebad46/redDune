@@ -37,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} ${playfair.variable} ${geistMono.variable} font-sans antialiased overflow-x-hidden`}
+        suppressHydrationWarning={true}
       >
         <LanguageProvider>
           <AOSInit />
@@ -47,3 +48,4 @@ export default function RootLayout({
     </html>
   );
 }
+

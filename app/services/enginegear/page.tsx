@@ -133,7 +133,7 @@ export default function EngineGearboxPage() {
             data-aos="fade-left"
           >
             <Image
-              src="/images/Gear Box.jfif.jpeg"
+              src="https://images.ebadprince49.workers.dev/Gear Box.jfif.jpeg"
               alt="Close-up of gearbox part"
               fill
               className="object-cover"
@@ -242,3 +242,4 @@ export default function EngineGearboxPage() {
     </div>
   );
 }
+

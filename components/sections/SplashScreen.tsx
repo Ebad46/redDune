@@ -40,3 +40,4 @@ export default function SplashScreen({ onFinish }: SplashProps) {
     </div>
   );
 }
+

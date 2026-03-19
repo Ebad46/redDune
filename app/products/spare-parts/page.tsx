@@ -218,7 +218,7 @@ export default function SparePartsPage() {
                 >
                   <div className="relative w-full aspect-square lg:aspect-[4/2] overflow-hidden">
                     <Image
-                      src={solution.image ?? "/images/z1.jpeg"}
+                      src={solution.image ?? "https://images.ebadprince49.workers.dev/z1.jpeg"}
                       alt={solution.imageLabel}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -354,7 +354,7 @@ export default function SparePartsPage() {
               data-aos-duration="800"
             >
               <Image
-                src="/images/services.jpg"
+                src="https://images.ebadprince49.workers.dev/services.jpg"
                 alt={t(SPARE_PARTS_DATA.whyChoose.imageLabel)}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -453,3 +453,4 @@ export default function SparePartsPage() {
     </main>
   );
 }
+

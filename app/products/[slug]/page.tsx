@@ -197,7 +197,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 className="relative aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Image
-                  src={`/images/${img}`}
+                  src={`https://images.ebadprince49.workers.dev/${img}`}
                   alt={`Gallery ${index + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 25vw"

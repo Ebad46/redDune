@@ -106,3 +106,4 @@ export default function ServiceDetailSections({ data }: { data: ServiceData }) {
     </section>
   );
 }
+
