@@ -321,7 +321,7 @@ export default function BrakeSystemPage() {
             >
               <div>
                 <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-primary mb-3">
-                  Our Standard
+                  {t("workshopPages.common.ourStandard")}
                   <span className="block w-12 h-[2px] bg-primary mt-2" />
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mt-4 mb-4">

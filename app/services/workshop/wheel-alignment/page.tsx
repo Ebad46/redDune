@@ -82,7 +82,7 @@ export default function WheelAlignmentPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Target size={14} />
-                  Section 01
+                  {t("workshopPages.common.section01")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.wheelAlignment.whyUs.title")}
@@ -158,7 +158,7 @@ export default function WheelAlignmentPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Target size={14} />
-                  Section 02
+                  {t("workshopPages.common.section02")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.wheelAlignment.frequency.title")}
@@ -216,7 +216,7 @@ export default function WheelAlignmentPage() {
             data-aos-duration="800"
           >
             <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-primary mb-3">
-              Warning Signs
+              {t("workshopPages.common.warningSigns")}
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
               {t("workshopPages.wheelAlignment.signs.title")}

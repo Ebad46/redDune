@@ -82,7 +82,7 @@ export default function FuelInjectionPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Zap size={14} />
-                  Section 01
+                  {t("workshopPages.common.section01")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.fuelInjection.whyUs.title")}
@@ -154,7 +154,7 @@ export default function FuelInjectionPage() {
             data-aos-duration="800"
           >
             <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-primary mb-3">
-              Warning Symptoms
+              {t("workshopPages.common.warningSymptoms")}
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
               {t("workshopPages.fuelInjection.symptoms.title")}
@@ -215,7 +215,7 @@ export default function FuelInjectionPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Zap size={14} />
-                  Section 03
+                  {t("workshopPages.common.section03")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.fuelInjection.inspection.title")}

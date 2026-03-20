@@ -215,19 +215,13 @@ export default function ComfortSystemPage() {
       {/* ─── GET IN TOUCH ─── */}
       <section className="py-24 bg-black text-white" id="contact">
         <div className="container mx-auto max-w-[1200px] px-6 text-center">
-          <h2
-            className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6"
-            data-aos="fade-up"
-          >
-
-          </h2>
+            {t("workshopPages.comfortSystem.finalCta.title")}
           <p
             className="text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-[1.7]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Our expert team is ready to assist you. Book an appointment or call
-            us directly for a free consultation.
+            {t("workshopPages.comfortSystem.finalCta.description")}
           </p>
           <div data-aos="zoom-in" data-aos-delay="200">
             <Link href="/contact">
@@ -235,7 +229,7 @@ export default function ComfortSystemPage() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white rounded-none font-bold px-12 py-6 uppercase tracking-wider shadow-[0_0_20px_rgba(209,50,50,0.35)] transition-all"
               >
-                Contact Us Now
+                {t("workshopPages.comfortSystem.finalCta.button")}
               </Button>
             </Link>
           </div>

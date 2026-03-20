@@ -81,7 +81,7 @@ export default function StopGoPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Settings size={14} />
-                  Section 01
+                  {t("workshopPages.common.section01")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.stopGo.care.title")}
@@ -137,7 +137,7 @@ export default function StopGoPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Settings size={14} />
-                  Section 02
+                  {t("workshopPages.common.section02")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.stopGo.whyUs.title")}
@@ -195,7 +195,7 @@ export default function StopGoPage() {
             data-aos-duration="800"
           >
             <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-primary mb-3">
-              Full Package
+              {t("workshopPages.common.fullPackage")}
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
               {t("workshopPages.stopGo.included.title")}
@@ -255,7 +255,7 @@ export default function StopGoPage() {
               <div>
                 <span className="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest mb-4">
                   <Settings size={14} />
-                  Section 04
+                  {t("workshopPages.common.section04")}
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black mb-4">
                   {t("workshopPages.stopGo.maintenance.title")}
@@ -318,7 +318,7 @@ export default function StopGoPage() {
             data-aos-duration="800"
           >
             <span className="inline-block text-sm font-bold uppercase tracking-[0.25em] text-primary">
-              Our Commitment
+              {t("workshopPages.common.ourCommitment")}
             </span>
             <h2 className="font-heading text-4xl md:text-5xl font-bold uppercase tracking-tight text-black">
               {t("workshopPages.stopGo.perfection.title")}

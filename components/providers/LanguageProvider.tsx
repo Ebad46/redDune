@@ -10,7 +10,7 @@ type LanguageContextType = {
   language: Language;
   direction: Direction;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -47,7 +47,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const resolveTranslation = (
     namespace: Record<string, unknown>,
     path: string,
-  ): string | null => {
+  ): any => {
     const keys = path.split(".");
     let current: unknown = namespace;
 
@@ -63,7 +63,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       }
     }
 
-    return typeof current === "string" ? current : null;
+    return current;
   };
 
   const t = (path: string) => {

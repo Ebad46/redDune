@@ -1440,7 +1440,10 @@ export const translations = {
                 fullPackage: "Full Package",
                 whyUs: "Why Us",
                 warning: "Warning",
-                symptoms: "Symptoms"
+                symptoms: "Symptoms",
+                ourStandard: "Our Standard",
+                ourCommitment: "Our Commitment",
+                warningSymptoms: "Warning Symptoms"
             }
         },
         products: {
@@ -2993,7 +2996,10 @@ export const translations = {
                 fullPackage: "باقة كاملة",
                 whyUs: "لماذا نحن؟",
                 warning: "تحذير",
-                symptoms: "الأعراض"
+                symptoms: "الأعراض",
+                ourStandard: "معيارنا",
+                ourCommitment: "التزامنا",
+                warningSymptoms: "أعراض تحذيرية"
             }
         },
         bodyshopServices: {
