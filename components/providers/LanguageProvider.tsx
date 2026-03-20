@@ -83,6 +83,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       return path;
     }
 
+    // Ensure we don't return objects to React children
+    if (typeof translation === 'object' && !Array.isArray(translation)) {
+      console.warn(`Translation for key "${path}" is an object, returning path instead.`);
+      return path;
+    }
+
     return translation;
   };
 
