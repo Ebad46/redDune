@@ -11,6 +11,7 @@ type LanguageContextType = {
   direction: Direction;
   setLanguage: (lang: Language) => void;
   t: (key: string) => any;
+  tArr: (key: string) => any[];
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -85,10 +86,19 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return translation;
   };
 
+  const tArr = (path: string): any[] => {
+    const value = t(path);
+    if (Array.isArray(value)) {
+      return value;
+    }
+    // If the value is the key itself (fallback) or not an array, return empty array
+    return [];
+  };
+
   if (!isHydrated) return null;
 
   return (
-    <LanguageContext.Provider value={{ language, direction, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, direction, setLanguage, t, tArr }}>
       <div
         dir={direction}
         className={direction === "rtl" ? "font-arabic" : "font-sans"}

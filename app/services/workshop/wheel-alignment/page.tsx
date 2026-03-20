@@ -10,7 +10,7 @@ import { Contact } from "@/components/sections/Contact";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function WheelAlignmentPage() {
-  const { t } = useLanguage();
+  const { t, tArr } = useLanguage();
 
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
@@ -94,7 +94,7 @@ export default function WheelAlignmentPage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.wheelAlignment.whyUs.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.wheelAlignment.whyUs.list").map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -106,7 +106,7 @@ export default function WheelAlignmentPage() {
               </ul>
 
               <div className="grid grid-cols-2 gap-4 pt-2">
-                {(t("workshopPages.wheelAlignment.whyUs.grid") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.wheelAlignment.whyUs.grid").map((item, i) => (
                   <div
                     key={i}
                     className="border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors flex items-center gap-3"
@@ -170,7 +170,7 @@ export default function WheelAlignmentPage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.wheelAlignment.frequency.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.wheelAlignment.frequency.list").map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 text-gray-700 font-medium"
@@ -229,7 +229,7 @@ export default function WheelAlignmentPage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {(t("workshopPages.wheelAlignment.signs.list") as unknown as string[]).map((item, i) => (
+            {tArr("workshopPages.wheelAlignment.signs.list").map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"

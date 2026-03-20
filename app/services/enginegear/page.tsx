@@ -11,17 +11,8 @@ import { translations } from "@/lib/translations";
 import { ENGINE_GEARBOX_DATA } from "@/lib/data";
 
 export default function EngineGearboxPage() {
-  const { t, direction, language } = useLanguage();
+  const { t, tArr, direction, language } = useLanguage();
 
-  // Helper to resolve nested translation paths to arrays/objects
-  const tArr = (path: string) => {
-    const keys = path.split(".");
-    let current: any = (translations as Record<string, any>)[language];
-    for (const key of keys) {
-      current = current?.[key];
-    }
-    return current;
-  };
 
   return (
     <div className="bg-white text-black font-sans mt-16 overflow-x-hidden" dir={direction}>
@@ -42,7 +33,7 @@ export default function EngineGearboxPage() {
             </h1>
             <div className="w-16 h-1 bg-[#E10600]"></div>
             <div className="text-gray-700 text-lg space-y-4 leading-relaxed">
-              {(tArr(ENGINE_GEARBOX_DATA.hero.description) as string[] || []).map((p: string, i: number) => (
+              {tArr(ENGINE_GEARBOX_DATA.hero.description).map((p: string, i: number) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
@@ -99,7 +90,7 @@ export default function EngineGearboxPage() {
             </h2>
             <div className="w-16 h-1 bg-[#E10600]"></div>
             <div className="text-gray-700 text-lg space-y-4 leading-relaxed">
-              {(tArr(ENGINE_GEARBOX_DATA.overhaulDubai.description) as string[] || []).map((p: string, i: number) => (
+              {tArr(ENGINE_GEARBOX_DATA.overhaulDubai.description).map((p: string, i: number) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
@@ -126,7 +117,7 @@ export default function EngineGearboxPage() {
             </h2>
             <div className="w-16 h-1 bg-[#E10600]"></div>
             <div className="text-gray-700 text-lg space-y-4 leading-relaxed">
-              {(tArr(ENGINE_GEARBOX_DATA.whyChooseUs.description) as string[] || []).map((p: string, i: number) => (
+              {tArr(ENGINE_GEARBOX_DATA.whyChooseUs.description).map((p: string, i: number) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
@@ -168,7 +159,7 @@ export default function EngineGearboxPage() {
               <p>{t(ENGINE_GEARBOX_DATA.whenToGet.description)}</p>
 
               <ul className="space-y-2 mt-2">
-                {(tArr(ENGINE_GEARBOX_DATA.whenToGet.signsKey) as string[] || []).map((item: string, index: number) => (
+                {tArr(ENGINE_GEARBOX_DATA.whenToGet.signsKey).map((item: string, index: number) => (
                   <li
                     key={index}
                     className="flex items-center space-x-2"
@@ -218,7 +209,7 @@ export default function EngineGearboxPage() {
             </h2>
             <div className="w-16 h-1 bg-[#E10600]"></div>
             <div className="text-gray-700 text-lg space-y-4 leading-relaxed">
-              {(tArr(ENGINE_GEARBOX_DATA.atRedDune.description) as string[] || []).map((p: string, i: number) => (
+              {tArr(ENGINE_GEARBOX_DATA.atRedDune.description).map((p: string, i: number) => (
                 <p key={i}>{p}</p>
               ))}
             </div>

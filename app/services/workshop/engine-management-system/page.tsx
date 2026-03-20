@@ -10,7 +10,7 @@ import { Contact } from "@/components/sections/Contact";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function EngineManagementSystemPage() {
-  const { t } = useLanguage();
+  const { t, tArr } = useLanguage();
 
   return (
     <main className="min-h-screen bg-black text-white selection:bg-red-600 selection:text-white font-sans">
@@ -92,7 +92,7 @@ export default function EngineManagementSystemPage() {
                     {t("workshopPages.engineManagement.engine.whyUsTitle")}
                   </h4>
                   <ul className="space-y-4">
-                    {(t("workshopPages.engineManagement.engine.benefits") as unknown as string[]).map((item, i) => (
+                    {tArr("workshopPages.engineManagement.engine.benefits").map((item, i) => (
                       <li
                         key={i}
                         className="flex items-center gap-4 text-lg text-gray-700 font-medium whitespace-nowrap lg:whitespace-normal"
@@ -158,7 +158,7 @@ export default function EngineManagementSystemPage() {
                     {t("workshopPages.engineManagement.ecu.symptomsTitle")}
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {(t("workshopPages.engineManagement.ecu.symptoms") as unknown as string[]).map((item, i) => (
+                    {tArr("workshopPages.engineManagement.ecu.symptoms").map((item, i) => (
                       <div
                         key={i}
                         className="flex items-center gap-3 bg-white p-4 shadow-sm border border-gray-100 hover:border-primary/30 transition-colors"
@@ -292,7 +292,7 @@ export default function EngineManagementSystemPage() {
                     {t("workshopPages.engineManagement.radiator.problemsTitle")}
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {(t("workshopPages.engineManagement.radiator.problems") as unknown as string[]).map((item, i) => (
+                    {tArr("workshopPages.engineManagement.radiator.problems").map((item, i) => (
                       <div
                         key={i}
                         className="bg-white p-6 border border-gray-200 hover:border-primary transition-colors flex items-center gap-6"
@@ -368,7 +368,7 @@ export default function EngineManagementSystemPage() {
                       {t("workshopPages.engineManagement.battery.benefitsTitle")}
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-                      {(t("workshopPages.engineManagement.battery.benefits") as unknown as string[]).map((item, i) => (
+                      {tArr("workshopPages.engineManagement.battery.benefits").map((item, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                           <span className="font-bold text-gray-800">
@@ -384,7 +384,7 @@ export default function EngineManagementSystemPage() {
                       {t("workshopPages.engineManagement.battery.whyUsTitle")}
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
-                      {(t("workshopPages.engineManagement.battery.whyUs") as unknown as string[]).map((item, i) => (
+                      {tArr("workshopPages.engineManagement.battery.whyUs").map((item, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <div className="w-2 h-2 bg-black rounded-full flex-shrink-0" />
                           <span className="font-medium text-gray-700">

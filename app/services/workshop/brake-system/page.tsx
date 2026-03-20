@@ -10,7 +10,7 @@ import { Contact } from "@/components/sections/Contact";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function BrakeSystemPage() {
-  const { t } = useLanguage();
+  const { t, tArr } = useLanguage();
 
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
@@ -94,7 +94,7 @@ export default function BrakeSystemPage() {
               </div>
 
               <ul className="space-y-4 mb-8">
-                {(t("workshopPages.brakeSystem.service.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.brakeSystem.service.list").map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary w-5 h-5 flex-shrink-0" />
                     {item}
@@ -153,7 +153,7 @@ export default function BrakeSystemPage() {
               </div>
 
               <ul className="space-y-4 mb-8">
-                {(t("workshopPages.brakeSystem.abs.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.brakeSystem.abs.list").map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                     {item}
@@ -213,7 +213,7 @@ export default function BrakeSystemPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {(t("workshopPages.brakeSystem.whyUs.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.brakeSystem.whyUs.list").map((item, i) => (
                   <div
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -275,7 +275,7 @@ export default function BrakeSystemPage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {(t("workshopPages.brakeSystem.signs.list") as unknown as string[]).map((item, i) => (
+            {tArr("workshopPages.brakeSystem.signs.list").map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-white border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"

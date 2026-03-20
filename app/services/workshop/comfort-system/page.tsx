@@ -10,7 +10,7 @@ import { Contact } from "@/components/sections/Contact";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function ComfortSystemPage() {
-  const { t } = useLanguage();
+  const { t, tArr } = useLanguage();
 
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
@@ -100,7 +100,7 @@ export default function ComfortSystemPage() {
                   {t("workshopPages.comfortSystem.ac.partsTitle")}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                  {(t("workshopPages.comfortSystem.ac.parts") as unknown as string[]).map((item, i) => (
+                  {tArr("workshopPages.comfortSystem.ac.parts").map((item, i) => (
                     <div
                       key={i}
                       className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -174,7 +174,7 @@ export default function ComfortSystemPage() {
                   {t("workshopPages.comfortSystem.suspension.whyUsTitle")}
                 </h3>
                 <ul className="space-y-4">
-                  {(t("workshopPages.comfortSystem.suspension.benefits") as unknown as string[]).map((item, i) => (
+                  {tArr("workshopPages.comfortSystem.suspension.benefits").map((item, i) => (
                     <li
                       key={i}
                       className="flex items-center gap-4 text-gray-700 font-medium"

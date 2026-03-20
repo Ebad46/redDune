@@ -10,7 +10,7 @@ import { Contact } from "@/components/sections/Contact";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
 export default function OilChangePage() {
-  const { t } = useLanguage();
+  const { t, tArr } = useLanguage();
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-red-600 selection:text-white">
       <Header />
@@ -90,7 +90,7 @@ export default function OilChangePage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.oilChange.service.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.oilChange.service.list").map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-4 text-gray-700 font-medium"
@@ -152,7 +152,7 @@ export default function OilChangePage() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            {(t("workshopPages.oilChange.signs.list") as unknown as string[]).map((item, i) => (
+            {tArr("workshopPages.oilChange.signs.list").map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 bg-white border border-gray-200 px-6 py-5 hover:border-primary/40 transition-colors"
@@ -203,7 +203,7 @@ export default function OilChangePage() {
               </div>
 
               <ul className="space-y-4">
-                {(t("workshopPages.oilChange.expect.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.oilChange.expect.list").map((item, i) => (
                   <li
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
@@ -262,7 +262,7 @@ export default function OilChangePage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t("workshopPages.oilChange.oils.items") as unknown as any[]).map((item, i) => (
+                {tArr("workshopPages.oilChange.oils.items").map((item: any, i: number) => (
                   <div
                     key={i}
                     className="border border-gray-200 p-5 hover:border-primary/40 transition-colors"
@@ -323,7 +323,7 @@ export default function OilChangePage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t("workshopPages.oilChange.whyUs.list") as unknown as string[]).map((item, i) => (
+                {tArr("workshopPages.oilChange.whyUs.list").map((item, i) => (
                   <div
                     key={i}
                     className="flex items-center gap-3 border border-gray-200 px-5 py-4 hover:border-primary/40 transition-colors"
