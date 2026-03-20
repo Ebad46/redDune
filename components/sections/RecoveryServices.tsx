@@ -6,9 +6,20 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Phone, Clock, Shield, CheckCircle2, MapPin, Truck, HelpCircle, ChevronRight, Star } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { translations } from "@/lib/translations";
 
 export const RecoveryServices = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Helper to resolve nested translation paths to arrays/objects
+  const tArr = (path: string) => {
+    const keys = path.split(".");
+    let current: any = (translations as Record<string, any>)[language];
+    for (const key of keys) {
+      current = current?.[key];
+    }
+    return current;
+  };
 
   return (
     <div className="bg-white selection:bg-red-600 selection:text-white">
@@ -81,10 +92,10 @@ export const RecoveryServices = () => {
         <div className="container mx-auto max-w-[1200px] px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
-              { label: "Response", value: "30-45m", icon: Clock },
-              { label: "Availability", value: "24/7", icon: Shield },
-              { label: "Fleet size", value: "25+ Units", icon: Truck },
-              { label: "Rating", value: "4.9/5", icon: Star },
+              { label: t("recovery.trustBar.response"), value: "30-45m", icon: Clock },
+              { label: t("recovery.trustBar.availability"), value: "24/7", icon: Shield },
+              { label: t("recovery.trustBar.fleet"), value: "25+", icon: Truck },
+              { label: t("recovery.trustBar.rating"), value: "4.9/5", icon: Star },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center md:items-start text-center md:text-left" data-aos="fade-up" data-aos-delay={i * 100}>
                 <stat.icon className="w-5 h-5 text-primary mb-2" />
@@ -127,7 +138,7 @@ export const RecoveryServices = () => {
               </p>
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-8 w-full">
-                {(t("recovery.flatbed.items") as unknown as string[]).map((item, i) => (
+                {(tArr("recovery.flatbed.items") as string[] || []).map((item: string, i: number) => (
                   <li key={i} className="flex items-start gap-3 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay={i * 100}>
                     <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
@@ -176,7 +187,7 @@ export const RecoveryServices = () => {
               </p>
 
               <div className="bg-white p-6 md:p-8 border border-gray-200 gap-y-4 md:gap-y-6 flex flex-col mb-10 shadow-sm w-full">
-                {(t("recovery.dubai.items") as unknown as string[]).map((item, i) => (
+                {(tArr("recovery.dubai.items") as string[] || []).map((item: string, i: number) => (
                   <div key={i} className="flex items-center gap-4 lg:gap-5 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay={i * 100}>
                     <span className="text-primary font-black text-xl md:text-2xl select-none">0{i + 1}</span>
                     <p className="text-black font-bold uppercase text-xs md:text-sm tracking-wider">{item}</p>
@@ -281,7 +292,7 @@ export const RecoveryServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {(t("recovery.support.steps") as unknown as any[]).map((step, i) => (
+            {(tArr("recovery.support.steps") as any[] || []).map((step: any, i: number) => (
               <div key={i} className="relative group" data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="text-8xl font-black text-gray-50 absolute -top-10 -left-6 group-hover:text-red-50 transition-colors z-0">
                   {step.step}
@@ -309,20 +320,20 @@ export const RecoveryServices = () => {
                   {t("recovery.faq.title")}
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  Everything you need to know about our premium recovery service in the UAE.
+                  {t("recovery.faq.subtitle")}
                 </p>
                 <div className="p-6 bg-white border border-gray-200">
-                  <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Still have questions?</p>
-                  <p className="font-bold text-black uppercase text-sm mb-4">Our dispatch team is available 24/7</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">{t("recovery.faq.stillQuestions")}</p>
+                  <p className="font-bold text-black uppercase text-sm mb-4">{t("recovery.faq.dispatch")}</p>
                   <Button variant="outline" className="w-full rounded-none border-black text-black hover:bg-black hover:text-white font-bold uppercase text-xs tracking-widest py-6">
-                    WhatsApp Us
+                    {t("recovery.faq.whatsapp")}
                   </Button>
                 </div>
               </div>
             </div>
 
             <div className="w-full lg:w-2/3 space-y-4" data-aos="fade-left">
-              {(t("recovery.faq.items") as unknown as any[]).map((faq, i) => (
+              {(tArr("recovery.faq.items") as any[] || []).map((faq: any, i: number) => (
                 <details key={i} className="group bg-white border border-gray-200 open:border-primary transition-all duration-300">
                   <summary className="flex items-center justify-between p-8 cursor-pointer list-none">
                     <span className="font-bold uppercase tracking-tight text-lg pr-10">{faq.q}</span>

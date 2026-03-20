@@ -19,28 +19,39 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { translations } from "@/lib/translations";
 import { Contact } from "@/components/sections/Contact";
 
 import { SPARE_PARTS_DATA } from "@/lib/data";
 
 export default function SparePartsPage() {
-  const { t, direction } = useLanguage();
+  const { t, direction, language } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const faqItems = t(SPARE_PARTS_DATA.faq.itemsKey) as unknown as Array<{
+  // Helper to resolve nested translation paths to arrays/objects
+  const tArr = (path: string) => {
+    const keys = path.split(".");
+    let current: any = (translations as Record<string, any>)[language];
+    for (const key of keys) {
+      current = current?.[key];
+    }
+    return current;
+  };
+
+  const faqItems = (tArr(SPARE_PARTS_DATA.faq.itemsKey) || []) as Array<{
     question: string;
     answer: string;
   }>;
-  const processSteps = t(SPARE_PARTS_DATA.process.itemsKey) as unknown as Array<{
+  const processSteps = (tArr(SPARE_PARTS_DATA.process.itemsKey) || []) as Array<{
     step: string;
     title: string;
     desc: string;
   }>;
-  const aboutItems = t(SPARE_PARTS_DATA.about.itemsKey) as unknown as string[];
+  const aboutItems = (tArr(SPARE_PARTS_DATA.about.itemsKey) || []) as string[];
 
   return (
     <main
@@ -205,9 +216,7 @@ export default function SparePartsPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {SPARE_PARTS_DATA.solutions.items.map((solution, idx) => {
-              const items = t(
-                `spareParts.solutions.${solution.key}.items`,
-              ) as unknown as string[];
+              const items = (tArr(`spareParts.solutions.${solution.key}.items`) || []) as string[];
               return (
                 <div
                   key={idx}

@@ -222,7 +222,52 @@ export const translations = {
                 make: "Vehicle Make",
                 model: "Vehicle Model",
                 message: "How can we help you?",
+                namePlaceholder: "Enter your name",
+                phonePlaceholder: "Enter your phone",
+                emailPlaceholder: "Enter your email address",
+                makePlaceholder: "e.g. BMW",
+                modelPlaceholder: "e.g. X5",
+                messagePlaceholder: "Describe your requirements...",
+                processing: "Processing...",
                 submit: "Send Message"
+            },
+            ourLocation: "Our Location",
+            openInMaps: "Open in Google Maps"
+        },
+        contactPage: {
+            hero: {
+                title: "CONTACT US",
+                subtitle: "GET IN TOUCH",
+                description: "Have questions about our services or need to schedule an appointment? Our team of German automotive experts is ready to assist you with precision care."
+            },
+            features: {
+                fast: {
+                    title: "Fast Turnaround",
+                    description: "Quick diagnostics and efficient repairs to get you back on the road."
+                },
+                premium: {
+                    title: "Premium Facility",
+                    description: "Comfortable lounge and state-of-the-art climate-controlled workshop."
+                }
+            },
+            faq: {
+                title: "COMMON QUESTIONS",
+                highlight: "QUESTIONS",
+                description: "Find quick answers to the most frequently asked questions about our services and process.",
+                needHelp: "Need more help?",
+                experts: "Our experts are just a message away",
+                whatsapp: "CHAT ON WHATSAPP"
+            },
+            emergency: {
+                title: "EMERGENCY ASSISTANCE?",
+                highlight: "ASSISTANCE?",
+                description: "Our recovery team is available 24/7 for premium car towing in Dubai.",
+                callNow: "CALL NOW",
+                recoveryServices: "RECOVERY SERVICES"
+            },
+            breadcrumb: {
+                home: "Home",
+                contact: "Contact Us"
             }
         },
         servicesPage: {
@@ -873,8 +918,15 @@ export const translations = {
                     luxury: { title: "Luxury Cars", models: "Ferrari, Bentley, Mercedes-AMG" },
                     suv: { title: "SUVs & 4x4s", models: "Land Cruiser, Pajero, Patrol" },
                     electric: { title: "Electric Vehicles", models: "Tesla, Polestar, Hybrids" },
+                    ev: { title: "Electric Vehicles", models: "Tesla, Polestar, Hybrids" },
                     commercial: { title: "Commercial", models: "Vans, Fleets, Buses" }
                 }
+            },
+            trustBar: {
+                response: "Response",
+                availability: "Availability",
+                fleet: "Fleet Size",
+                rating: "Rating"
             },
             response: {
                 title: "Reach Our Nearest Recovery Unit in Minutes",
@@ -902,6 +954,10 @@ export const translations = {
             },
             faq: {
                 title: "Frequently Asked Questions",
+                subtitle: "Everything you need to know about our premium recovery service in the UAE.",
+                stillQuestions: "Still have questions?",
+                dispatch: "Our dispatch team is available 24/7",
+                whatsapp: "WhatsApp Us",
                 items: [
                     { q: "How fast can your car recovery team reach breakdown locations in Dubai?", a: "Typically within 30 to 45 minutes, depending on your location and traffic conditions." },
                     { q: "Do you provide specialized towing services for exotic and luxury vehicles like Ferrari or Rolls-Royce?", a: "Yes. We use self-lift flatbeds and experienced drivers trained for high-end cars." },
@@ -1718,7 +1774,52 @@ export const translations = {
                 make: "نوع المركبة",
                 model: "موديل المركبة",
                 message: "كيف يمكننا مساعدتك؟",
+                namePlaceholder: "أدخل اسمك",
+                phonePlaceholder: "أدخل رقم هاتفك",
+                emailPlaceholder: "أدخل بريدك الإلكتروني",
+                makePlaceholder: "مثال: بي إم دبليو",
+                modelPlaceholder: "مثال: X5",
+                messagePlaceholder: "صف متطلباتك...",
+                processing: "جاري المعالجة...",
                 submit: "إرسال الرسالة"
+            },
+            ourLocation: "موقعنا",
+            openInMaps: "افتح في خرائط جوجل"
+        },
+        contactPage: {
+            hero: {
+                title: "اتصل بنا",
+                subtitle: "تواصل معنا",
+                description: "هل لديك أسئلة حول خدماتنا أم تحتاج إلى تحديد موعد؟ فريقنا من خبراء السيارات الألمان مستعد لمساعدتك برعاية فائقة الدقة."
+            },
+            features: {
+                fast: {
+                    title: "إنجاز سريع",
+                    description: "تشخيص سريع وإصلاحات فعالة لإعادتك إلى الطريق."
+                },
+                premium: {
+                    title: "مرفق متميز",
+                    description: "صالة مريحة وورشة عمل حديثة ومكيفة."
+                }
+            },
+            faq: {
+                title: "الأسئلة الشائعة",
+                highlight: "الشائعة",
+                description: "ابحث عن إجابات سريعة للأسئلة الأكثر شيوعاً حول خدماتنا وعملياتنا.",
+                needHelp: "هل تحتاج لمزيد من المساعدة؟",
+                experts: "خبراؤنا على بعد رسالة منك",
+                whatsapp: "تواصل عبر واتساب"
+            },
+            emergency: {
+                title: "مساعدة طارئة؟",
+                highlight: "طارئة؟",
+                description: "فريق الاسترداد لدينا متاح على مدار الساعة طوال أيام الأسبوع لسحب السيارات المتميزة في دبي.",
+                callNow: "اتصل الآن",
+                recoveryServices: "خدمات الاسترداد"
+            },
+            breadcrumb: {
+                home: "الرئيسية",
+                contact: "اتصل بنا"
             }
         },
         servicesPage: {
@@ -2370,8 +2471,15 @@ export const translations = {
                     luxury: { title: "السيارات الفاخرة", models: "فيراري، بنتلي، مرسيدس AMG" },
                     suv: { title: "سيارات الدفع الرباعي 4x4", models: "لاند كروزر، باجيرو، باترول" },
                     electric: { title: "السيارات الكهربائية", models: "تسلا، بولستار، الهجينة" },
+                    ev: { title: "السيارات الكهربائية", models: "تسلا، بولستار، الهجينة" },
                     commercial: { title: "السيارات التجارية", models: "فانات، أساطيل، حافلات" }
                 }
+            },
+            trustBar: {
+                response: "الاستجابة",
+                availability: "التوفر",
+                fleet: "حجم الأسطول",
+                rating: "التقييم"
             },
             response: {
                 title: "صل إلى أقرب وحدة سحب لدينا في غضون دقائق",
@@ -2399,6 +2507,10 @@ export const translations = {
             },
             faq: {
                 title: "الأسئلة الشائعة",
+                subtitle: "كل ما تحتاج معرفته عن خدمة الاسترداد المتميزة لدينا في الإمارات.",
+                stillQuestions: "لا تزال لديك أسئلة؟",
+                dispatch: "فريق الإرسال لدينا متاح على مدار الساعة",
+                whatsapp: "تواصل عبر واتساب",
                 items: [
                     { q: "ما مدى سرعة وصول فريق سحب السيارات الخاص بكم إلى مواقع الأعطال في دبي؟", a: "عادة في غضون 30 إلى 45 دقيقة، حسب موقعك وظروف حركة المرور." },
                     { q: "هل تقدمون خدمات سحب متخصصة للسيارات الغريبة والفاخرة مثل فيراري أو رولز رويس؟", a: "نعم. نستخدم شاحنات سحب ذاتية الرفع وسائقين ذوي خبرة مدربين على السيارات الفاخرة." },
@@ -2888,6 +3000,8 @@ export const translations = {
             dashboard: { title: "جلد لوحة القيادة أو استبدالها", description: "تغليف جلدي فاخر وترميم لوحة القيادة." },
             classicCar: { title: "ترميم السيارات الكلاسيكية", description: "إعادة الحياة للسيارات العريقة." },
             headlight: { title: "ترميم المصابيح الأمامية", description: "استعادة وضوح وسطوع المصابيح الأمامية." },
+            windscreen: { title: "ترميم الزجاج الأمامي", description: "إصلاح الشقوق والرقائق للرؤية الواضحة." },
+            roofLining: { title: "إصلاح بطانة السقف", description: "إصلاح البطانة المترهلة والأقمشة." },
             alloyWheel: { title: "إصلاح الجنوط", description: "إصلاح خدوش الأرصفة والانحناءات والأضرار الجمالية." },
             upholstery: { title: "التنجيد والتجديد", description: "إصلاح مقاعد المقصورة وتجديد المواد بشكل احترافي." },
             dent: { title: "إصلاح الصدمات والدهان", description: "إزالة الصدمات والدهان الاحترافي." },
@@ -2896,13 +3010,13 @@ export const translations = {
             bodykit: {
                 title: "كت الهيكل (Body Kit)",
                 description: "تركيب احترافي وتصميم انسيابي."
-            },
-            engineeringServices: {
-                retrofit: { title: "تحديث الميزات (Retrofit)", description: "ترقية المركبات القديمة بميزات حديثة." },
-                radar: { title: "معايرة الرادار", description: "معايرة دقيقة لأنظمة السلامة." },
-                navigation: { title: "تحديث الخرائط", description: "أحدث الخرائط والبرمجيات لنظام الملاحة الخاص بك." },
-                programming: { title: "البرمجة", description: "برمجة البرمجيات وتكويد الوحدات." }
             }
+        },
+        engineeringServices: {
+            retrofit: { title: "تحديث الميزات (Retrofit)", description: "ترقية المركبات القديمة بميزات حديثة." },
+            radar: { title: "معايرة الرادار", description: "معايرة دقيقة لأنظمة السلامة." },
+            navigation: { title: "تحديث الخرائط", description: "أحدث الخرائط والبرمجيات لنظام الملاحة الخاص بك." },
+            programming: { title: "البرمجة", description: "برمجة البرمجيات وتكويد الوحدات." }
         },
         products: {
             pageTitle: "استكشف منتجاتنا",

@@ -264,7 +264,7 @@ export default function EngineManagementSystemPage() {
                 data-aos="fade-left"
               >
                 <Image
-                  src="https://images.ebadprince49.workers.dev/gear box.jfif.jpeg"
+                  src="https://images.ebadprince49.workers.dev/Gear Box.jfif.jpeg"
                   alt="Recovery Vehicle"
                   fill
                   className="object-cover object-bottom"

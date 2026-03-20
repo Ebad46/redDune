@@ -43,7 +43,7 @@ export default function InspectionsPage() {
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.ebadprince49.workers.devhttps://images.ebadprince49.workers.dev/ins1.jpeg"
+            src="https://images.ebadprince49.workers.dev/ins1.jpeg"
             alt="Hero Background"
             fill
             className="opacity-30 mix-blend-overlay object-cover"
@@ -194,7 +194,7 @@ export default function InspectionsPage() {
               <div className="absolute inset-0 transform translate-x-4 translate-y-4 border border-primary/30 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
               <div className="relative z-10 w-full h-full">
                 <Image
-                  src="https://images.ebadprince49.workers.dev/ins1.JPEG"
+                  src="https://images.ebadprince49.workers.dev/ins1.jpeg"
                   alt="Inspection Workflow"
                   fill
                   className="object-cover"

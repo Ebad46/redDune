@@ -141,10 +141,10 @@ export function EngineeringServices() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-secondary uppercase">
-              {t("ENGINEERING AND PROGRAMMING")}
+              {t("services.items.engineering.title")}
             </h2>
             <p className="font-sans text-muted-foreground max-w-2xl mx-auto">
-              {t("Our Services About")}
+              {t("services.items.engineering.description")}
             </p>
           </div>
 
@@ -210,7 +210,7 @@ export function EngineeringServices() {
                           onClick={(e) => e.stopPropagation()}
                         >
                           <Button className="rounded-full bg-primary hover:bg-primary/90 text-white font-bold px-8 shadow-[0_0_20px_rgba(209,50,50,0.4)] hover:scale-110 transition-all duration-300">
-                            {t("engineeringSection.readMore")}
+                            {t("servicesPage.readMore")}
                           </Button>
                         </Link>
                       </div>

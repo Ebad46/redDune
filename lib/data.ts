@@ -299,7 +299,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.dashboard.title",
         icon: Armchair,
         description: "bodyshopServices.dashboard.description",
-        image: "https://images.ebadprince49.workers.dev/dashboard cover.jpg",
+        image: "https://images.ebadprince49.workers.dev/Dashboard cover.jpg",
         href: "/services/bodyshop/dashboard-leather-or-replacement",
     },
     {
@@ -339,7 +339,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.alloyWheel.title",
         icon: CircleDot,
         description: "bodyshopServices.alloyWheel.description",
-        image: "https://images.ebadprince49.workers.dev/alloy.jpg",
+        image: "https://images.ebadprince49.workers.dev/wheel1.jpeg",
         href: "/services/bodyshop/alloy-wheel-repair",
     },
     {
@@ -355,7 +355,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.dent.title",
         icon: Disc,
         description: "bodyshopServices.dent.description",
-        image: "https://images.ebadprince49.workers.dev/car painting.jpg",
+        image: "https://images.ebadprince49.workers.dev/Car Painting.jpg",
         href: "/services/bodyshop/denting-painting",
     },
     {
@@ -371,7 +371,7 @@ export const BODYSHOP_SERVICES = [
         title: "bodyshopServices.rims.title",
         icon: CircleDot,
         description: "bodyshopServices.rims.description",
-        image: "https://images.ebadprince49.workers.dev/caliper.jpg",
+        image: "https://images.ebadprince49.workers.dev/Caliper.jpg",
         href: "/services/bodyshop/rims-and-caliper",
     },
     {
@@ -392,7 +392,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.dashboard.s1.heading",
                 description: "bodyshopData.dashboard.s1.description",
-                image: "https://images.ebadprince49.workers.dev/dashboard cover.jpg",
+                image: "https://images.ebadprince49.workers.dev/Dashboard cover.jpg",
             },
             {
                 heading: "bodyshopData.dashboard.s2.heading",
@@ -595,7 +595,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.dent.s1.heading",
                 description: "bodyshopData.dent.s1.description",
-                image: "https://images.ebadprince49.workers.dev/car painting.jpg",
+                image: "https://images.ebadprince49.workers.dev/Car Painting.jpg",
             },
             {
                 heading: "bodyshopData.dent.s2.heading",
@@ -653,7 +653,7 @@ export const BODYSHOP_PAGE_DATA = [
             {
                 heading: "bodyshopData.rims.s1.heading",
                 description: "bodyshopData.rims.s1.description",
-                image: "https://images.ebadprince49.workers.dev/caliper.jpg",
+                image: "https://images.ebadprince49.workers.dev/Caliper.jpg",
             },
             {
                 heading: "bodyshopData.rims.s2.heading",
@@ -784,7 +784,7 @@ export const ENGINEERING_PAGE_DATA = [
             {
                 heading: "engineeringData.retrofit.s2.heading",
                 description: "engineeringData.retrofit.s2.description",
-                image: "https://images.ebadprince49.workers.dev/re2.JPEG",
+                image: "https://images.ebadprince49.workers.dev/re2.jpeg",
                 list: [
                     "engineeringData.retrofit.s2.items.0",
                     "engineeringData.retrofit.s2.items.1",

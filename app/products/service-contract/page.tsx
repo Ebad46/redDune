@@ -22,6 +22,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/components/providers/LanguageProvider";
+import { translations } from "@/lib/translations";
 import { Contact } from "@/components/sections/Contact";
 
 const WHY_CHOOSE_KEYS = [
@@ -47,17 +48,17 @@ const HOW_HELPS_KEYS = ["costs", "safety", "save", "peace"] as const;
 const HOW_HELPS_ICONS = [Wallet, ShieldCheck, Clock, ThumbsUp];
 
 export default function ServiceContractPage() {
-  const { t, direction } = useLanguage();
+  const { t, direction, language } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const faqItems = t("serviceContract.faq.items") as unknown as Array<{
+  const faqItems = (translations as Record<string, any>)[language]?.serviceContract?.faq?.items as Array<{
     question: string;
     answer: string;
-  }>;
+  }> || [];
 
   return (
     <main
@@ -162,11 +163,18 @@ export default function ServiceContractPage() {
                 </div>
               );
             })}
-            <div className="bg-neutral-950 p-0 border border-white/5 overflow-hidden group">
-              <PlaceholderImage
-                label="Benefits Grid"
-                className="h-full w-full opacity-50 group-hover:opacity-70 transition-opacity"
-              />
+            <div
+              className="bg-neutral-950 p-8 border border-white/5 hover:border-primary/50 transition-all duration-300 group hover:-translate-y-1"
+            >
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                <Wrench size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black font-[family-name:var(--font-playfair)]">
+                {t("serviceContract.whatIs.learnMore")}
+              </h3>
+              <p className="text-gray-500 group-hover:text-gray-400 transition-colors">
+                {t("serviceContract.whatIs.description").slice(0, 100)}…
+              </p>
             </div>
           </div>
         </div>

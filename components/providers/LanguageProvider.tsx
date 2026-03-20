@@ -44,9 +44,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.lang = lang;
   };
 
-  const t = (path: string) => {
+  const resolveTranslation = (
+    namespace: Record<string, unknown>,
+    path: string,
+  ): string | null => {
     const keys = path.split(".");
-    let current: unknown = (translations as Record<string, unknown>)[language];
+    let current: unknown = namespace;
 
     for (const key of keys) {
       if (
@@ -56,12 +59,30 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       ) {
         current = (current as Record<string, unknown>)[key];
       } else {
-        console.warn(`Translation missing for key: ${path}`);
-        return path;
+        return null;
       }
     }
 
-    return current as string;
+    return typeof current === "string" ? current : null;
+  };
+
+  const t = (path: string) => {
+    const languageNamespace = (translations as Record<string, unknown>)[language] as Record<string, unknown>;
+    let translation = resolveTranslation(languageNamespace, path);
+
+    if (!translation) {
+      const fallbackPath = path.toLowerCase();
+      if (fallbackPath !== path) {
+        translation = resolveTranslation(languageNamespace, fallbackPath);
+      }
+    }
+
+    if (!translation) {
+      console.warn(`Translation missing for key: ${path}`);
+      return path;
+    }
+
+    return translation;
   };
 
   if (!isHydrated) return null;

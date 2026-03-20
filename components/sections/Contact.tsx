@@ -125,7 +125,7 @@ export function Contact() {
                                         <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">{t("contact.form.firstName")}</label>
                                         <Input
                                             name="firstName"
-                                            placeholder="Enter your name"
+                                            placeholder={t("contact.form.namePlaceholder")}
                                             value={formData.firstName}
                                             onChange={handleChange}
                                             required
@@ -136,7 +136,7 @@ export function Contact() {
                                         <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">{t("contact.form.phone")}</label>
                                         <Input
                                             name="phone"
-                                            placeholder="Enter your phone"
+                                            placeholder={t("contact.form.phonePlaceholder")}
                                             value={formData.phone}
                                             onChange={handleChange}
                                             className="bg-gray-50/50 border-gray-200 focus:bg-white transition-all"
@@ -147,7 +147,7 @@ export function Contact() {
                                     <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">{t("contact.form.email")}</label>
                                     <Input
                                         name="email"
-                                        placeholder="Enter your email address"
+                                        placeholder={t("contact.form.emailPlaceholder")}
                                         type="email"
                                         value={formData.email}
                                         onChange={handleChange}
@@ -160,7 +160,7 @@ export function Contact() {
                                         <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">{t("contact.form.make")}</label>
                                         <Input
                                             name="make"
-                                            placeholder="e.g. BMW"
+                                            placeholder={t("contact.form.makePlaceholder")}
                                             value={formData.make}
                                             onChange={handleChange}
                                             className="bg-gray-50/50 border-gray-200 focus:bg-white transition-all"
@@ -170,7 +170,7 @@ export function Contact() {
                                         <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">{t("contact.form.model")}</label>
                                         <Input
                                             name="model"
-                                            placeholder="e.g. X5"
+                                            placeholder={t("contact.form.modelPlaceholder")}
                                             value={formData.model}
                                             onChange={handleChange}
                                             className="bg-gray-50/50 border-gray-200 focus:bg-white transition-all"
@@ -181,7 +181,7 @@ export function Contact() {
                                     <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground ml-1">{t("contact.form.message")}</label>
                                     <Textarea
                                         name="message"
-                                        placeholder="Describe your requirements..."
+                                        placeholder={t("contact.form.messagePlaceholder")}
                                         className="min-h-[150px] bg-gray-50/50 border-gray-200 focus:bg-white transition-all"
                                         value={formData.message}
                                         onChange={handleChange}
@@ -208,7 +208,7 @@ export function Contact() {
                                     className="w-full h-14 text-base font-bold uppercase tracking-widest shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
                                     disabled={status === "loading"}
                                 >
-                                    {status === "loading" ? "Processing..." : t("contact.form.submit")}
+                                    {status === "loading" ? t("contact.form.processing") : t("contact.form.submit")}
                                 </Button>
                             </form>
                         </div>
@@ -227,14 +227,14 @@ export function Contact() {
                             className="absolute inset-0 transition-all duration-700"
                         />
                         <div className="absolute top-6 left-6 right-6 p-6 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                            <h3 className="font-heading font-bold text-xl mb-2">Our Location</h3>
+                            <h3 className="font-heading font-bold text-xl mb-2">{t("contact.ourLocation")}</h3>
                             <p className="text-sm text-muted-foreground mb-4">https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.675353778403!2d55.224226676080555!3d25.112848635110655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6cae06ddeb37%3A0x4f75f321335d4a6b!2s800CarGuru%20Mobile%20Auto%20Repair%20Services!5e0!3m2!1sen!2s!4v1773783861471!5m2!1sen!2s</p>
                             <Link
                                 href={CONTACT_DATA.googleMapsUrl}
                                 target="_blank"
                                 className="text-primary text-sm font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all"
                             >
-                                Open in Google Maps
+                                {t("contact.openInMaps")}
                                 <span>→</span>
                             </Link>
                         </div>
